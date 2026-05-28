@@ -5,567 +5,238 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>معرض الصور — القصر الصغير | Ksar Sghir Gallery</title>
 <meta name="description" content="معرض صور القصر الصغير الاحترافي — شواطئ، طبيعة، غروب الشمس، ميناء. Photography gallery of Ksar Sghir Morocco by Bilal El Hichou">
-<meta name="keywords" content="معرض صور القصر الصغير, ksar sghir gallery, photos maroc, plage ksar sghir, bilal el hichou photography">
+<meta name="keywords" content="معرض صور القصر الصغير, ksar sghir gallery, photos maroc, bilal el hichou photography">
 <link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Tajawal', sans-serif; background: #0a0f1a; color: #fff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; }
 
-/* HEADER */
-header {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  border-bottom: 2px solid #00b4d8;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.logo { line-height: 1.2; text-decoration: none; }
-.logo-ar { font-size: 18px; font-weight: 900; color: #00b4d8; display: block; }
-.logo-en { font-size: 9px; color: #888; letter-spacing: 3px; text-transform: uppercase; display: block; }
-.back-btn {
-  color: #00b4d8;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border: 1px solid rgba(0,180,216,0.3);
-  border-radius: 20px;
-  transition: all 0.2s;
-}
-.back-btn:hover { background: rgba(0,180,216,0.1); }
+header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
+.logo { text-decoration:none; }
+.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
+.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.hright { display:flex; align-items:center; gap:10px; }
+.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
+.lang-sw { display:flex; gap:4px; }
+.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
+.lb:hover { border-color:#00b4d8; color:#00b4d8; }
+.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
 
-/* HERO */
-.gallery-hero {
-  background: linear-gradient(160deg, #0d1b2a 0%, #1a3a5c 50%, #0d1b2a 100%);
-  padding: 40px 20px 35px;
-  text-align: center;
-  border-bottom: 1px solid rgba(0,180,216,0.15);
-}
-.gallery-hero h1 { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 8px; }
-.gallery-hero h1 em { color: #00b4d8; font-style: normal; }
-.gallery-hero p { color: #90e0ef; font-size: 13px; }
-.photo-count {
-  display: inline-block;
-  background: rgba(0,180,216,0.15);
-  border: 1px solid #00b4d8;
-  color: #00b4d8;
-  font-size: 11px;
-  padding: 4px 14px;
-  border-radius: 20px;
-  margin-top: 10px;
-  letter-spacing: 2px;
-}
+.hero { background:linear-gradient(160deg,#0d1b2a,#1a3a5c,#0d1b2a); padding:40px 20px 35px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
+.hero h1 { font-size:clamp(24px,6vw,42px); font-weight:900; margin-bottom:8px; }
+.hero h1 em { color:#00b4d8; font-style:normal; }
+.hero p { color:#90e0ef; font-size:13px; margin-bottom:12px; }
+.badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid #00b4d8; color:#00b4d8; font-size:11px; padding:4px 14px; border-radius:20px; letter-spacing:2px; }
 
-/* FILTERS */
-.filters {
-  display: flex;
-  gap: 8px;
-  padding: 20px;
-  overflow-x: auto;
-  background: #0d1b2a;
-  border-bottom: 1px solid rgba(0,180,216,0.1);
-  scrollbar-width: none;
-}
-.filters::-webkit-scrollbar { display: none; }
-.filter-btn {
-  background: transparent;
-  border: 1px solid rgba(0,180,216,0.2);
-  color: #aaa;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 7px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-family: 'Tajawal', sans-serif;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-.filter-btn:hover { border-color: #00b4d8; color: #00b4d8; }
-.filter-btn.active { background: #00b4d8; color: #fff; border-color: #00b4d8; }
+.filters { display:flex; gap:8px; padding:12px 15px; overflow-x:auto; background:#0d1b2a; scrollbar-width:none; border-bottom:1px solid rgba(0,180,216,0.1); }
+.filters::-webkit-scrollbar { display:none; }
+.fbtn { background:transparent; border:1px solid rgba(0,180,216,0.2); color:#aaa; font-size:11px; font-weight:600; padding:6px 14px; border-radius:20px; cursor:pointer; white-space:nowrap; font-family:'Tajawal',sans-serif; transition:all 0.2s; }
+.fbtn.on, .fbtn:hover { background:#00b4d8; color:#fff; border-color:#00b4d8; }
 
-/* GALLERY GRID */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
-  padding: 4px;
-}
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; padding:4px; max-width:1100px; margin:0 auto; }
+.card { position:relative; aspect-ratio:1; overflow:hidden; cursor:pointer; border-radius:4px; background:#16213e; }
+.card img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; display:block; }
+.card .ph { width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-size:45px; }
+.card:hover img, .card:hover .ph { transform:scale(1.06); }
+.card .info { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.85)); padding:20px 10px 8px; opacity:0; transition:opacity 0.3s; }
+.card:hover .info { opacity:1; }
+.card .info .name { font-size:12px; font-weight:700; color:#fff; }
+.card .info .cat { display:inline-block; background:#00b4d8; color:#fff; font-size:9px; padding:2px 7px; border-radius:8px; margin-top:3px; }
+.hidden { display:none !important; }
 
-.photo-item {
-  position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-  cursor: pointer;
-  background: #16213e;
-}
+.lb-box { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.96); z-index:1000; flex-direction:column; align-items:center; justify-content:center; padding:20px; }
+.lb-box.on { display:flex; }
+.lb-box img { max-width:90vw; max-height:70vh; object-fit:contain; border-radius:6px; display:block; }
+.lb-ph { font-size:80px; }
+.lb-title { color:#fff; font-size:15px; font-weight:700; margin-top:12px; text-align:center; }
+.lb-close { position:absolute; top:15px; left:15px; background:rgba(255,255,255,0.1); border:none; color:#fff; font-size:20px; width:36px; height:36px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+.lb-nav { display:flex; gap:12px; margin-top:15px; }
+.lb-nav button { background:rgba(0,180,216,0.2); border:1px solid #00b4d8; color:#00b4d8; padding:7px 18px; border-radius:20px; cursor:pointer; font-family:'Tajawal',sans-serif; font-size:13px; }
+.lb-nav button:hover { background:#00b4d8; color:#fff; }
 
-.photo-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
+footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1px solid #16213e; }
+footer a { color:#555; text-decoration:none; font-size:12px; margin:0 8px; }
+footer a:hover { color:#00b4d8; }
+.fc { font-size:11px; color:#555; margin-top:8px; }
+.fc span { color:#00b4d8; }
 
-.photo-item:hover img { transform: scale(1.06); }
-
-.photo-item .ph {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-  transition: transform 0.4s ease;
+@media(max-width:600px) {
+  .grid { grid-template-columns:repeat(2,1fr); }
+  .lang-sw { display:none; }
 }
-.photo-item:hover .ph { transform: scale(1.06); }
-
-.photo-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 12px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.photo-item:hover .photo-overlay { opacity: 1; }
-.photo-title { color: #fff; font-size: 12px; font-weight: 700; }
-.photo-cat {
-  display: inline-block;
-  background: #00b4d8;
-  color: #fff;
-  font-size: 9px;
-  padding: 2px 8px;
-  border-radius: 10px;
-  margin-top: 4px;
-  font-weight: 600;
-}
-
-/* COLOR PLACEHOLDERS */
-.c1 { background: linear-gradient(135deg, #c0392b, #f39c12); }
-.c2 { background: linear-gradient(135deg, #023e8a, #0096c7); }
-.c3 { background: linear-gradient(135deg, #1b5e20, #4caf50); }
-.c4 { background: linear-gradient(135deg, #1a237e, #311b92); }
-.c5 { background: linear-gradient(135deg, #4a148c, #880e4f); }
-.c6 { background: linear-gradient(135deg, #bf360c, #ff6f00); }
-.c7 { background: linear-gradient(135deg, #006064, #00acc1); }
-.c8 { background: linear-gradient(135deg, #1b5e20, #558b2f); }
-.c9 { background: linear-gradient(135deg, #37474f, #546e7a); }
-.c10 { background: linear-gradient(135deg, #880e4f, #e91e63); }
-.c11 { background: linear-gradient(135deg, #e65100, #ff9800); }
-.c12 { background: linear-gradient(135deg, #0d47a1, #1976d2); }
-
-/* LIGHTBOX */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.95);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.lightbox.open { display: flex; }
-.lightbox-img {
-  max-width: 90vw;
-  max-height: 75vh;
-  object-fit: contain;
-  border-radius: 4px;
-}
-.lightbox-ph {
-  width: 80vw;
-  height: 60vh;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 80px;
-  border-radius: 8px;
-}
-.lightbox-info {
-  margin-top: 15px;
-  text-align: center;
-}
-.lightbox-title { font-size: 16px; font-weight: 700; color: #fff; }
-.lightbox-cat { color: #00b4d8; font-size: 12px; margin-top: 4px; }
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(255,255,255,0.1);
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.lightbox-nav {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-.lightbox-nav button {
-  background: rgba(0,180,216,0.2);
-  border: 1px solid #00b4d8;
-  color: #00b4d8;
-  padding: 8px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-family: 'Tajawal', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-}
-.lightbox-nav button:hover { background: #00b4d8; color: #fff; }
-
-/* LOAD MORE */
-.load-more-wrap { text-align: center; padding: 30px 20px; }
-.load-more-btn {
-  background: transparent;
-  border: 2px solid #00b4d8;
-  color: #00b4d8;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 12px 35px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-family: 'Tajawal', sans-serif;
-  transition: all 0.3s;
-}
-.load-more-btn:hover { background: #00b4d8; color: #fff; }
-
-/* HIDDEN */
-.hidden { display: none !important; }
-
-/* FOOTER */
-footer {
-  background: #060c14;
-  padding: 18px 20px;
-  text-align: center;
-  border-top: 1px solid #16213e;
-  font-size: 11px;
-  color: #555;
-}
-footer span { color: #00b4d8; }
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-hero h1 { font-size: 22px; }
-}
-
-/* LANG SWITCHER */
-.lang-sw { display: flex; gap: 5px; }
-.lb2 { background: transparent; border: 1px solid rgba(0,180,216,0.3); color: #aaa; font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 10px; cursor: pointer; font-family: 'Tajawal',sans-serif; transition: all 0.2s; }
-.lb2:hover { border-color: #00b4d8; color: #00b4d8; }
-.lb2.on { background: #00b4d8; color: #fff; border-color: #00b4d8; }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <a href="https://www.ksarsghir.com" class="logo">
-    <span class="logo-ar">القصر الصغير</span>
-    <span class="logo-en">KSAR SGHIR • MAROC</span>
+    <span class="logo-ar" id="lname">القصر الصغير</span>
+    <span class="logo-en">KSAR SGHIR GALLERY</span>
   </a>
-  <a href="https://www.ksarsghir.com" class="back-btn">← الرئيسية</a>
+  <div class="hright">
+    <div class="lang-sw">
+      <button class="lb on" onclick="setL('ar')">AR</button>
+      <button class="lb" onclick="setL('fr')">FR</button>
+      <button class="lb" onclick="setL('en')">EN</button>
+    </div>
+    <a href="https://www.ksarsghir.com" class="back" id="lback">← الرئيسية</a>
+  </div>
 </header>
 
-<!-- HERO -->
-<div class="gallery-hero">
-  <h1>معرض <em>الصور</em></h1>
-  <p><span id="hdesc">بعدسة بلال الهيشو — القصر الصغير، المغرب</span></p>
-  <div class="photo-count" id="photoCount"><span id="lcount">12</span> <span id="lphoto">صورة</span></div>
+<div class="hero">
+  <h1 id="htitle">معرض <em>الصور</em></h1>
+  <p id="hdesc">بعدسة بلال الهيشو — القصر الصغير، المغرب</p>
+  <div class="badge" id="lbadge">Bilal El Hichou Photography</div>
 </div>
 
-<!-- FILTERS -->
 <div class="filters">
-  <button class="filter-btn active" onclick="filterGallery('all')" id="fall">🌟 الكل</button>
-  <button class="filter-btn" onclick="filterGallery('beach')" id="fbeach">🌊 الشاطئ</button>
-  <button class="filter-btn" onclick="filterGallery('sunset')" id="fsunset">🌅 الغروب</button>
-  <button class="filter-btn" onclick="filterGallery('nature')" id="fnature">🌿 الطبيعة</button>
-  <button class="filter-btn" onclick="filterGallery('night')" id="fnight">🌙 الليل</button>
-  <button class="filter-btn" onclick="filterGallery('port')" id="fport">⚓ الميناء</button>
+  <button class="fbtn on" onclick="filter(this,'all')" id="fall">🌟 الكل</button>
+  <button class="fbtn" onclick="filter(this,'beach')" id="fbeach">🌊 الشاطئ</button>
+  <button class="fbtn" onclick="filter(this,'sunset')" id="fsunset">🌅 الغروب</button>
+  <button class="fbtn" onclick="filter(this,'nature')" id="fnature">🌿 الطبيعة</button>
+  <button class="fbtn" onclick="filter(this,'night')" id="fnight">🌙 الليل</button>
+  <button class="fbtn" onclick="filter(this,'port')" id="fport">⚓ الميناء</button>
 </div>
 
-<!-- GALLERY -->
-<div class="gallery-grid" id="galleryGrid">
+<div class="grid" id="grid">
 
-  <div class="photo-item" data-cat="sunset" data-title="غروب الشمس — القصر الصغير" onclick="openLightbox(0)">
-    <div class="ph c1">🌅</div>
-    <div class="photo-overlay">
-      <div class="photo-title">غروب الشمس</div>
-      <span class="photo-cat">الغروب</span>
+  <div class="card" data-cat="sunset" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#c0392b,#f39c12)">🌅</div>
+    <div class="info">
+      <div class="name" data-ar="غروب الشمس" data-fr="Coucher de soleil" data-en="Sunset">غروب الشمس</div>
+      <span class="cat">غروب</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="beach" data-title="شاطئ القصر الصغير" onclick="openLightbox(1)">
-    <div class="ph c2">🌊</div>
-    <div class="photo-overlay">
-      <div class="photo-title">شاطئ القصر الصغير</div>
-      <span class="photo-cat">الشاطئ</span>
+  <div class="card" data-cat="beach" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#023e8a,#0096c7)">🌊</div>
+    <div class="info">
+      <div class="name" data-ar="شاطئ القصر الصغير" data-fr="Plage de Ksar Sghir" data-en="Ksar Sghir Beach">شاطئ القصر الصغير</div>
+      <span class="cat">شاطئ</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="nature" data-title="الربيع في بليونش" onclick="openLightbox(2)">
-    <div class="ph c3">🌿</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الربيع في بليونش</div>
-      <span class="photo-cat">الطبيعة</span>
+  <div class="card" data-cat="nature" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#1b5e20,#4caf50)">🌿</div>
+    <div class="info">
+      <div class="name" data-ar="الربيع في بليونش" data-fr="Printemps à Belyounech" data-en="Spring in Belyounech">الربيع في بليونش</div>
+      <span class="cat">طبيعة</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="night" data-title="الهلال والنجمة" onclick="openLightbox(3)">
-    <div class="ph c4">🌙</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الهلال والنجمة</div>
-      <span class="photo-cat">الليل</span>
+  <div class="card" data-cat="night" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#1a237e,#311b92)">🌙</div>
+    <div class="info">
+      <div class="name" data-ar="الهلال والنجمة" data-fr="Croissant et Étoile" data-en="Crescent and Star">الهلال والنجمة</div>
+      <span class="cat">ليل</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="port" data-title="ميناء الصيد التقليدي" onclick="openLightbox(4)">
-    <div class="ph c5">⚓</div>
-    <div class="photo-overlay">
-      <div class="photo-title">ميناء الصيد</div>
-      <span class="photo-cat">الميناء</span>
+  <div class="card" data-cat="port" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#4a148c,#880e4f)">⚓</div>
+    <div class="info">
+      <div class="name" data-ar="ميناء الصيد" data-fr="Port de pêche" data-en="Fishing Port">ميناء الصيد</div>
+      <span class="cat">ميناء</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="sunset" data-title="الغروب من الأعلى" onclick="openLightbox(5)">
-    <div class="ph c6">🏔️</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الغروب من الأعلى</div>
-      <span class="photo-cat">الغروب</span>
+  <div class="card" data-cat="sunset" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#bf360c,#ff6f00)">🏔️</div>
+    <div class="info">
+      <div class="name" data-ar="الغروب من الأعلى" data-fr="Vue panoramique" data-en="Panoramic Sunset">الغروب من الأعلى</div>
+      <span class="cat">غروب</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="beach" data-title="الشاطئ في الفجر" onclick="openLightbox(6)">
-    <div class="ph c7">🌄</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الشاطئ في الفجر</div>
-      <span class="photo-cat">الشاطئ</span>
+  <div class="card" data-cat="beach" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#006064,#00acc1)">🌄</div>
+    <div class="info">
+      <div class="name" data-ar="الشاطئ في الفجر" data-fr="La plage à l'aube" data-en="Beach at Dawn">الشاطئ في الفجر</div>
+      <span class="cat">شاطئ</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="nature" data-title="الأزهار الصفراء" onclick="openLightbox(7)">
-    <div class="ph c8">🌻</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الأزهار الصفراء</div>
-      <span class="photo-cat">الطبيعة</span>
+  <div class="card" data-cat="nature" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#1b5e20,#558b2f)">🌻</div>
+    <div class="info">
+      <div class="name" data-ar="الأزهار الصفراء" data-fr="Fleurs jaunes" data-en="Yellow Flowers">الأزهار الصفراء</div>
+      <span class="cat">طبيعة</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="night" data-title="المدينة ليلاً" onclick="openLightbox(8)">
-    <div class="ph c9">🌃</div>
-    <div class="photo-overlay">
-      <div class="photo-title">المدينة ليلاً</div>
-      <span class="photo-cat">الليل</span>
+  <div class="card" data-cat="night" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#37474f,#546e7a)">🌃</div>
+    <div class="info">
+      <div class="name" data-ar="المدينة ليلاً" data-fr="La ville la nuit" data-en="City at Night">المدينة ليلاً</div>
+      <span class="cat">ليل</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="sunset" data-title="ألوان المغرب" onclick="openLightbox(9)">
-    <div class="ph c10">🎨</div>
-    <div class="photo-overlay">
-      <div class="photo-title">ألوان المغرب</div>
-      <span class="photo-cat">الغروب</span>
+  <div class="card" data-cat="sunset" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#880e4f,#e91e63)">🎨</div>
+    <div class="info">
+      <div class="name" data-ar="ألوان المغرب" data-fr="Couleurs du Maroc" data-en="Colors of Morocco">ألوان المغرب</div>
+      <span class="cat">غروب</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="port" data-title="قوارب الصيد" onclick="openLightbox(10)">
-    <div class="ph c11">⛵</div>
-    <div class="photo-overlay">
-      <div class="photo-title">قوارب الصيد</div>
-      <span class="photo-cat">الميناء</span>
+  <div class="card" data-cat="port" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#e65100,#ff9800)">⛵</div>
+    <div class="info">
+      <div class="name" data-ar="قوارب الصيد" data-fr="Bateaux de pêche" data-en="Fishing Boats">قوارب الصيد</div>
+      <span class="cat">ميناء</span>
     </div>
   </div>
 
-  <div class="photo-item" data-cat="beach" data-title="أمواج المتوسط" onclick="openLightbox(11)">
-    <div class="ph c12">🏖️</div>
-    <div class="photo-overlay">
-      <div class="photo-title">أمواج المتوسط</div>
-      <span class="photo-cat">الشاطئ</span>
+  <div class="card" data-cat="beach" onclick="openCard(this)">
+    <div class="ph" style="background:linear-gradient(135deg,#0d47a1,#1976d2)">🏖️</div>
+    <div class="info">
+      <div class="name" data-ar="أمواج المتوسط" data-fr="Vagues méditerranéennes" data-en="Mediterranean Waves">أمواج المتوسط</div>
+      <span class="cat">شاطئ</span>
     </div>
   </div>
 
-</div>
-
-<!-- LOAD MORE -->
-<div class="load-more-wrap">
-  <button class="load-more-btn" id="loadMoreBtn" id="lmore">تحميل المزيد من الصور</button>
 </div>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <div class="lightbox-ph" id="lightboxPh"></div>
-  <div class="lightbox-info">
-    <div class="lightbox-title" id="lightboxTitle"></div>
-    <div class="lightbox-cat" id="lightboxCat"></div>
-  </div>
-  <div class="lightbox-nav">
-    <button onclick="prevPhoto()">→ السابق</button>
-    <button onclick="nextPhoto()">التالي ←</button>
+<div class="lb-box" id="lbox">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <div id="lbcontent"></div>
+  <div class="lb-title" id="lbtitle"></div>
+  <div class="lb-nav">
+    <button onclick="prevCard()">→ السابق</button>
+    <button onclick="nextCard()">التالي ←</button>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <span>ksar sghir — القصر الصغير</span> • Bilal El Hichou • جميع الحقوق محفوظة
+  <div>
+    <a href="https://www.ksarsghir.com">ksarsghir.com</a>
+    <a href="https://store.ksarsghir.com">المتجر</a>
+    <a href="https://tourism.ksarsghir.com">السياحة</a>
+    <a href="https://wa.me/212708053745">تواصل</a>
+  </div>
+  <div class="fc"><span>Ksar Sghir Gallery</span> • Bilal El Hichou © 2026</div>
 </footer>
 
 <script>
-var currentIndex = 0;
-var photos = [];
-var activeFilter = 'all';
-
-function buildPhotos() {
-  photos = [];
-  var items = document.querySelectorAll('.photo-item');
-  items.forEach(function(item, i) {
-    photos.push({
-      index: i,
-      cat: item.getAttribute('data-cat'),
-      title: item.getAttribute('data-title'),
-      emoji: item.querySelector('.ph') ? item.querySelector('.ph').textContent.trim() : '📷',
-      color: item.querySelector('.ph') ? item.querySelector('.ph').className.replace('ph ', '') : 'c1'
-    });
-  });
-}
-
-function filterGallery(cat) {
-  activeFilter = cat;
-  var items = document.querySelectorAll('.photo-item');
-  var visible = 0;
-  items.forEach(function(item) {
-    if (cat === 'all' || item.getAttribute('data-cat') === cat) {
-      item.classList.remove('hidden');
-      visible++;
-    } else {
-      item.classList.add('hidden');
-    }
-  });
-  document.querySelectorAll('.filter-btn').forEach(function(btn) {
-    btn.classList.remove('active');
-  });
-  event.target.classList.add('active');
-  document.getElementById('photoCount').textContent = visible + ' صورة';
-}
-
-function openLightbox(index) {
-  currentIndex = index;
-  var p = photos[index];
-  var ph = document.getElementById('lightboxPh');
-  ph.className = 'lightbox-ph ' + p.color;
-  ph.textContent = p.emoji;
-  document.getElementById('lightboxTitle').textContent = p.title;
-  document.getElementById('lightboxCat').textContent = p.cat;
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function nextPhoto() {
-  currentIndex = (currentIndex + 1) % photos.length;
-  openLightbox(currentIndex);
-}
-
-function prevPhoto() {
-  currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-  openLightbox(currentIndex);
-}
-
-document.getElementById('lightbox').addEventListener('click', function(e) {
-  if (e.target === this) closeLightbox();
-});
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') nextPhoto();
-  if (e.key === 'ArrowRight') prevPhoto();
-});
-
-buildPhotos();
-
-// ═══ TRANSLATIONS ═══
 var curLang = 'ar';
+var curIdx = 0;
+var cards = [];
+
 var T = {
-  ar: {
-    dir: 'rtl',
-    lname: 'القصر الصغير',
-    lback: '← الرئيسية',
-    htitle: 'معرض <em>الصور</em>',
-    hdesc: 'بعدسة بلال الهيشو — القصر الصغير، المغرب',
-    lphoto: 'صورة',
-    fall: '🌟 الكل', fbeach: '🌊 الشاطئ', fsunset: '🌅 الغروب',
-    fnature: '🌿 الطبيعة', fnight: '🌙 الليل', fport: '⚓ الميناء',
-    lmore: 'تحميل المزيد من الصور',
-    photos: {
-      'غروب الشمس': 'غروب الشمس', 'الشاطئ': 'الشاطئ',
-      'الطبيعة': 'الطبيعة', 'الهلال والنجمة': 'الهلال والنجمة',
-      'ميناء الصيد': 'ميناء الصيد', 'الغروب من الأعلى': 'الغروب من الأعلى',
-      'الشاطئ في الفجر': 'الشاطئ في الفجر', 'الأزهار الصفراء': 'الأزهار الصفراء',
-      'المدينة ليلاً': 'المدينة ليلاً', 'ألوان المغرب': 'ألوان المغرب',
-      'قوارب الصيد': 'قوارب الصيد', 'أمواج المتوسط': 'أمواج المتوسط'
-    }
-  },
-  fr: {
-    dir: 'ltr',
-    lname: 'Ksar Sghir',
-    lback: '← Accueil',
-    htitle: 'Galerie <em>Photos</em>',
-    hdesc: 'Par Bilal El Hichou — Ksar Sghir, Maroc',
-    lphoto: 'photos',
-    fall: '🌟 Tout', fbeach: '🌊 Plage', fsunset: '🌅 Coucher',
-    fnature: '🌿 Nature', fnight: '🌙 Nuit', fport: '⚓ Port',
-    lmore: 'Charger plus de photos',
-    photos: {
-      'غروب الشمس': 'Coucher de soleil', 'الشاطئ': 'La plage',
-      'الطبيعة': 'Nature', 'الهلال والنجمة': "Le Croissant et l'Étoile",
-      'ميناء الصيد': 'Port de pêche', 'الغروب من الأعلى': 'Vue panoramique',
-      'الشاطئ في الفجر': "La plage à l'aube", 'الأزهار الصفراء': 'Fleurs jaunes',
-      'المدينة ليلاً': 'La ville la nuit', 'ألوان المغرب': 'Couleurs du Maroc',
-      'قوارب الصيد': 'Bateaux de pêche', 'أمواج المتوسط': 'Vagues méditerranéennes'
-    }
-  },
-  en: {
-    dir: 'ltr',
-    lname: 'Ksar Sghir',
-    lback: '← Home',
-    htitle: 'Photo <em>Gallery</em>',
-    hdesc: 'By Bilal El Hichou — Ksar Sghir, Morocco',
-    lphoto: 'photos',
-    fall: '🌟 All', fbeach: '🌊 Beach', fsunset: '🌅 Sunset',
-    fnature: '🌿 Nature', fnight: '🌙 Night', fport: '⚓ Port',
-    lmore: 'Load more photos',
-    photos: {
-      'غروب الشمس': 'Sunset', 'الشاطئ': 'Beach',
-      'الطبيعة': 'Nature', 'الهلال والنجمة': 'Crescent and Star',
-      'ميناء الصيد': 'Fishing Port', 'الغروب من الأعلى': 'Panoramic View',
-      'الشاطئ في الفجر': 'Beach at Dawn', 'الأزهار الصفراء': 'Yellow Flowers',
-      'المدينة ليلاً': 'City at Night', 'ألوان المغرب': 'Colors of Morocco',
-      'قوارب الصيد': 'Fishing Boats', 'أمواج المتوسط': 'Mediterranean Waves'
-    }
-  }
+  ar: { dir:'rtl', lname:'القصر الصغير', lback:'← الرئيسية',
+        htitle:'معرض <em>الصور</em>', hdesc:'بعدسة بلال الهيشو — القصر الصغير، المغرب',
+        fall:'🌟 الكل', fbeach:'🌊 الشاطئ', fsunset:'🌅 الغروب',
+        fnature:'🌿 الطبيعة', fnight:'🌙 الليل', fport:'⚓ الميناء' },
+  fr: { dir:'ltr', lname:'Ksar Sghir', lback:'← Accueil',
+        htitle:'Galerie <em>Photos</em>', hdesc:'Par Bilal El Hichou — Ksar Sghir, Maroc',
+        fall:'🌟 Tout', fbeach:'🌊 Plage', fsunset:'🌅 Coucher',
+        fnature:'🌿 Nature', fnight:'🌙 Nuit', fport:'⚓ Port' },
+  en: { dir:'ltr', lname:'Ksar Sghir', lback:'← Home',
+        htitle:'Photo <em>Gallery</em>', hdesc:'By Bilal El Hichou — Ksar Sghir, Morocco',
+        fall:'🌟 All', fbeach:'🌊 Beach', fsunset:'🌅 Sunset',
+        fnature:'🌿 Nature', fnight:'🌙 Night', fport:'⚓ Port' }
 };
 
 function setL(lang) {
@@ -573,42 +244,84 @@ function setL(lang) {
   var t = T[lang];
   document.documentElement.setAttribute('dir', t.dir);
   document.body.setAttribute('dir', t.dir);
-  // Update text elements
-  var ids = ['lname','lback','lphoto','fall','fbeach','fsunset','fnature','fnight','fport','lmore'];
-  ids.forEach(function(id) {
+  ['lname','lback','fall','fbeach','fsunset','fnature','fnight','fport'].forEach(function(id) {
     var el = document.getElementById(id);
-    if (el && t[id]) el.innerHTML = t[id];
+    if (el) el.innerHTML = t[id];
   });
-  // Update hero
-  var ht = document.getElementById('htitle');
-  if (ht) ht.innerHTML = t.htitle;
-  var hd = document.getElementById('hdesc');
-  if (hd) hd.innerHTML = t.hdesc;
-  // Update photo labels
-  document.querySelectorAll('.photo-title').forEach(function(el) {
-    var arText = el.getAttribute('data-ar') || el.textContent;
-    if (t.photos[arText]) el.textContent = t.photos[arText];
-    if (!el.getAttribute('data-ar')) el.setAttribute('data-ar', el.textContent);
+  document.getElementById('htitle').innerHTML = t.htitle;
+  document.getElementById('hdesc').innerHTML = t.hdesc;
+  // Update card names
+  document.querySelectorAll('.card .name').forEach(function(el) {
+    var val = el.getAttribute('data-' + lang);
+    if (val) el.textContent = val;
   });
-  // Update lang buttons
-  document.querySelectorAll('.lb2').forEach(function(b) {
+  // Update buttons
+  document.querySelectorAll('.lb').forEach(function(b) {
     b.classList.remove('on');
     if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
   });
-  try { localStorage.setItem('glang', lang); } catch(e) {}
+  try { localStorage.setItem('gl', lang); } catch(e) {}
 }
 
-// Init lang on load
-document.addEventListener('DOMContentLoaded', function() {
-  // Store original AR text for photos
-  document.querySelectorAll('.photo-title').forEach(function(el) {
-    el.setAttribute('data-ar', el.textContent);
+function filter(btn, cat) {
+  document.querySelectorAll('.fbtn').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  document.querySelectorAll('.card').forEach(function(c) {
+    c.classList.toggle('hidden', cat !== 'all' && c.getAttribute('data-cat') !== cat);
   });
-  var saved = 'ar';
-  try { saved = localStorage.getItem('glang') || 'ar'; } catch(e) {}
-  setL(saved);
+}
+
+function getCards() {
+  return Array.from(document.querySelectorAll('.card:not(.hidden)'));
+}
+
+function openCard(el) {
+  cards = getCards();
+  curIdx = cards.indexOf(el);
+  showCard(curIdx);
+}
+
+function showCard(idx) {
+  var el = cards[idx];
+  var img = el.querySelector('img');
+  var ph = el.querySelector('.ph');
+  var name = el.querySelector('.name');
+  var title = name ? (name.getAttribute('data-' + curLang) || name.textContent) : '';
+  var lbc = document.getElementById('lbcontent');
+  if (img) {
+    lbc.innerHTML = '<img src="' + img.src + '" alt="' + title + '"/>';
+  } else if (ph) {
+    lbc.innerHTML = '<div class="lb-ph">' + ph.innerHTML + '</div>';
+  }
+  document.getElementById('lbtitle').textContent = title;
+  document.getElementById('lbox').classList.add('on');
+  document.body.style.overflow = 'hidden';
+}
+
+function nextCard() { curIdx = (curIdx + 1) % cards.length; showCard(curIdx); }
+function prevCard() { curIdx = (curIdx - 1 + cards.length) % cards.length; showCard(curIdx); }
+
+function closeLb() {
+  document.getElementById('lbox').classList.remove('on');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('lbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLb();
 });
 
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') nextCard();
+  if (e.key === 'ArrowRight') prevCard();
+});
+
+// Init
+(function() {
+  var s = 'ar';
+  try { s = localStorage.getItem('gl') || 'ar'; } catch(e) {}
+  setL(s);
+})();
 </script>
 
 </body>
