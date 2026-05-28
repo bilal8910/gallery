@@ -268,6 +268,12 @@ footer span { color: #00b4d8; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-hero h1 { font-size: 22px; }
 }
+
+/* LANG SWITCHER */
+.lang-sw { display: flex; gap: 5px; }
+.lb2 { background: transparent; border: 1px solid rgba(0,180,216,0.3); color: #aaa; font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 10px; cursor: pointer; font-family: 'Tajawal',sans-serif; transition: all 0.2s; }
+.lb2:hover { border-color: #00b4d8; color: #00b4d8; }
+.lb2.on { background: #00b4d8; color: #fff; border-color: #00b4d8; }
 </style>
 </head>
 <body>
@@ -284,18 +290,18 @@ footer span { color: #00b4d8; }
 <!-- HERO -->
 <div class="gallery-hero">
   <h1>معرض <em>الصور</em></h1>
-  <p>بعدسة بلال الهيشو — القصر الصغير، المغرب</p>
-  <div class="photo-count" id="photoCount">12 صورة</div>
+  <p><span id="hdesc">بعدسة بلال الهيشو — القصر الصغير، المغرب</span></p>
+  <div class="photo-count" id="photoCount"><span id="lcount">12</span> <span id="lphoto">صورة</span></div>
 </div>
 
 <!-- FILTERS -->
 <div class="filters">
-  <button class="filter-btn active" onclick="filterGallery('all')">🌟 الكل</button>
-  <button class="filter-btn" onclick="filterGallery('beach')">🌊 الشاطئ</button>
-  <button class="filter-btn" onclick="filterGallery('sunset')">🌅 الغروب</button>
-  <button class="filter-btn" onclick="filterGallery('nature')">🌿 الطبيعة</button>
-  <button class="filter-btn" onclick="filterGallery('night')">🌙 الليل</button>
-  <button class="filter-btn" onclick="filterGallery('port')">⚓ الميناء</button>
+  <button class="filter-btn active" onclick="filterGallery('all')" id="fall">🌟 الكل</button>
+  <button class="filter-btn" onclick="filterGallery('beach')" id="fbeach">🌊 الشاطئ</button>
+  <button class="filter-btn" onclick="filterGallery('sunset')" id="fsunset">🌅 الغروب</button>
+  <button class="filter-btn" onclick="filterGallery('nature')" id="fnature">🌿 الطبيعة</button>
+  <button class="filter-btn" onclick="filterGallery('night')" id="fnight">🌙 الليل</button>
+  <button class="filter-btn" onclick="filterGallery('port')" id="fport">⚓ الميناء</button>
 </div>
 
 <!-- GALLERY -->
@@ -401,7 +407,7 @@ footer span { color: #00b4d8; }
 
 <!-- LOAD MORE -->
 <div class="load-more-wrap">
-  <button class="load-more-btn" id="loadMoreBtn">تحميل المزيد من الصور</button>
+  <button class="load-more-btn" id="loadMoreBtn" id="lmore">تحميل المزيد من الصور</button>
 </div>
 
 <!-- LIGHTBOX -->
@@ -499,6 +505,110 @@ document.addEventListener('keydown', function(e) {
 });
 
 buildPhotos();
+
+// ═══ TRANSLATIONS ═══
+var curLang = 'ar';
+var T = {
+  ar: {
+    dir: 'rtl',
+    lname: 'القصر الصغير',
+    lback: '← الرئيسية',
+    htitle: 'معرض <em>الصور</em>',
+    hdesc: 'بعدسة بلال الهيشو — القصر الصغير، المغرب',
+    lphoto: 'صورة',
+    fall: '🌟 الكل', fbeach: '🌊 الشاطئ', fsunset: '🌅 الغروب',
+    fnature: '🌿 الطبيعة', fnight: '🌙 الليل', fport: '⚓ الميناء',
+    lmore: 'تحميل المزيد من الصور',
+    photos: {
+      'غروب الشمس': 'غروب الشمس', 'الشاطئ': 'الشاطئ',
+      'الطبيعة': 'الطبيعة', 'الهلال والنجمة': 'الهلال والنجمة',
+      'ميناء الصيد': 'ميناء الصيد', 'الغروب من الأعلى': 'الغروب من الأعلى',
+      'الشاطئ في الفجر': 'الشاطئ في الفجر', 'الأزهار الصفراء': 'الأزهار الصفراء',
+      'المدينة ليلاً': 'المدينة ليلاً', 'ألوان المغرب': 'ألوان المغرب',
+      'قوارب الصيد': 'قوارب الصيد', 'أمواج المتوسط': 'أمواج المتوسط'
+    }
+  },
+  fr: {
+    dir: 'ltr',
+    lname: 'Ksar Sghir',
+    lback: '← Accueil',
+    htitle: 'Galerie <em>Photos</em>',
+    hdesc: 'Par Bilal El Hichou — Ksar Sghir, Maroc',
+    lphoto: 'photos',
+    fall: '🌟 Tout', fbeach: '🌊 Plage', fsunset: '🌅 Coucher',
+    fnature: '🌿 Nature', fnight: '🌙 Nuit', fport: '⚓ Port',
+    lmore: 'Charger plus de photos',
+    photos: {
+      'غروب الشمس': 'Coucher de soleil', 'الشاطئ': 'La plage',
+      'الطبيعة': 'Nature', 'الهلال والنجمة': "Le Croissant et l'Étoile",
+      'ميناء الصيد': 'Port de pêche', 'الغروب من الأعلى': 'Vue panoramique',
+      'الشاطئ في الفجر': "La plage à l'aube", 'الأزهار الصفراء': 'Fleurs jaunes',
+      'المدينة ليلاً': 'La ville la nuit', 'ألوان المغرب': 'Couleurs du Maroc',
+      'قوارب الصيد': 'Bateaux de pêche', 'أمواج المتوسط': 'Vagues méditerranéennes'
+    }
+  },
+  en: {
+    dir: 'ltr',
+    lname: 'Ksar Sghir',
+    lback: '← Home',
+    htitle: 'Photo <em>Gallery</em>',
+    hdesc: 'By Bilal El Hichou — Ksar Sghir, Morocco',
+    lphoto: 'photos',
+    fall: '🌟 All', fbeach: '🌊 Beach', fsunset: '🌅 Sunset',
+    fnature: '🌿 Nature', fnight: '🌙 Night', fport: '⚓ Port',
+    lmore: 'Load more photos',
+    photos: {
+      'غروب الشمس': 'Sunset', 'الشاطئ': 'Beach',
+      'الطبيعة': 'Nature', 'الهلال والنجمة': 'Crescent and Star',
+      'ميناء الصيد': 'Fishing Port', 'الغروب من الأعلى': 'Panoramic View',
+      'الشاطئ في الفجر': 'Beach at Dawn', 'الأزهار الصفراء': 'Yellow Flowers',
+      'المدينة ليلاً': 'City at Night', 'ألوان المغرب': 'Colors of Morocco',
+      'قوارب الصيد': 'Fishing Boats', 'أمواج المتوسط': 'Mediterranean Waves'
+    }
+  }
+};
+
+function setL(lang) {
+  curLang = lang;
+  var t = T[lang];
+  document.documentElement.setAttribute('dir', t.dir);
+  document.body.setAttribute('dir', t.dir);
+  // Update text elements
+  var ids = ['lname','lback','lphoto','fall','fbeach','fsunset','fnature','fnight','fport','lmore'];
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el && t[id]) el.innerHTML = t[id];
+  });
+  // Update hero
+  var ht = document.getElementById('htitle');
+  if (ht) ht.innerHTML = t.htitle;
+  var hd = document.getElementById('hdesc');
+  if (hd) hd.innerHTML = t.hdesc;
+  // Update photo labels
+  document.querySelectorAll('.photo-title').forEach(function(el) {
+    var arText = el.getAttribute('data-ar') || el.textContent;
+    if (t.photos[arText]) el.textContent = t.photos[arText];
+    if (!el.getAttribute('data-ar')) el.setAttribute('data-ar', el.textContent);
+  });
+  // Update lang buttons
+  document.querySelectorAll('.lb2').forEach(function(b) {
+    b.classList.remove('on');
+    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
+  });
+  try { localStorage.setItem('glang', lang); } catch(e) {}
+}
+
+// Init lang on load
+document.addEventListener('DOMContentLoaded', function() {
+  // Store original AR text for photos
+  document.querySelectorAll('.photo-title').forEach(function(el) {
+    el.setAttribute('data-ar', el.textContent);
+  });
+  var saved = 'ar';
+  try { saved = localStorage.getItem('glang') || 'ar'; } catch(e) {}
+  setL(saved);
+});
+
 </script>
 
 </body>
