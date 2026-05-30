@@ -64,6 +64,56 @@ footer a:hover { color:#00b4d8; }
   .grid { grid-template-columns:repeat(2,1fr); }
   .lang-sw { display:flex; }
 }
+
+/* WATERMARK */
+.lb-img-wrap { position:relative; display:inline-block; }
+.lb-img-wrap img { max-width:90vw; max-height:70vh; object-fit:contain; border-radius:6px; display:block; }
+.watermark {
+  position:absolute;
+  bottom:12px;
+  right:12px;
+  background:rgba(0,0,0,0.6);
+  color:#00b4d8;
+  font-size:12px;
+  font-weight:700;
+  padding:5px 12px;
+  border-radius:4px;
+  font-family:'Tajawal',sans-serif;
+  letter-spacing:0.5px;
+  pointer-events:none;
+  user-select:none;
+}
+
+/* DARK/LIGHT MODE */
+body.light-mode { background:#f0f4f8; color:#1a1a2e; }
+body.light-mode header { background:linear-gradient(135deg,#e8f4fd,#dbeafe); border-bottom:2px solid #023e8a; }
+body.light-mode .logo-ar { color:#023e8a; }
+body.light-mode .logo-en { color:#555; }
+body.light-mode .lb { border-color:rgba(2,62,138,0.3); color:#555; }
+body.light-mode .lb.on { background:#023e8a; color:#fff; }
+body.light-mode .back { color:#023e8a; border-color:rgba(2,62,138,0.3); }
+body.light-mode .hero { background:linear-gradient(160deg,#dbeafe,#bfdbfe,#dbeafe); }
+body.light-mode .hero h1 { color:#1a1a2e; }
+body.light-mode .hero h1 em { color:#023e8a; }
+body.light-mode .hero p { color:#1e40af; }
+body.light-mode .filters { background:#e8f4fd; border-color:rgba(2,62,138,0.15); }
+body.light-mode .fbtn { border-color:rgba(2,62,138,0.2); color:#555; }
+body.light-mode .fbtn.on { background:#023e8a; color:#fff; }
+body.light-mode .card { background:#fff; border-color:rgba(2,62,138,0.15); }
+body.light-mode .card:hover { border-color:#023e8a; }
+body.light-mode .card .info { background:linear-gradient(transparent,rgba(0,0,0,0.7)); }
+body.light-mode .lb-box { background:rgba(255,255,255,0.97); }
+body.light-mode .lb-title { color:#1a1a2e; }
+body.light-mode footer { background:#e8f4fd; border-color:#dbeafe; }
+body.light-mode footer a { color:#777; }
+body.light-mode footer a:hover { color:#023e8a; }
+body.light-mode .footer-copy { color:#777; }
+body.light-mode .footer-copy span { color:#023e8a; }
+
+.mode-btn { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:18px; width:34px; height:34px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s; }
+.mode-btn:hover { border-color:#00b4d8; color:#00b4d8; }
+body.light-mode .mode-btn { border-color:rgba(2,62,138,0.3); color:#555; }
+body.light-mode .mode-btn:hover { border-color:#023e8a; color:#023e8a; }
 </style>
 </head>
 <body>
@@ -74,6 +124,7 @@ footer a:hover { color:#00b4d8; }
     <span class="logo-en">KSAR SGHIR GALLERY</span>
   </a>
   <div class="hright">
+    <button class="mode-btn" onclick="toggleMode()" id="modeBtn" title="تبديل الوضع">🌙</button>
     <div class="lang-sw">
       <button class="lb on" onclick="setL('ar')">AR</button>
       <button class="lb" onclick="setL('fr')">FR</button>
@@ -255,33 +306,6 @@ function openCard(el) {
   showCard(curIdx);
 }
 
-function addWatermark(imgSrc, title, callback) {
-  var img = new Image();
-  img.crossOrigin = "anonymous";
-  img.onload = function() {
-    var canvas = document.createElement('canvas');
-    canvas.width = img.width;
-    canvas.height = img.height;
-    var ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0);
-    // Watermark background
-    var text = "© Bilal El Hichou | ksarsghir.com";
-    var fontSize = Math.max(16, img.width * 0.022);
-    ctx.font = "bold " + fontSize + "px Arial";
-    var tw = ctx.measureText(text).width;
-    var pad = fontSize * 0.6;
-    var x = img.width - tw - pad * 2;
-    var y = img.height - fontSize * 1.8;
-    ctx.fillStyle = "rgba(0,0,0,0.55)";
-    ctx.fillRect(x - pad, y - fontSize, tw + pad * 2, fontSize * 1.6);
-    ctx.fillStyle = "rgba(0,180,216,0.9)";
-    ctx.fillText(text, x, y);
-    callback(canvas.toDataURL('image/jpeg', 0.92));
-  };
-  img.onerror = function() { callback(imgSrc); };
-  img.src = imgSrc;
-}
-
 function showCard(idx) {
   var el = cards[idx];
   var img = el.querySelector('img');
@@ -293,10 +317,43 @@ function showCard(idx) {
   document.getElementById('lbox').classList.add('on');
   document.body.style.overflow = 'hidden';
   if (img) {
-    lbc.innerHTML = '<div style="color:#90e0ef;font-size:13px;padding:20px;">جاري التحميل...</div>';
-    addWatermark(img.src, title, function(src) {
-      lbc.innerHTML = '<img src="' + src + '" alt="' + title + '"/>';
-    });
+    // Use proxy to bypass CORS then draw watermark on canvas
+    var proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(img.src);
+    var i = new Image();
+    i.crossOrigin = 'anonymous';
+    i.onload = function() {
+      var c = document.createElement('canvas');
+      c.width = i.naturalWidth;
+      c.height = i.naturalHeight;
+      var ctx = c.getContext('2d');
+      ctx.drawImage(i, 0, 0);
+      // Draw watermark
+      var wm = '© Bilal El Hichou  |  ksarsghir.com';
+      var fs = Math.max(18, Math.floor(i.naturalWidth * 0.025));
+      ctx.font = 'bold ' + fs + 'px Arial';
+      var tw = ctx.measureText(wm).width;
+      var pad = fs * 0.7;
+      var x = i.naturalWidth - tw - pad * 2 - 10;
+      var y = i.naturalHeight - fs * 0.8 - 10;
+      // Background
+      ctx.fillStyle = 'rgba(0,0,0,0.6)';
+      ctx.beginPath();
+      ctx.roundRect(x - pad, y - fs, tw + pad * 2, fs * 1.7, 4);
+      ctx.fill();
+      // Text
+      ctx.fillStyle = '#00b4d8';
+      ctx.fillText(wm, x, y);
+      lbc.innerHTML = '<img src="' + c.toDataURL('image/jpeg', 0.92) + '" alt="' + title + '" style="max-width:90vw;max-height:70vh;object-fit:contain;border-radius:6px;display:block;"/>';
+    };
+    i.onerror = function() {
+      // Fallback: CSS watermark
+      lbc.innerHTML = '<div class="lb-img-wrap">' +
+        '<img src="' + img.src + '" alt="' + title + '"/>' +
+        '<div class="watermark">&#169; Bilal El Hichou | ksarsghir.com</div>' +
+        '</div>';
+    };
+    lbc.innerHTML = '<div style="color:#90e0ef;font-size:13px;padding:30px;text-align:center;">&#128247; جاري التحميل...</div>';
+    i.src = proxyUrl;
   } else if (ph) {
     lbc.innerHTML = '<div class="lb-ph">' + ph.innerHTML + '</div>';
   }
@@ -321,10 +378,31 @@ document.addEventListener('keydown', function(e) {
 });
 
 // Init
+function toggleMode() {
+  var body = document.body;
+  var btn = document.getElementById('modeBtn');
+  if (body.classList.contains('light-mode')) {
+    body.classList.remove('light-mode');
+    btn.textContent = '🌙';
+    try { localStorage.setItem('mode', 'dark'); } catch(e) {}
+  } else {
+    body.classList.add('light-mode');
+    btn.textContent = '☀️';
+    try { localStorage.setItem('mode', 'light'); } catch(e) {}
+  }
+}
+
 (function() {
   var s = 'ar';
   try { s = localStorage.getItem('gl') || 'ar'; } catch(e) {}
   setL(s);
+  var m = 'dark';
+  try { m = localStorage.getItem('mode') || 'dark'; } catch(e) {}
+  if (m === 'light') {
+    document.body.classList.add('light-mode');
+    var btn = document.getElementById('modeBtn');
+    if (btn) btn.textContent = '☀️';
+  }
 })();
 </script>
 
