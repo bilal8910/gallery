@@ -145,7 +145,7 @@ body.light-mode .mode-btn:hover { border-color:#023e8a; color:#023e8a; }
   <button class="fbtn" onclick="filter(this,'beach')" id="fbeach">🌊 الشاطئ</button>
   <button class="fbtn" onclick="filter(this,'sunset')" id="fsunset">🌅 الغروب</button>
   <button class="fbtn" onclick="filter(this,'nature')" id="fnature">🌿 الطبيعة</button>
-  <button class="fbtn" onclick="filter(this,'night')" id="fnight">🌙 الليل</button>
+  <button class="fbtn" onclick="filter(this,'city')" id="fcity">🏙️ المدينة</button>
   <button class="fbtn" onclick="filter(this,'port')" id="fport">⚓ الميناء</button>
 </div>
 
@@ -353,7 +353,7 @@ function setL(lang) {
   var t = T[lang];
   document.documentElement.setAttribute('dir', t.dir);
   document.body.setAttribute('dir', t.dir);
-  ['lname','lback','fall','fbeach','fsunset','fnature','fnight','fport'].forEach(function(id) {
+  ['lname','lback','fall','fbeach','fsunset','fnature','fcity','fport'].forEach(function(id) {
     var el = document.getElementById(id);
     if (el) el.innerHTML = t[id];
   });
@@ -375,9 +375,7 @@ function setL(lang) {
 function filter(btn, cat) {
   document.querySelectorAll('.fbtn').forEach(function(b){ b.classList.remove('on'); });
   btn.classList.add('on');
-  document.querySelectorAll('.card').forEach(function(c) {
-    c.classList.toggle('hidden', cat !== 'all' && c.getAttribute('data-cat') !== cat);
-  });
+  resetGallery(cat);
 }
 
 function getCards() {
