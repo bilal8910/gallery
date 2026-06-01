@@ -554,14 +554,7 @@ function resetGallery(cat) {
 
 // Override filter function
 var origFilter = typeof filter === 'function' ? filter : null;
-function filter(cat) {
-  // Update filter buttons
-  document.querySelectorAll('.fbtn').forEach(function(b){
-    b.classList.remove('on');
-  });
-  event.target.classList.add('on');
-  resetGallery(cat);
-}
+/* filter defined above */
 
 // Init on load
 document.addEventListener('DOMContentLoaded', function() {
@@ -636,14 +629,7 @@ function resetGallery(cat) {
 
 // Override filter function
 var origFilter = typeof filter === 'function' ? filter : null;
-function filter(cat) {
-  // Update filter buttons
-  document.querySelectorAll('.fbtn').forEach(function(b){
-    b.classList.remove('on');
-  });
-  event.target.classList.add('on');
-  resetGallery(cat);
-}
+/* filter defined above */
 
 // Init on load
 document.addEventListener('DOMContentLoaded', function() {
