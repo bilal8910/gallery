@@ -3,650 +3,359 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>معرض صور القصر الصغير — Photography Ksar Sghir | Bilal El Hichou</title>
-<meta name="description" content="معرض صور احترافية للقصر الصغير — 141 صورة من شواطئ، موانئ، غروب الشمس وطبيعة شمال المغرب. بعدسة بلال الهيشو — Ksar Sghir Lens."/>
-<meta name="keywords" content="صور القصر الصغير, photos ksar sghir, galerie ksar sghir, bilal el hichou, ksar sghir lens, شمال المغرب, nord maroc photography"/>
-<meta name="author" content="Bilal El Hichou — Ksar Sghir Lens"/>
-<meta name="robots" content="index, follow"/>
-<meta property="og:type" content="website"/>
+<title>معرض صور القصر الصغير | Ksar Sghir Gallery | Bilal El Hichou</title>
+<meta name="description" content="معرض صور احترافية للقصر الصغير — شواطئ، موانئ، غروب وطبيعة. بعدسة بلال الهيشو."/>
 <meta property="og:title" content="معرض صور القصر الصغير | Ksar Sghir Gallery"/>
-<meta property="og:description" content="141 صورة احترافية من القصر الصغير — بعدسة بلال الهيشو"/>
 <meta property="og:url" content="https://gallery.ksarsghir.com"/>
-<meta property="og:site_name" content="Ksar Sghir Gallery"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="معرض صور القصر الصغير"/>
 <link rel="canonical" href="https://gallery.ksarsghir.com"/>
-<meta name="description" content="معرض صور القصر الصغير الاحترافي — شواطئ، طبيعة، غروب الشمس، ميناء. Photography gallery of Ksar Sghir Morocco by Bilal El Hichou">
-<meta name="keywords" content="معرض صور القصر الصغير, ksar sghir gallery, photos maroc, plage ksar sghir, bilal el hichou photography">
-<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <style>
-
-:root {
-  --bg:#0a0f1a; --bg2:#16213e; --bg3:#1a2a40;
-  --text:#e0e0e0; --text2:#aaa; --text3:#666;
-  --border:rgba(0,180,216,0.15); --accent:#00b4d8;
-}
-body.light {
-  --bg:#f0f4f8; --bg2:#fff; --bg3:#e8edf5;
-  --text:#1a1a2e; --text2:#555; --text3:#999;
-  --border:rgba(0,180,216,0.2);
-}
-body { background:var(--bg); color:var(--text); transition:background 0.3s,color 0.3s; }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Tajawal', sans-serif; background: #0a0f1a; color: #fff; }
-
-/* HEADER */
-header {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  border-bottom: 2px solid #00b4d8;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.logo { line-height: 1.2; text-decoration: none; }
-.logo-ar { font-size: 18px; font-weight: 900; color: #00b4d8; display: block; }
-.logo-en { font-size: 9px; color: #888; letter-spacing: 3px; text-transform: uppercase; display: block; }
-.back-btn {
-  color: #00b4d8;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border: 1px solid rgba(0,180,216,0.3);
-  border-radius: 20px;
-  transition: all 0.2s;
-}
-.back-btn:hover { background: rgba(0,180,216,0.1); }
-
-/* HERO */
-.gallery-hero {
-  background: linear-gradient(160deg, #0d1b2a 0%, #1a3a5c 50%, #0d1b2a 100%);
-  padding: 40px 20px 35px;
-  text-align: center;
-  border-bottom: 1px solid rgba(0,180,216,0.15);
-}
-.gallery-hero h1 { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 8px; }
-.gallery-hero h1 em { color: #00b4d8; font-style: normal; }
-.gallery-hero p { color: #90e0ef; font-size: 13px; }
-.photo-count {
-  display: inline-block;
-  background: rgba(0,180,216,0.15);
-  border: 1px solid #00b4d8;
-  color: #00b4d8;
-  font-size: 11px;
-  padding: 4px 14px;
-  border-radius: 20px;
-  margin-top: 10px;
-  letter-spacing: 2px;
-}
-
-/* FILTERS */
-.filters {
-  display: flex;
-  gap: 8px;
-  padding: 20px;
-  overflow-x: auto;
-  background: #0d1b2a;
-  border-bottom: 1px solid rgba(0,180,216,0.1);
-  scrollbar-width: none;
-}
-.filters::-webkit-scrollbar { display: none; }
-.filter-btn {
-  background: transparent;
-  border: 1px solid rgba(0,180,216,0.2);
-  color: #aaa;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 7px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-family: 'Tajawal', sans-serif;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-.filter-btn:hover { border-color: #00b4d8; color: #00b4d8; }
-.filter-btn.active { background: #00b4d8; color: #fff; border-color: #00b4d8; }
-
-/* GALLERY GRID */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
-  padding: 4px;
-}
-
-.photo-item {
-  position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-  cursor: pointer;
-  background: #16213e;
-}
-
-.photo-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.photo-item:hover img { transform: scale(1.06); }
-
-.photo-item .ph {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-  transition: transform 0.4s ease;
-}
-.photo-item:hover .ph { transform: scale(1.06); }
-
-.photo-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 12px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.photo-item:hover .photo-overlay { opacity: 1; }
-.photo-title { color: #fff; font-size: 12px; font-weight: 700; }
-.photo-cat {
-  display: inline-block;
-  background: #00b4d8;
-  color: #fff;
-  font-size: 9px;
-  padding: 2px 8px;
-  border-radius: 10px;
-  margin-top: 4px;
-  font-weight: 600;
-}
-
-/* COLOR PLACEHOLDERS */
-.c1 { background: linear-gradient(135deg, #c0392b, #f39c12); }
-.c2 { background: linear-gradient(135deg, #023e8a, #0096c7); }
-.c3 { background: linear-gradient(135deg, #1b5e20, #4caf50); }
-.c4 { background: linear-gradient(135deg, #1a237e, #311b92); }
-.c5 { background: linear-gradient(135deg, #4a148c, #880e4f); }
-.c6 { background: linear-gradient(135deg, #bf360c, #ff6f00); }
-.c7 { background: linear-gradient(135deg, #006064, #00acc1); }
-.c8 { background: linear-gradient(135deg, #1b5e20, #558b2f); }
-.c9 { background: linear-gradient(135deg, #37474f, #546e7a); }
-.c10 { background: linear-gradient(135deg, #880e4f, #e91e63); }
-.c11 { background: linear-gradient(135deg, #e65100, #ff9800); }
-.c12 { background: linear-gradient(135deg, #0d47a1, #1976d2); }
-
-/* LIGHTBOX */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.95);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.lightbox.open { display: flex; }
-.lightbox-img {
-  max-width: 90vw;
-  max-height: 75vh;
-  object-fit: contain;
-  border-radius: 4px;
-}
-.lightbox-ph {
-  width: 80vw;
-  height: 60vh;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 80px;
-  border-radius: 8px;
-}
-.lightbox-info {
-  margin-top: 15px;
-  text-align: center;
-}
-.lightbox-title { font-size: 16px; font-weight: 700; color: #fff; }
-.lightbox-cat { color: #00b4d8; font-size: 12px; margin-top: 4px; }
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(255,255,255,0.1);
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.lightbox-nav {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-.lightbox-nav button {
-  background: rgba(0,180,216,0.2);
-  border: 1px solid #00b4d8;
-  color: #00b4d8;
-  padding: 8px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-family: 'Tajawal', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-}
-.lightbox-nav button:hover { background: #00b4d8; color: #fff; }
-
-/* LOAD MORE */
-.load-more-wrap { text-align: center; padding: 30px 20px; }
-.load-more-btn {
-  background: transparent;
-  border: 2px solid #00b4d8;
-  color: #00b4d8;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 12px 35px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-family: 'Tajawal', sans-serif;
-  transition: all 0.3s;
-}
-.load-more-btn:hover { background: #00b4d8; color: #fff; }
-
-/* HIDDEN */
-.hidden { display: none !important; }
-
-/* FOOTER */
-footer {
-  background: #060c14;
-  padding: 18px 20px;
-  text-align: center;
-  border-top: 1px solid #16213e;
-  font-size: 11px;
-  color: #555;
-}
-footer span { color: #00b4d8; }
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-hero h1 { font-size: 22px; }
-}
-
-/* LANG SWITCHER */
-.lang-sw { display: flex; gap: 5px; }
-.lb2 { background: transparent; border: 1px solid rgba(0,180,216,0.3); color: #aaa; font-size: 11px; font-weight: 700; padding: 4px 9px; border-radius: 10px; cursor: pointer; font-family: 'Tajawal',sans-serif; transition: all 0.2s; }
-.lb2:hover { border-color: #00b4d8; color: #00b4d8; }
-.lb2.on { background: #00b4d8; color: #fff; border-color: #00b4d8; }
-
-.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; transition:all 0.2s; }
-.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
-
+:root { --bg:#0a0f1a; --bg2:#16213e; --bg3:#1a2a40; --text:#e0e0e0; --text2:#aaa; --text3:#666; --border:rgba(0,180,216,0.15); --accent:#00b4d8; }
+body.light { --bg:#f0f4f8; --bg2:#fff; --bg3:#e8edf5; --text:#1a1a2e; --text2:#555; --text3:#999; --border:rgba(0,180,216,0.2); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:"Tajawal",sans-serif; background:var(--bg); color:var(--text); transition:background 0.3s,color 0.3s; }
+header { background:var(--bg2); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid var(--accent); position:sticky; top:0; z-index:200; }
+.logo { text-decoration:none; }
+.logo-ar { font-size:18px; font-weight:900; color:var(--accent); display:block; }
+.logo-en { font-size:9px; color:var(--text3); letter-spacing:3px; display:block; }
+.hright { display:flex; align-items:center; gap:8px; }
+.lang-sw { display:flex; gap:3px; }
+.lb { background:transparent; border:1px solid var(--border); color:var(--text2); font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:"Tajawal",sans-serif; transition:all 0.2s; }
+.lb.on { background:var(--accent); color:#fff; }
+.theme-btn { background:transparent; border:1px solid var(--border); color:var(--text2); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center; }
+nav { background:var(--bg2); border-bottom:1px solid var(--border); padding:0 15px; display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; position:sticky; top:60px; z-index:199; }
+nav::-webkit-scrollbar { display:none; }
+.nav-link { color:var(--text2); text-decoration:none; font-size:12px; font-weight:600; padding:10px 12px; white-space:nowrap; border-bottom:2px solid transparent; transition:all 0.2s; }
+.nav-link:hover,.nav-link.active { color:var(--accent); border-bottom-color:var(--accent); }
+.hero { background:linear-gradient(135deg,var(--bg2),var(--bg3)); padding:35px 20px 25px; text-align:center; border-bottom:1px solid var(--border); }
+.hero h1 { font-size:clamp(22px,5vw,34px); font-weight:900; color:var(--text); margin-bottom:6px; }
+.hero h1 em { color:var(--accent); font-style:normal; }
+.hero p { color:var(--text2); font-size:13px; }
+.hero-badge { display:inline-block; background:rgba(0,180,216,0.1); border:1px solid var(--border); color:var(--accent); font-size:11px; padding:4px 14px; border-radius:20px; margin-top:8px; }
+.filters { display:flex; gap:8px; padding:10px 15px; overflow-x:auto; background:var(--bg2); scrollbar-width:none; border-bottom:1px solid var(--border); position:sticky; top:108px; z-index:198; }
+.filters::-webkit-scrollbar { display:none; }
+.fbtn { background:transparent; border:1px solid var(--border); color:var(--text2); font-size:12px; font-weight:600; padding:6px 15px; border-radius:20px; cursor:pointer; white-space:nowrap; font-family:"Tajawal",sans-serif; transition:all 0.2s; }
+.fbtn.on,.fbtn:hover { background:var(--accent); color:#fff; border-color:var(--accent); }
+.gallery-wrap { max-width:1200px; margin:0 auto; padding:12px; }
+.gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; }
+.photo-item { aspect-ratio:1; overflow:hidden; border-radius:6px; cursor:pointer; background:var(--bg2); }
+.photo-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.3s; }
+.photo-item:hover img { transform:scale(1.05); }
+.load-more-wrap { text-align:center; padding:20px 15px; }
+.load-more-btn { background:var(--accent); color:#fff; border:none; padding:12px 35px; border-radius:25px; font-size:14px; font-weight:700; cursor:pointer; font-family:"Tajawal",sans-serif; transition:all 0.3s; }
+.load-more-btn:hover { background:#0096c7; transform:translateY(-2px); }
+.load-more-btn:disabled { background:var(--bg3); color:var(--text3); cursor:default; transform:none; }
+.count-info { font-size:12px; color:var(--text2); margin-top:8px; }
+.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.96); z-index:999; align-items:center; justify-content:center; flex-direction:column; }
+.lightbox.open { display:flex; }
+.lb-img { max-width:92vw; max-height:88vh; object-fit:contain; border-radius:8px; }
+.lb-close,.lb-prev,.lb-next { background:rgba(255,255,255,0.1); border:none; color:#fff; cursor:pointer; border-radius:50%; }
+.lb-close { position:absolute; top:12px; right:12px; font-size:18px; width:36px; height:36px; }
+.lb-prev { position:absolute; left:10px; top:50%; transform:translateY(-50%); font-size:26px; width:44px; height:44px; }
+.lb-next { position:absolute; right:10px; top:50%; transform:translateY(-50%); font-size:26px; width:44px; height:44px; }
+.lb-count { position:absolute; bottom:10px; left:50%; transform:translateX(-50%); color:rgba(255,255,255,0.5); font-size:12px; }
+footer { background:var(--bg2); padding:25px 20px 15px; border-top:1px solid var(--border); }
+.footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1100px; margin:0 auto 15px; }
+.footer-col h4 { font-size:13px; font-weight:700; color:var(--accent); margin-bottom:10px; }
+.footer-col a { display:block; color:var(--text3); text-decoration:none; font-size:12px; margin-bottom:6px; transition:color 0.2s; }
+.footer-col a:hover { color:var(--accent); }
+.footer-bottom { text-align:center; padding-top:15px; border-top:1px solid var(--border); font-size:11px; color:var(--text3); }
+.footer-bottom span { color:var(--accent); }
+@media(max-width:600px) { .gallery-grid { gap:3px; } .footer-grid { grid-template-columns:1fr 1fr; } }
 </style>
 </head>
 <body>
-
-<!-- HEADER -->
 <header>
   <a href="https://www.ksarsghir.com" class="logo">
     <span class="logo-ar" id="logo-ar">القصر الصغير</span>
-    <span class="logo-en">KSAR SGHIR • MAROC</span>
+    <span class="logo-en">KSAR SGHIR LENS</span>
   </a>
-  <div style="display:flex;align-items:center;gap:8px;">
-    <div style="display:flex;gap:3px;">
+  <div class="hright">
+    <div class="lang-sw">
       <button class="lb on" onclick="setLang('ar')">AR</button>
       <button class="lb" onclick="setLang('fr')">FR</button>
       <button class="lb" onclick="setLang('en')">EN</button>
     </div>
-    <button id="theme-btn" onclick="toggleTheme()" style="background:transparent;border:1px solid rgba(0,180,216,0.3);color:#aaa;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;">🌙</button>
-    <a href="https://www.ksarsghir.com" class="back-btn" id="lback">← الرئيسية</a>
+    <button class="theme-btn" onclick="toggleTheme()" id="theme-btn">🌙</button>
   </div>
 </header>
-<!-- NAV STICKY -->
-<nav style="background:#16213e;border-bottom:1px solid rgba(0,180,216,0.15);padding:0 15px;display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none;position:sticky;top:60px;z-index:199;">
-  <a href="https://www.ksarsghir.com" style="color:#aaa;text-decoration:none;font-size:12px;font-weight:600;padding:10px 12px;white-space:nowrap;border-bottom:2px solid transparent;">🏠 الرئيسية</a>
-  <a href="https://tourism.ksarsghir.com" style="color:#aaa;text-decoration:none;font-size:12px;font-weight:600;padding:10px 12px;white-space:nowrap;border-bottom:2px solid transparent;">🗺️ السياحة</a>
-  <a href="https://gallery.ksarsghir.com" style="color:#00b4d8;text-decoration:none;font-size:12px;font-weight:600;padding:10px 12px;white-space:nowrap;border-bottom:2px solid #00b4d8;">📸 المعرض</a>
-  <a href="https://blog.ksarsghir.com" style="color:#aaa;text-decoration:none;font-size:12px;font-weight:600;padding:10px 12px;white-space:nowrap;border-bottom:2px solid transparent;">✍️ المدونة</a>
-  <a href="https://store.ksarsghir.com" style="color:#aaa;text-decoration:none;font-size:12px;font-weight:600;padding:10px 12px;white-space:nowrap;border-bottom:2px solid transparent;">🛒 المتجر</a>
-  <a href="https://www.ksarsghir.com/advertise.html" style="color:#aaa;text-decoration:none;font-size:12px;font-weight:600;padding:10px 12px;white-space:nowrap;border-bottom:2px solid transparent;">📢 إعلن معنا</a>
-  <a href="https://meteo.ksarsghir.com" style="color:#aaa;text-decoration:none;font-size:12px;font-weight:600;padding:10px 12px;white-space:nowrap;border-bottom:2px solid transparent;">🌤️ الطقس</a>
-  <a href="https://salat.ksarsghir.com" style="color:#aaa;text-decoration:none;font-size:12px;font-weight:600;padding:10px 12px;white-space:nowrap;border-bottom:2px solid transparent;">🕌 الصلاة</a>
+<nav>
+  <a href="https://www.ksarsghir.com" class="nav-link" id="n1">🏠 الرئيسية</a>
+  <a href="https://tourism.ksarsghir.com" class="nav-link" id="n2">🗺️ السياحة</a>
+  <a href="https://gallery.ksarsghir.com" class="nav-link active" id="n3">📸 المعرض</a>
+  <a href="https://blog.ksarsghir.com" class="nav-link" id="n4">✍️ المدونة</a>
+  <a href="https://store.ksarsghir.com" class="nav-link" id="n5">🛒 المتجر</a>
+  <a href="https://www.ksarsghir.com/advertise.html" class="nav-link" id="n6">📢 إعلن معنا</a>
+  <a href="https://meteo.ksarsghir.com" class="nav-link" id="n7">🌤️ الطقس</a>
+  <a href="https://salat.ksarsghir.com" class="nav-link" id="n8">🕌 الصلاة</a>
 </nav>
-
-
-<!-- HERO -->
-<div class="gallery-hero">
-  <h1>معرض <em>الصور</em></h1>
-  <p><span id="hdesc">بعدسة بلال الهيشو — القصر الصغير، المغرب</span></p>
-  <div class="photo-count" id="photoCount"><span id="lcount">12</span> <span id="lphoto">صورة</span></div>
+<div class="hero">
+  <h1 id="htitle">معرض <em>الصور</em></h1>
+  <p id="hdesc">بعدسة بلال الهيشو — القصر الصغير، المغرب</p>
+  <span class="hero-badge" id="lbadge">Bilal El Hichou Photography</span>
 </div>
-
-<!-- FILTERS -->
 <div class="filters">
-  <button class="filter-btn active" onclick="filterGallery(\'all\')" data-filter="all" id="fall">🌟 الكل</button>
-  <button class="filter-btn" onclick="filterGallery(\'beach\')" data-filter="beach" id="fbeach">🌊 الشاطئ</button>
-  <button class="filter-btn" onclick="filterGallery(\'sunset\')" data-filter="sunset" id="fsunset">🌅 الغروب</button>
-  <button class="filter-btn" onclick="filterGallery(\'nature\')" data-filter="nature" id="fnature">🌿 الطبيعة</button>
-  <button class="filter-btn" onclick="filterGallery(\'night\')" data-filter="night" id="fnight">🌙 الليل</button>
-  <button class="filter-btn" onclick="filterGallery(\'port\')" data-filter="port" id="fport">⚓ الميناء</button>
+  <button class="fbtn on" onclick="setFilter('all',this)" id="fall">🌟 الكل</button>
+  <button class="fbtn" onclick="setFilter('beach',this)" id="fbeach">🌊 الشاطئ</button>
+  <button class="fbtn" onclick="setFilter('sunset',this)" id="fsunset">🌅 الغروب</button>
+  <button class="fbtn" onclick="setFilter('nature',this)" id="fnature">🌿 الطبيعة</button>
+  <button class="fbtn" onclick="setFilter('port',this)" id="fport">⚓ الميناء</button>
+  <button class="fbtn" onclick="setFilter('city',this)" id="fcity">🏙️ المدينة</button>
 </div>
-
-<!-- GALLERY -->
-<div class="gallery-grid" id="galleryGrid"></div>
-
-<!-- LOAD MORE -->
-<div class="load-more-wrap">
-  <button class="load-more-btn" id="loadMoreBtn" id="lmore">تحميل المزيد من الصور</button>
-</div>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <div class="lightbox-ph" id="lightboxPh"></div>
-  <div class="lightbox-info">
-    <div class="lightbox-title" id="lightboxTitle"></div>
-    <div class="lightbox-cat" id="lightboxCat"></div>
-  </div>
-  <div class="lightbox-nav">
-    <button onclick="prevPhoto()">→ السابق</button>
-    <button onclick="nextPhoto()">التالي ←</button>
+<div class="gallery-wrap">
+  <div class="gallery-grid" id="gallery-grid"></div>
+  <div class="load-more-wrap">
+    <button class="load-more-btn" id="load-more-btn" onclick="loadMore()">تحميل المزيد</button>
+    <div class="count-info" id="count-info"></div>
   </div>
 </div>
-
-<!-- FOOTER -->
-<footer style="background:#060c14;padding:25px 20px 15px;border-top:1px solid #16213e;">
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto 15px;">
-    <div>
-      <h4 style="font-size:13px;font-weight:700;color:#00b4d8;margin-bottom:10px;">🗺️ السياحة</h4>
-      <a href="https://tourism.ksarsghir.com/plage.html" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">شاطئ القصر الصغير</a>
-      <a href="https://tourism.ksarsghir.com/belyounech.html" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">قرية بليونش</a>
-      <a href="https://tourism.ksarsghir.com/port.html" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">ميناء الصيد</a>
-      <a href="https://tourism.ksarsghir.com/tangermed.html" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">طنجة المتوسط</a>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4 id="fc1">🗺️ السياحة</h4>
+      <a href="https://tourism.ksarsghir.com/plage.html" id="fl1">شاطئ القصر الصغير</a>
+      <a href="https://tourism.ksarsghir.com/belyounech.html" id="fl2">قرية بليونش</a>
+      <a href="https://tourism.ksarsghir.com/port.html" id="fl3">ميناء الصيد</a>
+      <a href="https://tourism.ksarsghir.com/tangermed.html" id="fl4">طنجة المتوسط</a>
     </div>
-    <div>
-      <h4 style="font-size:13px;font-weight:700;color:#00b4d8;margin-bottom:10px;">🔗 المواقع</h4>
-      <a href="https://www.ksarsghir.com" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">الرئيسية</a>
-      <a href="https://blog.ksarsghir.com" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">المدونة</a>
-      <a href="https://store.ksarsghir.com" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">المتجر</a>
-      <a href="https://meteo.ksarsghir.com" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">الطقس والبحر</a>
-      <a href="https://salat.ksarsghir.com" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">مواقيت الصلاة</a>
+    <div class="footer-col">
+      <h4 id="fc2">🔗 المواقع</h4>
+      <a href="https://www.ksarsghir.com" id="fl5">الرئيسية</a>
+      <a href="https://blog.ksarsghir.com" id="fl6">المدونة</a>
+      <a href="https://store.ksarsghir.com" id="fl7">المتجر</a>
+      <a href="https://meteo.ksarsghir.com" id="fl8">الطقس والبحر</a>
     </div>
-    <div>
-      <h4 style="font-size:13px;font-weight:700;color:#00b4d8;margin-bottom:10px;">📄 معلومات</h4>
-      <a href="https://www.ksarsghir.com/about.html" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">من أنا</a>
-      <a href="https://www.ksarsghir.com/advertise.html" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">إعلن معنا</a>
-      <a href="https://www.ksarsghir.com/privacy.html" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">سياسة الخصوصية</a>
-      <a href="https://wa.me/212708053745" style="display:block;color:#555;text-decoration:none;font-size:12px;margin-bottom:6px;">تواصل معنا</a>
+    <div class="footer-col">
+      <h4 id="fc3">📄 معلومات</h4>
+      <a href="https://www.ksarsghir.com/about.html" id="fl9">من أنا</a>
+      <a href="https://www.ksarsghir.com/advertise.html" id="fl10">إعلن معنا</a>
+      <a href="https://www.ksarsghir.com/privacy.html" id="fl11">سياسة الخصوصية</a>
+      <a href="https://wa.me/212708053745" id="fl12">تواصل معنا</a>
     </div>
   </div>
-  <div style="text-align:center;padding-top:15px;border-top:1px solid #16213e;font-size:11px;color:#555;">
-    © 2026 <span style="color:#00b4d8;">Ksar Sghir Gallery</span> • Bilal El Hichou — Ksar Sghir Lens
-  </div>
+  <div class="footer-bottom">© 2026 <span>Ksar Sghir Gallery</span> • Bilal El Hichou</div>
 </footer>
-
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLB()">✕</button>
+  <button class="lb-prev" onclick="prevLB()">‹</button>
+  <img class="lb-img" id="lb-img" src="" alt="Ksar Sghir"/>
+  <button class="lb-next" onclick="nextLB()">›</button>
+  <div class="lb-count" id="lb-count"></div>
+</div>
 <script>
 var BASE = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/";
 var allPhotos = [
   ["AVvXsEjxN43xDPVB6q6YXuyWZ12EuTa9EAEUPBnaPKE2zSd5cddk8wX0MClkY9f6T4AwHSbgvaSAcrSfq6VVuAMups3HqsGmvgY47Pz5lnKV_Le9Adj9qzWOmYU9dBzPqV1b1hbUhGd1nENG--zXuZCFWAvlrg-EC2TgXS62yVv2e4ny141qKGmLuBONGnPc3K4","7913.jpg","nature"],
-  ["AVvXsEhCM0r4yacJJuYZRFni3e0bve2aDtcXfymD4uG-fODIkPIfTXePaQyVEofRHRPshNJi2bTQdxq5V6aUaF1htetyDthVxt6-_mmeLP7oPVUhkfxrrOl3556GsYAxBJCEuYto9oePnlswU5GcLHl-UZkq7lKrKs_GajA0TDNyCdQRg5HWfrHgjqJjnjVy8eE","7956.png","beach"],
-  ["AVvXsEgWT0bD1AvC7-640LvprewobT2nGtT_IaxBdubUswt6LuQXpSIqaH229pZCLNTU4HZl_m388vHdmq_ph45XxzqoVyU1bhYfJ20scagE1eJiU8xtYbYTTTf8e12yir-3oLY1ha05nPyOVOYq1ZD3O-sYPLQ47_1XCHPE6LlaADxvyfap4_IL7FKjdiBAcBU","7964.jpg","port"],
-  ["AVvXsEjla9apDn9aK2ghcDM2Mfil1gKoO7hQHCpZTY4C5uiUytEOu5KEG8BEOd8Mm3NRdpdSsuHU9108ULuzu0yV6EPNQTGa1kRod6hlKl0lHGZBb8iDRZetVhMXNPlK-E4znabvV6qwDpG8SfRjXT8V5ogP5EDaPGiPFnx4pKltG8_LviHkUPZQG4_mBNXq9XI","7883.png","sunset"],
-  ["AVvXsEhcqb-abHAyM99WR9vG-FcD9ox536nW_uUGiGwXbCjvad8N4lsQK1jT87EjE0TXPG3jE4QomAieUyV8w3E-IZvgfNMerxB759AIKOIZQ9nb9mlUdR0ictr1XaTxurRELCO8Og8vzRF9ebZ-AXaGeRZ-CbVEJXDylWgMmMm51m3pzpJpUVy4DTrDofP3NFY","7952.jpg","city"],
-  ["AVvXsEjAW2QOwDlNTzJtio_seJpxA4nkkLjB4IKWN9SEphoTOPHEEu5LLTz6bOQi3YwfxtzmKJnj1vSrCYaNe87ZzpvLitETx18gpae3RXHbQv52yBMbjcyXhMxp3LvYDxZnWkBE7V9etbrByZbFzX6REcsCZB4JaswEykvko6WOqzyutHbjaju2UvuPbAtklSU","7884.png","nature"],
-  ["AVvXsEhPhnYoMuVnPpubzyZ-KD1uY8Erz2b4OjfwXX6ApHSFVKe95lld_KPD1kwmJfwSZT1IhGDMmLoXBj5sRAZspLyRrLCtZmfw9eqpp8JssvLZJQcdNigr4LLm6Mx9DE_BAuWCE4mRHsqftw8R1YEWEOEQZDKxeBLUb5WnoWB4n6yU7LsI40MHa_c6DgqZ9Pg","7953.png","beach"],
-  ["AVvXsEguQEDPv6Xfl6Qv2TJSDA_IVjzkZAcBMP3OndXHGlX_2hUmelCkNjEw1ce0AI9PXDI2GrokoK9z6xnNxRFmNQmB_HCjluSVQ2fqOWSKkZ5TKZ9YCL65oGxBgkJE390rR7bdpIZ6PsK891_PerWLlGTEhZpOt8ZeJT0RERl9X3Wni4jqf9M8dBdlFVQwjbM","7882.png","port"],
-  ["AVvXsEhnFBn57GEx_0-LyOV5tc7Sx2M0cEgrWJIbDZqAyqIFVg94qXQ5oSLAXjxOa0tupmq3qtRBRuzbDVvebWxmKge7wFwiQwi4qLX8Q2Wy1zcTOg0tMLGg2tQfr7dVd4yAnbtmPQiEluKjcQgatpS-OO2Icih_drcipU3H5GAV3WqOvGQ63AW9Zdly1xJ1XAs","7963.png","sunset"],
-  ["AVvXsEgPSZgDcf7k-LI7U2aQM45NuKoHvx_Bok5dEGmIZ5U0LL3ivlb3ql9PGO4WfCrOSBOCrFqAl2jfOCsSqcUO-1KRQE4WvTkJlGXpHd2DFSNmAte2vmjpSLAcn2Jf74JlUe1Sv1if1zIPHsMTWBmo4_j_HQiaI6EvWzpYrcoQYOGcWt91Ysi173ma16FZTcg","7872.jpg","city"],
-  ["AVvXsEi5w9Sf_gSI7Oj7LzA9Y8PBHMtSsBX4Zm3KGONzllRNiOwM1rbbDTPACFOxoJn_-ZdJqfTJQnSMTwc4sKjgFgJ4JuHALX3aVHK3A6x6D9t3lnlZbxZgvDDJeyKecMbJB2ZNc_ZLY6NZ0PsLL3taNsVG2Vi6REkpCNOau4S6jgYh_VYbeo-NZ-Rms8LAQ7o","7955.png","nature"],
-  ["AVvXsEiBXU6Zz-ybZgXzYgZvaIVasLrcpWZNESs9d74lhblBigp-1JxKKAjYOT8-_XJeJWBdiU4PXGIJwfE_M-WVsVBTScqIKA_l0uatIgR0oAdsNwNAIxkuWDaXQxxYfplOLqV82lGw_Sw2rL2LBxyxaDIOc9pdCdael4dQAMMLfJCVgpwQPBVp7oOCnMhmhKA","7873.jpg","beach"],
-  ["AVvXsEgKG9qD5hn_Ojnt4WpxgVVw_5k5LadxUyEs26RNbKYVpuIfgSikYPSM8MOD_M3BDgXXWAOAn-GWaGN8QAFtpKa_-10le72rt2jTcwkoON37OtpkzeTj3t1GJ9e4Q0oCgzxgSo1oOGACZNkjsIQkHIFKvWWgeMwlrjnNIuOBgGh3mVU8K9CW_HtLPmhyelo","7941.jpg","port"],
-  ["AVvXsEicm-GCUpWm_0H_Y1NXmwiIrZr3n-4fCKIW-Kd_OtSKT7A03vljXPmnpWd_5KAKnNvtwFUp1Y6ULqMK0sbs8xLWQ-CRCkM5_7KGKMH2_P0YPEv6gUBViHU-bpQH7LCKnQVi0GhMxGRuw9lRe55Ffn2wT38HxAU8AZrb3xt7vtpsYJUSn7s3feKK_s3DeOk","7875.png","sunset"],
-  ["AVvXsEhbIpuBb8WSITNCVLPrYsZ7DzfZTLWPftaZjrKiHokGi3E5h5yH-LbBweGNUs09v6EmWL8i-R51QcKPphKoZwCqt_JdXKKmwzQxa8AzhubtN1bhEIlwihfITMTnSh2ecre5hbHRLbY-un2UnxgdMOaMrTA06uXRbGpqFKt5wY1UruT83uO8iAQDYks3kYw","7946.jpg","city"],
-  ["AVvXsEheAUoVwJvHY-vnw0IpM48QWbb1BPIMdSuTyYkKXiPSJGjOWlriRZ5QXnjwVbt4bpkh2SQNMZSTUU4zyZYYixlKEmq621a-8iAHuo5w9gStPNz3M6ZDnzb8aDOt2pmaqGo5MOQ_xX9o_0RnC9ZyGcVos_cR51-h5i3cxSm5rl85yf3MtXwdA5wiRPqyH3A","7870.jpg","nature"],
-  ["AVvXsEiy4u5c5NVBssMxaQsYGVnWMfe6c3a20phgmCc-rHy5FrsSXLoc3V_PKOk59-3gdTTekH9Stq3XW7cPMXotyU0rBt58vcCQ94LnhRfy7KCzunPlEhM2lliiTyoKtBS_zvJ1h-HNfToXBV_tNIuxemDkv9vYu8dGhnOpe5PhpMqM87VWrMYNcDk09SregSs","7958.png","beach"],
-  ["AVvXsEhWaSyn1FVYLSVH_iT7-MWEmxayR-jjogVbPN-_RLSkmLDK994nUvMQj2cWrqX2Ev0oFRfuJdmIjXgpRBbknj0GMaWV9xn4yzLVRvwxca1FwNC3cdGOQBNnyDFQohGG4nZifwUb4Uk2luEaRrNJM6J70wLHiyKkaDVEsRmn1sZc9Wxzl7d-Fvgs7epewyo","7947.png","port"],
+  ["AVvXsEgWT0bD1AvC7-640LvprewobT2nGtT_IaxBdubUswt6LuQXpSIqaH229pZCLNTU4HZl_m388vHdmq_ph45XxzqoVyU1bhYfJ20scagE1eJiU8xtYbYTTTf8e12yir-3oLY1ha05nPyOVOYq1ZD3O-sYPLQ47_1XCHPE6LlaADxvyfap4_IL7FKjdiBAcBU","7964.jpg","beach"],
+  ["AVvXsEhcqb-abHAyM99WR9vG-FcD9ox536nW_uUGiGwXbCjvad8N4lsQK1jT87EjE0TXPG3jE4QomAieUyV8w3E-IZvgfNMerxB759AIKOIZQ9nb9mlUdR0ictr1XaTxurRELCO8Og8vzRF9ebZ-AXaGeRZ-CbVEJXDylWgMmMm51m3pzpJpUVy4DTrDofP3NFY","7952.jpg","port"],
+  ["AVvXsEgPSZgDcf7k-LI7U2aQM45NuKoHvx_Bok5dEGmIZ5U0LL3ivlb3ql9PGO4WfCrOSBOCrFqAl2jfOCsSqcUO-1KRQE4WvTkJlGXpHd2DFSNmAte2vmjpSLAcn2Jf74JlUe1Sv1if1zIPHsMTWBmo4_j_HQiaI6EvWzpYrcoQYOGcWt91Ysi173ma16FZTcg","7872.jpg","sunset"],
+  ["AVvXsEiBXU6Zz-ybZgXzYgZvaIVasLrcpWZNESs9d74lhblBigp-1JxKKAjYOT8-_XJeJWBdiU4PXGIJwfE_M-WVsVBTScqIKA_l0uatIgR0oAdsNwNAIxkuWDaXQxxYfplOLqV82lGw_Sw2rL2LBxyxaDIOc9pdCdael4dQAMMLfJCVgpwQPBVp7oOCnMhmhKA","7873.jpg","city"],
+  ["AVvXsEgKG9qD5hn_Ojnt4WpxgVVw_5k5LadxUyEs26RNbKYVpuIfgSikYPSM8MOD_M3BDgXXWAOAn-GWaGN8QAFtpKa_-10le72rt2jTcwkoON37OtpkzeTj3t1GJ9e4Q0oCgzxgSo1oOGACZNkjsIQkHIFKvWWgeMwlrjnNIuOBgGh3mVU8K9CW_HtLPmhyelo","7941.jpg","nature"],
+  ["AVvXsEhbIpuBb8WSITNCVLPrYsZ7DzfZTLWPftaZjrKiHokGi3E5h5yH-LbBweGNUs09v6EmWL8i-R51QcKPphKoZwCqt_JdXKKmwzQxa8AzhubtN1bhEIlwihfITMTnSh2ecre5hbHRLbY-un2UnxgdMOaMrTA06uXRbGpqFKt5wY1UruT83uO8iAQDYks3kYw","7946.jpg","beach"],
+  ["AVvXsEheAUoVwJvHY-vnw0IpM48QWbb1BPIMdSuTyYkKXiPSJGjOWlriRZ5QXnjwVbt4bpkh2SQNMZSTUU4zyZYYixlKEmq621a-8iAHuo5w9gStPNz3M6ZDnzb8aDOt2pmaqGo5MOQ_xX9o_0RnC9ZyGcVos_cR51-h5i3cxSm5rl85yf3MtXwdA5wiRPqyH3A","7870.jpg","port"],
   ["AVvXsEihXYGrdW3uUW4yBytoRp5w0peuCYEKzTKnifGb3tExOquaxWahnjuIEeMwDB9lQ4iXEhUa5LK26_Bd-bgJYcGxx1R2I17LlJcRW5Qy-hDZDKmQgdJj3viCSCwYb_29FRvGTM8i2jm32S3V3NgYA3LlXiiC1HHFV6hWUTl6ri9qoZeFuekVyf4zn_nEY3s","7829.jpg","sunset"],
   ["AVvXsEjdDbCNDGpQ_KSbXbuKBIQtXPSwJfFdm3XNPTiySG7PggRcA7m1A9lZsTu70LvPsAG2RU0JrjRgFUNrbQyYhfNjXzZQh7eXsdt_vJ7IkAmPVk7MB_DkaqroyjLDA7_k7By5K64AnXrZ8Nk9ICqw7pRtlsAFrirypganeKepOGMH2foyBrJRkFIBXoYJFWs","7874.jpg","city"],
-  ["AVvXsEhmdw-EOXSoXPEPqdAIpPsvXtGefhQ32_6E2bIS33X7uogm6Nh9smtAWru4UxzQ5qKKM1qkxLWbVlQjthf3g_V5e76oA39ZkVpEB3F0bObymB9oobWSnQ1h8X3bxzbqS0YmrwTp1h04OZz191P3-dOfE5-NPYCqtcySlS3Atz1D2YroagX8JDsR9K4OynM","7945.png","nature"],
-  ["AVvXsEifnBotYH0ONYqqRcO5GJFWKurK5aur_PJbaNJ_y61Gd8Zvk_ExBKAkVBptr4ZSS8uLNyLFlH6eI0W_37QMcftwO31DVg6S-l_taVtA3F1xo7RIxa7Q9-7SZTnQ87UKtayyTQZ6U-XFeQGgDxRhGqpd0qJn_gCstAEKYaxWC6d_Hzd9DgkYXNBSVNYhEE8","7940.png","beach"],
-  ["AVvXsEhCggpxNnZr-Phu6k7r832n_XehABTJ4AJDJoQIlu32_S-V43WLHdCMkVbf0QmoMDVnC1wANW_gmRHb4zWhbs6MFFzqpe9nZrK_NxHYokGIHwciEq_nW7pkCFmobmlTYBSv9AvD_aYigkH2XkV2IlyKzCgC8oLYQKUHsAa-UDBMuffccux_9ys_Qt83wD4","7866.jpg","port"],
-  ["AVvXsEhqFk1LivRZm7xXrn9QSuqgGGr26IRUztp0fz_cqrwNY6BqPg1jOqEDzan20_1xA49mN33z5I5563niRaWdP1WMO3NZZQSyKlDHAInS09J-8-aQ6E-umgrsESymiFSgp2a-UjzJl-ejoIVrFI2Xp_ryQm562WTYpPZT_J4gsOAVPWCSiHe4mDAKazTL5Dg","7939.jpg","sunset"],
-  ["AVvXsEjtp5uz7Orji5JITiVWXHpM9yIhI-eRKSlLkHmsC_KeE-mbiqtEQBny1AfbDFCwfLGtwjhR_OzTPm6PgF7aDJ0RfV9lL6G_Rw5PKOhQ-ya8UIUWeCBMO0Sh5s2bAZoW6SvQNrW46lnzP3GePfjWfGcZXKdfEJZ5DA5UNhlVqbxIM4BEyzhXfgXj7IphWiQ","7949.jpg","city"],
-  ["AVvXsEh9oGNGbmtAwcoY-lv8dcIxxMpdOE8a8G__O1TscH9s6YlpBjf-QqCCMlqqlGsn6355kcctAiSrMUUaUMLuS--NX9xBg59PcisVS8abNhXCpUDnUtYTQz_P4gO-NFL47msIJTvZFJ9GoUNyTodRY7JxkziBF3tZilHxnAdvOn2ZBtwxBgaC4ZpfOlE9Trg","7865.jpg","nature"],
-  ["AVvXsEgcScAuYtFKbwFaOG1IwPzmC9BtvYSTzPR4FtK06yYXk-PjvaNKeg1F1aLn70lJMWD7Zsz-gMknDIdGSmE8cl9KBwy5v_IaZXHjvaCzHYy7FxcnYoblt9lL8X6DtjyuU3w1UMktC9MtFo3oYa62kaTtQ1U0cft1GyLRVD-LVsG82lc5iEBk4J9kjxHE1w8","7950.png","beach"],
-  ["AVvXsEgi2iKeb2DZmTfsMw0eGA4zhCT49aYk1vYA8lF-D-n3pp26NovKBt-gE_4_CaNn9QGuVg2kmjxr8OBZqPIBN8fGJ5savPk3Ogc-0dcSSTAEgI0dUEpIJ1ryPTkh8o9_y2QR5EEBkaL6TruNZ3y_okUzbmuhV4V-Xed86_4yp9c7U47EowIGOukl2zKcwHI","7859.png","port"],
-  ["AVvXsEiQ_bWscMarFl-vHc6p6UockFgOfJ56rMRyEOtIQmzNmdlAtltLOvJw1ZZOYZHiFCDE82AjEVbtdVVQwfX1tf7p7VS282YZyhjLMaasul2DAKkU4cs2ga_hOP7sRoEa63u0aIKh2AVg-rgLhPRzErbOg4VRBLB1qFxE6AVREDFlY-qB5LALzF4i2IboTrI","7938.png","sunset"],
-  ["AVvXsEhHIDJagUVwKIxBz4lRL4p6K_5KWJS7Dq6a47vGoo1hR_GblksQaMdLsE8FR9dfjA2cWoJYzlPZ1ztyNJ0CREYpG9dLD5f-NbAM79UVhDnGSkAjXy2rHAPSAzhQqGqHS0qPIFTKQf6GgZWGrgHIfYNTUxyjTeY8UDofbF4bbjs352euyogPpb2-19nGkJE","7860.png","city"],
-  ["AVvXsEjMMZ8EqWHiOagMTTLBzV7QyZI7-UxKtn5nTz_DevL8A4_5J-l1W4hSo3JLzmYu43LfDFpbWXCTN_fJ31kTvj58bCl1pE_8uZkdE7OUmFoFd2odNgM5tsWXfYPWpHw4_QC8LC5qundHKmfD_Gioqmuhwhzf0fICPZXW-Bfg38TmyUg0d9ux5rhL1dGAeAs","7869.png","nature"],
-  ["AVvXsEiX2-D4BkdA41EV05jovI0JjPzhxWVkzcnMkNZbLQGYvj7z5447JufCiEtHX1ZKMq4PXBIU5gf_wqrLnpnzb2H6d_wflinDDTI6m4qI9tmtNECLktI9O4ZKAkLA5yikVN3PTxtyJbzph1uM-ayWlpvHYqnwzDfoWreJu-j70RYYBLSWxz93UhTSn0RP7Yw","7929.jpg","beach"],
-  ["AVvXsEj8xxQUzWrHv8ABz3bwiajZK9WM_tzMHwljNafu76PMVNmRBZbTm9ioewXP5xn4wW6R-ZkbD2Wail3ou2H45E-CXGr2I75VoJbuulOj3lgqwb_ryLchspjtHJwecUBC5_Lq0QCS3Tb-bF_ikqDXx_tY4fmtrFOHe9GfMct1SieWeL8kd7abFkuBKdLTCtY","7863.jpg","port"],
-  ["AVvXsEhgqeZzS0y4GDnU76dqyKDgVUvzwTe9CTRU07tLVPFfj2erOkGdmonVUCt1_ahyN_wNY_Zaf1A1Hew90PiaUt-eetHb486uMJ_Ed_bc_w66M29IDYfWNcOXmdclmIfF37FKCgfqT0jHAkTmUxdyjr595n0SHAx3cjkGJH99NIhC16egS0ZJh76IYCXPTcQ","7856.png","sunset"],
-  ["AVvXsEjeIrEkvhryxryBsIdYE4uelTkhTS5SE3BscwngXzQtBk8Zh5p6kYFRHj2a7Ou-vyuMJMsaGsgpk6UddM2Ld0shCzQwwOAwF0b71ntc7zl0S2MBcnpXhnsdlq9kVBTu7yReNdfX_oq3qWS5o58bj-CX85bWIlJOwX-ajmciIRXXW4wjDYiyq5xzDAzKxQs","7925.jpg","city"],
-  ["AVvXsEhMWxIUF6AxI3n8OtyXBkgklAOCRD9hCffGom6Ts6noaVm2uUMCuQsi8qFG0ZYLtSeRq9PrATFdrBTTOQfLaBFPgcLpxnrfHryPz-p3nqsrap9aDMWFm1CgZV70Tt5okqg0dBTWRQ9xsQeQSkZbXm3LhcvvQSbhAi2JvxQoniYdDRqmmESN3Z7IT9U99Tw","7857.jpg","nature"],
-  ["AVvXsEiru6VvAvYSMpcqETGqp-Wq7Ol5ONhHLmgok1nlSKmM4unA1NaZbQ3kYuz9JTTnT_2qUgaVE0jeOSVsceRgKkmj9mcWom0dsGJUnlW2TK0Mf5hwAfcNOPSfE3yLs_0riDWdEkV77wNtJ8WyQoMsTVVxC2kHA9F7_omD5lFRU58dGyQUaVg-24Eteas7EhE","7855.jpg","beach"],
-  ["AVvXsEilMTIc8aqIJKvHrWWs1kemJrmM37sWO_pmjs8UNEX8WwXp-eeYL3mgaKW7gW5uK2P72Lttch4-ZTM8oRcmyUx5F2DijWVOeUNIvXlSyu_5T27d9QSl82pOMri7HlF2XxQsZs4RYMOn3F_Qcpo0tjvNSyXADRYrsqemqVzX4GvdCNosXFDYBXoTZoGTzlI","7926.png","port"],
-  ["AVvXsEi54d0NfNcYvpDqRUE66nSK_8MqMbGSp_tj3KVeS5wPK2xJWb6jmp29ue6wb36midEBbpLmgT3230fp8BP7dV9SMHaM6f89uLvsX7orBXKnphqTSjGy1Oo0_6nlFw-kfrRU6r4pSqEBNqbTd00weKF6TBwlzYpmDUX0Z4h69NlUsEtSdbQ53yDDndHj-Ug","7936.png","sunset"],
-  ["AVvXsEi86An1peZYxf9gZ0opYWRuwUbnKqahSalWqZ7jjpkFKbGhQWL6-2KSf7eLnZaRLpUD8XnmIE9s9pZ3e1FWulQk49oup9yYAS4Jw0jl2V6Hfa_PI5nd4ZrLSZktjUGgf2YUoEiRNW7SfWv2jEikHh_q-8jwne-xPNm7k0FX_C24iqwT0sInm5f7-vZwcKw","7927.png","city"],
-  ["AVvXsEjgPuu6ld6PIuaGff9humCQgiqAUs5FElQKzwuHI5IEXh6lRKRyF1h-wGmYiZunI_zg6Ts-PXJOYIaB5PoIniOTEWma5FfbtkbtiwY3A8kkZ69Vp1orNFMALj6HGQAK3KzSwR3n09cFlzMNwtR65vcz_U7yopNtgiBeNfCS4_Viub634b1_Bs-93B8gBew","7846.png","nature"],
-  ["AVvXsEitZ2TPuE0hQJ-QT1qmN3WWUBL8gaXEr6t_PLxGnptpH7Zeym3v8VxU3-r8ys9Ar-94aJcOpmEo7MooBHVnTzvSJ8Gwqz292D_q8yTIBjZZY_FMyRMwrEnZ-Aow0tcLfJPSiOSb5n9bt7ARqaWjsRJ167vKAWpaaqGV3nujxDMZCKzHcbMTRnmvH2qrqI4","7853.png","beach"],
-  ["AVvXsEjqgg6IHcfYfR-AbZ5zfDz9PUxhhKGfE1E-B0zPgdzvD26cCKZT8fISl5BhLux16tR6GmTuYOWtg2jFK9twpnXSOn_9JXGF1Y9216lP-ED2m9O0zYGzOn6ALTvsIckwscNWu6rOn_X4sYpSp8gL7ZTb_7VUH5009G8vuY380XJvRha7RZ-O-c_rmd7OnTE","7930.png","port"],
-  ["AVvXsEjVbPw-VGigMg7owSsQiXeWUWYmCdQdfalHeq35_5EOd251AoNbLpCzrlChAWNKEyTPrEX4j3Xqlgl7C2Vcta2JUt9ynatJBQPXt3njleLzqHPR6FrI-xexoyQ3ZwgzJsTxTlkV4YwtZHgUDhHfTVBygVl6x4d4X3u7ymQAlGMYI9CVNgF-iptwtv7v0SI","7849.png","sunset"],
+  ["AVvXsEhCggpxNnZr-Phu6k7r832n_XehABTJ4AJDJoQIlu32_S-V43WLHdCMkVbf0QmoMDVnC1wANW_gmRHb4zWhbs6MFFzqpe9nZrK_NxHYokGIHwciEq_nW7pkCFmobmlTYBSv9AvD_aYigkH2XkV2IlyKzCgC8oLYQKUHsAa-UDBMuffccux_9ys_Qt83wD4","7866.jpg","nature"],
+  ["AVvXsEhqFk1LivRZm7xXrn9QSuqgGGr26IRUztp0fz_cqrwNY6BqPg1jOqEDzan20_1xA49mN33z5I5563niRaWdP1WMO3NZZQSyKlDHAInS09J-8-aQ6E-umgrsESymiFSgp2a-UjzJl-ejoIVrFI2Xp_ryQm562WTYpPZT_J4gsOAVPWCSiHe4mDAKazTL5Dg","7939.jpg","beach"],
+  ["AVvXsEjtp5uz7Orji5JITiVWXHpM9yIhI-eRKSlLkHmsC_KeE-mbiqtEQBny1AfbDFCwfLGtwjhR_OzTPm6PgF7aDJ0RfV9lL6G_Rw5PKOhQ-ya8UIUWeCBMO0Sh5s2bAZoW6SvQNrW46lnzP3GePfjWfGcZXKdfEJZ5DA5UNhlVqbxIM4BEyzhXfgXj7IphWiQ","7949.jpg","port"],
+  ["AVvXsEh9oGNGbmtAwcoY-lv8dcIxxMpdOE8a8G__O1TscH9s6YlpBjf-QqCCMlqqlGsn6355kcctAiSrMUUaUMLuS--NX9xBg59PcisVS8abNhXCpUDnUtYTQz_P4gO-NFL47msIJTvZFJ9GoUNyTodRY7JxkziBF3tZilHxnAdvOn2ZBtwxBgaC4ZpfOlE9Trg","7865.jpg","sunset"],
+  ["AVvXsEiX2-D4BkdA41EV05jovI0JjPzhxWVkzcnMkNZbLQGYvj7z5447JufCiEtHX1ZKMq4PXBIU5gf_wqrLnpnzb2H6d_wflinDDTI6m4qI9tmtNECLktI9O4ZKAkLA5yikVN3PTxtyJbzph1uM-ayWlpvHYqnwzDfoWreJu-j70RYYBLSWxz93UhTSn0RP7Yw","7929.jpg","city"],
+  ["AVvXsEj8xxQUzWrHv8ABz3bwiajZK9WM_tzMHwljNafu76PMVNmRBZbTm9ioewXP5xn4wW6R-ZkbD2Wail3ou2H45E-CXGr2I75VoJbuulOj3lgqwb_ryLchspjtHJwecUBC5_Lq0QCS3Tb-bF_ikqDXx_tY4fmtrFOHe9GfMct1SieWeL8kd7abFkuBKdLTCtY","7863.jpg","nature"],
+  ["AVvXsEjeIrEkvhryxryBsIdYE4uelTkhTS5SE3BscwngXzQtBk8Zh5p6kYFRHj2a7Ou-vyuMJMsaGsgpk6UddM2Ld0shCzQwwOAwF0b71ntc7zl0S2MBcnpXhnsdlq9kVBTu7yReNdfX_oq3qWS5o58bj-CX85bWIlJOwX-ajmciIRXXW4wjDYiyq5xzDAzKxQs","7925.jpg","beach"],
+  ["AVvXsEhMWxIUF6AxI3n8OtyXBkgklAOCRD9hCffGom6Ts6noaVm2uUMCuQsi8qFG0ZYLtSeRq9PrATFdrBTTOQfLaBFPgcLpxnrfHryPz-p3nqsrap9aDMWFm1CgZV70Tt5okqg0dBTWRQ9xsQeQSkZbXm3LhcvvQSbhAi2JvxQoniYdDRqmmESN3Z7IT9U99Tw","7857.jpg","port"],
+  ["AVvXsEiru6VvAvYSMpcqETGqp-Wq7Ol5ONhHLmgok1nlSKmM4unA1NaZbQ3kYuz9JTTnT_2qUgaVE0jeOSVsceRgKkmj9mcWom0dsGJUnlW2TK0Mf5hwAfcNOPSfE3yLs_0riDWdEkV77wNtJ8WyQoMsTVVxC2kHA9F7_omD5lFRU58dGyQUaVg-24Eteas7EhE","7855.jpg","sunset"],
   ["AVvXsEg5nNkvGgqAEGeFZRDoGzrSvzgtggXFhlMEJjJ-g0DYyoarDMO2PN_irMh0XgelFJeoqTuAa1tW5bkRc4FYwI84TKQtDufHmUSXPAP8VtHqPQ8Uvv52c0bZcEYe-27l6_g_RUaQoAqY-sKRehYdSHIx_r76PKwPiiEYmfAxg8igRjJQHBCXefj_O-VwiIQ","7944.jpg","city"],
   ["AVvXsEjCHuNZOOd_vSzW9t4kfVg9X0JRbUbJbS24pQ5v2M_WUg-66U-64_Ys_8mZYx3H7lu7b1JPPUZpPHMflwHf3kaMR9FlkQXyAkSTfOCC-LAYunTYSpTyhkJ92BQ-JTAbncUeqEMOr8UmFvytXqV6JvAtq4uBgTAhV9zfVr66NQYKA99jwe-F2GG49yLM6ng","7844.jpg","nature"],
   ["AVvXsEg3RSMPMIPpFY2alGMZBiJksvB8oJr-7sr_Y1bVZKaHicWvPazfQQlN9C-5nZEdWFVzS2CMb7EEfCWo1ZIww7y5Zva9XU94mOuc1Gr0X4d-o-zEc1M2ZzaPM7wDp6JkLD4ayjQLoI-i183O00STFqqWJbc703zDPQ5xcn9Ind4qjhvEI_Pysc_CqHNmbi4","7935.jpg","beach"],
   ["AVvXsEj-8tOqvUlY6xmSE-yzTEjPQuo-iFIAJ54rVAZMPtS4iwB5q4V6d2D7_uttI6xFLTDllA7ZY5ubaduLVCUEdR-jagOxb3nV1UmeVPvgj4IunyN6O3NRYSsDLW2Tkfz9mtQ38QkosnaG3qOpkd4eY5t-tkLhk85ESjDA7VMkd8EUH-W4TUaN6KEB-Ujahb8","7845.jpg","port"],
   ["AVvXsEhMr5tH-W6LfWjo0FUdfNVfcEShJJ102oueRIQxTngRuYLzsOJ0mb7XcB2i07hDQXScA3qepoqmXYGC-U32ygpzofUZQ5Ddr3mK3KRvpz3QAgTf89sU2MQJAj7kL2U4mYbJZzA4EJLJVtO_XpYU4IFAPFhAeImgIxu37oJBAvG_u8-dkxU751TGN5CmdeI","7864.jpg","sunset"],
   ["AVvXsEhuw-oPsQlv6eYNuAqjHPYcUaBL6M3J1GcLfu4TjZQc_-n2KxzFHTOqUOxcPkwO0mut-JJZ3jZPt4ktcsojXQHgkC7xR6GHNV6RHKwdzxF0iPvY26Wg6r3hck6jrnR8jKM7YQq0RNn6wH0nYRpm4ksGAIhyzAoRPSCsJgMlY5JoZSeysBQEIUSl2_iSMl4","7862.jpg","city"],
-  ["AVvXsEjGmNPIVl5A9Kc5ROjIQ6AMRquxUsEkxflm6VhE04Pq8OH9trqKiFogRXR-ciuFFOtAGoDWit9Jz5gumbj9uiq-pzHRL8mhRxRZNf3epO26WfGmVTXtPNOHCbPSXX_UHVmgg1DxZDYyhS1j5xf5dgK17uyCrJWuhBqv3YFP6_aXPRLdPGkojUxKIFMja2Y","7850.png","nature"],
-  ["AVvXsEiD6h6yn51hLlJe0fFqE9k_xm7Z70tg66W-dpBTnEOFojtfK6vHXYh1IEEExmezi5Nn5892Jjxr7hijZg95eKwK3VKdyZUkPqPdOe_x3SMr8bjg3EIfXbVMHYSoa8no2G8HJFz-0GKHMoYnkwD9GcW7lpjmC7YiG8exa2_MdrVhRwK9OEJVhYcHSFumL50","7843.jpg","beach"],
-  ["AVvXsEi1Xeum79GEND46Sfdoz3X1jpIeE2UuplpshZD1SCKnXRAgNkZjMaF9EyVyfWJlWzuuJ_hvxqfrpx-Uj7Tnqqi0BITRmb8kIJO2gt2gtqXoRNRyRfkH5IDdW9-CS0C5drKGvZpn3aohfIAgAFn4B6isgWvd48kgTb-Ei5LyinOdwkuvvgmzQcUXCnr-ZvI","7861.jpg","port"],
-  ["AVvXsEgva1piTXUnAtolrXZXfLM-8_g1SrzC2a7l0CO8kJAVegdva50bzO1aHd1i86b4Y0OKKEK1Y4E7_-HKxG_8dDmmHgL2_M2MNOEdiTK2Rp26oNs2yPjDsIcd-Q_ZBZj7WSAHDTlE3EJ1cRutgvHSCxNngcVV_u8isbd2k-eMF4XlOzOy33URmw2ZCsJyfAY","7858.png","sunset"],
-  ["AVvXsEheIUtM-1GQFEIpD-ohiDWJ4MXjw15ybN2lkSWLZulb8yKdWw0ex1uR3jkrc-FanL9OvLvsryS8z9YoFnpj48_AGkhOe-UhTZLSAmxOLcoT-9Jh9VqvTE4DlO40KpvSzcclVuiEh4l8xm6MmxqYEgcaHkhg1yjtxS1QU5YVtS0sUQGt17l10lOKxGM6los","7831.jpg","city"],
-  ["AVvXsEjKTBP2CU7YzEM4ecPk24xes2krPldL2JIAs1zCV7vapn64eQbFnKKEEQ-JYCVzn7igFBHhqDQfHKZmd23lri0upt4BKx4_nODmjOv45dmQ22-qejbHphnvYdXlagqxYnr1T20KO1br5If1uk0BgvU4OOPyPlEpe2jkT2kRZ37pqnnvne8GkQRh5ENwIw4","7824.jpg","nature"],
-  ["AVvXsEhPU6jswRdyaR2VxVPVWzRn8VD4p9-0uyvTsEWkDAu0l_MnalIWhD0B3GFjGOdIcd_sqOMbvJGDla0-oXqg-XyRHyyGAXZbJPklxBjcvORX-WpgQeNo7u0r3JzXn9npnCvhAfLgxna-nSqIMw2Y2nDfF0eEnmQktxEpWtX0qG4iIAQPn1nIRQMsEqa3KWU","7842.jpg","beach"],
-  ["AVvXsEhlBk4uzhpLv9f31XG3T2E54VVO7UKVQiA89-Lnb-NGzI8MromuWYSbu6-FqP31VeEwGd4usDf3SHE5VWu3aQx3r0ykNlbghgjhglrAnDJlKfd6pUAnxK34bo9nq13hAvnv9HsPHzYl_wrNQAO01jC8R4APgBqLPkrHnt-352Xzk8DUH914lbLmr77ljTY","7815.jpg","port"],
-  ["AVvXsEgad0d2de7VW6vjVgIuR47UHPUb0gRL7vhJ2aPwcXhYfU3C_9Qmj7difhcrU81IUKh_PGMCvzkjK2jv-992NHLkwR6aOxGMbpA-u79KCq5C3Rm2T7qRcFn1m122JOQLUsNRUQhOwH-4B6mKVGHh430DRFi3eKaq6BPo_8js_XYFAcLbka-XrvyVGISHbr0","7819.jpg","sunset"],
-  ["AVvXsEg3xirQBLLoIO0A8RWXl7QCBdOU8qtrxTsoFFvQ_Y13N2PJudNcMChTSkbnbYJxKgWt-ULsoaqSOr7Txq0cGO-Bs4Ps4OxCSUZnTA4FtWnKMdFJmQmqUfI6lzO0KBOY3QFOsQJIosGpIC9u3NOdHaWdbwzWVhp1qkWdso1RVuSrjHaFxMiTonfTIoAdGxc","7812.jpg","city"],
-  ["AVvXsEhDK4gusBHQybzNzJzGKjNUiN1poCEwBSpBtCEBMSWwB28qbvTdBrlZO1ndmTIXfpctsfoyaPV6uBafaIBz61EbSGK0FPwqqJ9MsfSimFnNCrzoND-NoLt-hBhbE8FCUeBubcuTDr4uWc56VbvhIfHiIMN1zl9lJBfcCL-OlgpgHzBxJ0kQgHSDcjzppck","7813.jpg","nature"],
-  ["AVvXsEiwy_4X0tAuNPWcYP0RdOCYkNR0gE2dDo99JeOHQUngpylU8bFpeI7dhBEiaG-owhZ-5kkbTFHbYyx2w-B3qocxCwXewljJtjIV4PsdyWAhTQun3m6cTpIIvX80op9u8CY_JFU6jcD-Y470Q6rfLOnuhAP9E0iYFixa1pf_kPJKxDeOtsCPtnIDUHj21zk","7836.jpg","beach"],
-  ["AVvXsEj7yZtCTuVh5Ywqz8g9uiJBdydx066xeKFifBCdC4N4nWQjUtSi5U_JosasP5FEdVFtj4ntbQZjbQswRdU7q2KK67jGrhsARoGccjUMtetmklK2ThIgtI8BdVXZZBaq6HP_tQCo00m1FDLENbVQoUUF3dwiy-31OZvUw-U8Dv4Z_tHBivKAJW790CrTv2o","7840.jpg","port"],
-  ["AVvXsEiRPgyO9ycdRIxiAuZUBb2uJyjMDi3pwqjIPG78qG7VPi-TAy8u1sKnuSvzQlYD8RHvTpCxJNSs-pCDUUB6uvgGdDWO5gNczFeQgo1FlDegpDrWsLGdodWX3i6xY0errerSs9Q36KjtSfbkfilYN_tPmObVnCUMx6lxWiQ5uLILgBsq_bCNGffGp36sfw0","7889.png","sunset"],
-  ["AVvXsEg3WaQVWAlG9dqxysxHPjsQ1ZoJBGFecD4F4IVUao1q8eJzG7iEUM98m-UKc3D175bbNuMk2yxncYJ3pLgMiVVA-GiI9xFx-jEz5tX4rggS41n8Dv8Rvjg3cpsyU9p2Pnf1k4eoTQPn4OuaG73eHLSYXrkMFlmoTuL8fJIMNubUiVW0pd96witvDS1zlKg","7847.png","city"],
-  ["AVvXsEjqHde9ymIHvNRv16mLUgW67C5atvMwGTBilBXT3W5HfJbMLg8wh1CSENBRKEaKPMTaoii9URDysgkOkFfKc23epULyjIg8q1ZTesqd_DekFsezpAjibtdE5cnR94GJLywQFqQPEJjmX7LhNddzaH06_6f1WhNvZ_it_nLWrkvcMsTIGc3P_RCzeyhd2Rc","7792.jpg","nature"],
-  ["AVvXsEgZ7Mpx00x_wmoYGYyr8W-V9CdC4UW87X5v-GN7YNb1Za0KKD7lXg0jQFQeIu04m1j10K_S7cGagJVplFkd25r6nhjLi17srR9XJ4U-z5CXWJ_KxHKGnx4I9fQgob2wOPHA9R3w_7a519V9V9EdLt6Eutn4uWMrSMZyhBJuo9qF-y05Km_EudPfFBonmz8","7811.png","beach"],
-  ["AVvXsEj5qGCFGXs53ctq0BWDNKH49omx-nSNLjt0a2zlUYQtvJvyOXC1DD71EZWNnK80_w9TeBUK41EDheMIQB8WTRx6q93VXmyk5HcLIRkBQ4b6GsgQ_e0-VtMCq-mtSOqDOxXkJEG498O5bSWmWCQjQx0ZTG6kKblMxdm0YUMnApfsDgWVm8hGExJkgU_hsfY","7808.png","port"],
-  ["AVvXsEh9CSd5dkNR_b50AvPvs0PoWNfwQWCH9FBRoCte4fP2FN2hduhBLm0AtYyQHFwjAwWL0empSXC9_nulet-crKUKV-3lN4I0xxI6Nf4rZ3cE_JGdxdKfr67cEUs3hmzpn9pwmSBvtXi7n_UcW7FxVftu1KPKdEkOMzsQ0utBoGbx9KZvlVbh1QTyMKGLOMs","7806.png","sunset"],
-  ["AVvXsEiLdRiizTgM9wX5w52Nr5dhKRcQeX21tvErKXLtwoYDhJV3Is8OCsjvMum1187sTFUUwwFEVaeEpgq5EsGKNvlKepMvkwEFyR4ecN_N4N_KW-TZdJarNKpD3vMwzJjS_DUlbpZrXpyJH9wKiHIaZN59oLdUp5acToMbem2_tQKHqJoJY2QLq0nXd1aF5cs","7809.png","city"],
-  ["AVvXsEiEXmsGCnYHUioesmKWlLuejdEVOlxC9jgOSsP1y7a4LCLvqevhdL3DBa6ZzVXq8-cuDDj52KA1oW_qn5aRAriyRq0EO488YfaUr8OkApNai6tSgKRA4FBvN1YYShwX_RmROoEs__2Tuun9FU5RFFUHH7xn8lMt9ycCDQBjTTseTR73UnW63xLxoADFpbw","7796.jpg","nature"],
-  ["AVvXsEjMo7Eqb9t_LjuZBNkYC5xXslu_nbxJ4eBVlRlnyGQRdbuZBIOij36q-7U969lCQwhDaFPO0wLBtEipguPvDTG8BmpY9DZkTnbfDJ7-mqM45p0awaiT-M70N5HQbCRQLr9ArOGwBQJhNddKk9ml9IYULQ_xiOz2jHwa9j2C3ywFFX6xW7m1p6jiSL8yWdI","7787.jpg","beach"],
-  ["AVvXsEh27zewjvIds8xD3afhOXySKS-lMuVdVr4ed07t8MegY6kTkZq2YWzCbIZnp1pUirNMbq--AoefgfIuW_GQXfRSp5grhtOzRoUC-if-hMN7Xj9f3a3h7Q4cI49UROenbN8o91qzrrFlj5SMpqIn6K1EP7_nxBQQB8mv0misZI8iVAYz0IhGu1OVdv6fPuQ","7802.jpg","port"],
-  ["AVvXsEi1ihdL4tXJcYqPmL6iV6AwqjVKJ9L91E4UXSi_k-xd9VOSu7ueYsPez2D4nxv8BI_l2bSI0liTuI0poshqXO_x7lrTMRprTU9g7lzqso8VVJkESVAqM4NpaccsnrXxMhTq79inEjqW263Be2V50Y1oHWnYklc6X6jDHmpBv1ktIIDI_CeMsXQioH2OX1E","7795.png","sunset"],
-  ["AVvXsEilNc57edDTu0VUBrPRieD3WHnC8_k9sw934u4g7W0wCTKtXKlDYuW_YIgaScicv2iXF_dbQzHy4yW4DtYHfjsCOZ5EskIAKoYqt-tOHwHG0nozCduGuLy4mOK2CWkYwKyQPXBAIx7JxukBPUk2OEtX4Is68uPeS2WrAi1ghE99aF53RxuDA4SdvC9NwV4","7789.jpg","city"],
-  ["AVvXsEj1dqV_OjRg9e7BNmhbTd_4pAbNqmTQTFubx41kSc5QTAvaGdVS0_T52iO37ajPgTaWGFiS8Q6glWRoWd9H_UqYi0D4fJoaHsBlQRzpYl35NaM06a9pNKF1qNNMU5yJnvgOAi0iVOY_aA4kQRcrpHqd_eZHxpavUlgdw3IaUv80Ly8i5PY5KVT6jKQosjA","7797.png","nature"],
+  ["AVvXsEiD6h6yn51hLlJe0fFqE9k_xm7Z70tg66W-dpBTnEOFojtfK6vHXYh1IEEExmezi5Nn5892Jjxr7hijZg95eKwK3VKdyZUkPqPdOe_x3SMr8bjg3EIfXbVMHYSoa8no2G8HJFz-0GKHMoYnkwD9GcW7lpjmC7YiG8exa2_MdrVhRwK9OEJVhYcHSFumL50","7843.jpg","nature"],
+  ["AVvXsEi1Xeum79GEND46Sfdoz3X1jpIeE2UuplpshZD1SCKnXRAgNkZjMaF9EyVyfWJlWzuuJ_hvxqfrpx-Uj7Tnqqi0BITRmb8kIJO2gt2gtqXoRNRyRfkH5IDdW9-CS0C5drKGvZpn3aohfIAgAFn4B6isgWvd48kgTb-Ei5LyinOdwkuvvgmzQcUXCnr-ZvI","7861.jpg","beach"],
+  ["AVvXsEheIUtM-1GQFEIpD-ohiDWJ4MXjw15ybN2lkSWLZulb8yKdWw0ex1uR3jkrc-FanL9OvLvsryS8z9YoFnpj48_AGkhOe-UhTZLSAmxOLcoT-9Jh9VqvTE4DlO40KpvSzcclVuiEh4l8xm6MmxqYEgcaHkhg1yjtxS1QU5YVtS0sUQGt17l10lOKxGM6los","7831.jpg","port"],
+  ["AVvXsEjKTBP2CU7YzEM4ecPk24xes2krPldL2JIAs1zCV7vapn64eQbFnKKEEQ-JYCVzn7igFBHhqDQfHKZmd23lri0upt4BKx4_nODmjOv45dmQ22-qejbHphnvYdXlagqxYnr1T20KO1br5If1uk0BgvU4OOPyPlEpe2jkT2kRZ37pqnnvne8GkQRh5ENwIw4","7824.jpg","sunset"],
+  ["AVvXsEhPU6jswRdyaR2VxVPVWzRn8VD4p9-0uyvTsEWkDAu0l_MnalIWhD0B3GFjGOdIcd_sqOMbvJGDla0-oXqg-XyRHyyGAXZbJPklxBjcvORX-WpgQeNo7u0r3JzXn9npnCvhAfLgxna-nSqIMw2Y2nDfF0eEnmQktxEpWtX0qG4iIAQPn1nIRQMsEqa3KWU","7842.jpg","city"],
+  ["AVvXsEhlBk4uzhpLv9f31XG3T2E54VVO7UKVQiA89-Lnb-NGzI8MromuWYSbu6-FqP31VeEwGd4usDf3SHE5VWu3aQx3r0ykNlbghgjhglrAnDJlKfd6pUAnxK34bo9nq13hAvnv9HsPHzYl_wrNQAO01jC8R4APgBqLPkrHnt-352Xzk8DUH914lbLmr77ljTY","7815.jpg","nature"],
+  ["AVvXsEgad0d2de7VW6vjVgIuR47UHPUb0gRL7vhJ2aPwcXhYfU3C_9Qmj7difhcrU81IUKh_PGMCvzkjK2jv-992NHLkwR6aOxGMbpA-u79KCq5C3Rm2T7qRcFn1m122JOQLUsNRUQhOwH-4B6mKVGHh430DRFi3eKaq6BPo_8js_XYFAcLbka-XrvyVGISHbr0","7819.jpg","beach"],
+  ["AVvXsEg3xirQBLLoIO0A8RWXl7QCBdOU8qtrxTsoFFvQ_Y13N2PJudNcMChTSkbnbYJxKgWt-ULsoaqSOr7Txq0cGO-Bs4Ps4OxCSUZnTA4FtWnKMdFJmQmqUfI6lzO0KBOY3QFOsQJIosGpIC9u3NOdHaWdbwzWVhp1qkWdso1RVuSrjHaFxMiTonfTIoAdGxc","7812.jpg","port"],
+  ["AVvXsEhDK4gusBHQybzNzJzGKjNUiN1poCEwBSpBtCEBMSWwB28qbvTdBrlZO1ndmTIXfpctsfoyaPV6uBafaIBz61EbSGK0FPwqqJ9MsfSimFnNCrzoND-NoLt-hBhbE8FCUeBubcuTDr4uWc56VbvhIfHiIMN1zl9lJBfcCL-OlgpgHzBxJ0kQgHSDcjzppck","7813.jpg","sunset"],
+  ["AVvXsEiwy_4X0tAuNPWcYP0RdOCYkNR0gE2dDo99JeOHQUngpylU8bFpeI7dhBEiaG-owhZ-5kkbTFHbYyx2w-B3qocxCwXewljJtjIV4PsdyWAhTQun3m6cTpIIvX80op9u8CY_JFU6jcD-Y470Q6rfLOnuhAP9E0iYFixa1pf_kPJKxDeOtsCPtnIDUHj21zk","7836.jpg","city"],
+  ["AVvXsEj7yZtCTuVh5Ywqz8g9uiJBdydx066xeKFifBCdC4N4nWQjUtSi5U_JosasP5FEdVFtj4ntbQZjbQswRdU7q2KK67jGrhsARoGccjUMtetmklK2ThIgtI8BdVXZZBaq6HP_tQCo00m1FDLENbVQoUUF3dwiy-31OZvUw-U8Dv4Z_tHBivKAJW790CrTv2o","7840.jpg","nature"],
+  ["AVvXsEjqHde9ymIHvNRv16mLUgW67C5atvMwGTBilBXT3W5HfJbMLg8wh1CSENBRKEaKPMTaoii9URDysgkOkFfKc23epULyjIg8q1ZTesqd_DekFsezpAjibtdE5cnR94GJLywQFqQPEJjmX7LhNddzaH06_6f1WhNvZ_it_nLWrkvcMsTIGc3P_RCzeyhd2Rc","7792.jpg","beach"],
+  ["AVvXsEiEXmsGCnYHUioesmKWlLuejdEVOlxC9jgOSsP1y7a4LCLvqevhdL3DBa6ZzVXq8-cuDDj52KA1oW_qn5aRAriyRq0EO488YfaUr8OkApNai6tSgKRA4FBvN1YYShwX_RmROoEs__2Tuun9FU5RFFUHH7xn8lMt9ycCDQBjTTseTR73UnW63xLxoADFpbw","7796.jpg","port"],
+  ["AVvXsEjMo7Eqb9t_LjuZBNkYC5xXslu_nbxJ4eBVlRlnyGQRdbuZBIOij36q-7U969lCQwhDaFPO0wLBtEipguPvDTG8BmpY9DZkTnbfDJ7-mqM45p0awaiT-M70N5HQbCRQLr9ArOGwBQJhNddKk9ml9IYULQ_xiOz2jHwa9j2C3ywFFX6xW7m1p6jiSL8yWdI","7787.jpg","sunset"],
+  ["AVvXsEh27zewjvIds8xD3afhOXySKS-lMuVdVr4ed07t8MegY6kTkZq2YWzCbIZnp1pUirNMbq--AoefgfIuW_GQXfRSp5grhtOzRoUC-if-hMN7Xj9f3a3h7Q4cI49UROenbN8o91qzrrFlj5SMpqIn6K1EP7_nxBQQB8mv0misZI8iVAYz0IhGu1OVdv6fPuQ","7802.jpg","city"],
+  ["AVvXsEilNc57edDTu0VUBrPRieD3WHnC8_k9sw934u4g7W0wCTKtXKlDYuW_YIgaScicv2iXF_dbQzHy4yW4DtYHfjsCOZ5EskIAKoYqt-tOHwHG0nozCduGuLy4mOK2CWkYwKyQPXBAIx7JxukBPUk2OEtX4Is68uPeS2WrAi1ghE99aF53RxuDA4SdvC9NwV4","7789.jpg","nature"],
   ["AVvXsEgbBkgR49CPGxrhSfowqbOZeQNF4bS2dLOwDpfAY68BnJYMXmb7im4kVW4PRwLw7zgYDOxKflgrKiUGPZSUU48LCTA-iNxiXLQrgJUFUBDwJIiVujwbH7tQz_XyuAGFpej1xt-4g4DcS7QSwosXxNdDi3Hj8j2acztFDSvvLvCGIsHycxcFpiOK4EE7N-M","7794.jpg","beach"],
   ["AVvXsEhofrdpHToAzIzg11qlNIIRR2SU9WiWTbSdg-tmSsnoSb8y8E_CZ04cluwoul88l50QasiV2AaJlmP0rRu55m0-BFXLFbYNCtjyLP4beSAtfaHf7_uUty_NZuuufYrdwzwixN0ATja9OYRRkomC3FpPmVWKMsJxcSFsp5dlkjK2LfPOqMBVyAN-RTEL3c0","7793.jpg","port"],
-  ["AVvXsEiE6bbH4tJE8EP8FUWJ2HOaooflQvTxGOsYBn5PaXLy34U6doCnyXYZbtvv-xB1bXDeOqpk2gC4OHb1Snh08sjUVHZVbZAkdrMkzgQzN3GGAh_k_K_6qC-Sb3soF5RiL7YQejuL1D4JvCaBQoRpDz47uhjEZJaDeFSt1lykb1BdUNwvgqGTyNnzHIe0HBI","7799.png","sunset"],
-  ["AVvXsEih83AgtJi6PFMer_o7_8S8sfeOISBu1fki07Z3JnKwZRnEVhvAbqCmHJnNxoxnsNoXT8s3jTV4CyztJZJ55ZK7RN2sZJQ9WFASIqmBozBDsG-CYGDAM0Nqaor0pkwP4o5dQ1Y6mD-igNrmrvhw3zhi1-tG7TMH3mItRdwlv31fHkLir7m2q6QJ2sZ5Cs4","7807.png","city"],
-  ["AVvXsEiyh8-88Du8qPLpxbOY5GJGE0N8ZHHfM1eGjf1G2O2sTOlR61UElMV9Zr6IrJ51EBqP3_84MJA8PW5VHlLMBLr-udW4-8MGrHkU8cQR_JPwPeFExZ6AJ85vneX9QxdiYdSKD4yMEhphT2I62u33z6CJ09Uq_o4HVi5dA6RzhGGWOlusFeKL24ojRdQVCmg","7801.png","nature"],
-  ["AVvXsEgohhXgeJpzc-5WEHHoQ2y6Fnlcba-97Jx6OtXVPWwhNdg1ZeSmuodhGZxjLnR_CCca0H2SvUHwttIJqwy_hLJdncjDaZUSs-Unxs51_gmAJV_YEkdzbGXPOp_sTokv42Amty_ZGWNtsddlGeQ7iXYwYigPhGMoCYq4CuOS1CRjr0FcLIeHgD1L8AEJKek","7835.jpg","beach"],
-  ["AVvXsEjaGetbHseIY6dgxzzmaDQMzPoqyXK8ivRcDN1mEAP9wqePeKkR2N5Fu4OTwxwfnw2P5XMcMWboaVqOIylEBXQx46SfjUBxBEh0qY-ZvWh4reG9Hb1AdMx0yX1jBJkziQD27yh3lSDo5H77Bw8NiBeoS0weJAfwusnwU9E7STIkR2Fn_L3Cl_75hkB4R5o","7810.jpg","port"],
-  ["AVvXsEhtvD5IWIbWOK4U3OWYuRSGVWcte2diRnJg5WjSj-Z_XFX6mfCujJ5bfOb6QRxm6kSCcJjVC1MgqwKLmu5bw5JE3vwIkFXBU3B8qqU8c8XSuKm0xUZt9e_NHHvhEN5dibmr7FBQJAmSQt64hUYQgEawdSfxgxRn8Y4SkFTQd1MXVxqNOkzsaPVsY8WY-Do","7839.jpg","sunset"],
-  ["AVvXsEieY_S-yoyjBqBIK-fg6XGWSNTQvqb227wg2LxSq6VrQMcVJE4U7UAHv85UYdrfrQJO-9RKaMzKHah3-PxczgczmC5OPfveavcXmLzUhsKcyfHwRQFWN3sGlWaKgOybnL0JElEU7HovJ6Qkc_ggUJ2o59HfSRsf57XOiKcEigpEgxXpIA0jRlxbiSivd8s","7814.jpg","city"],
-  ["AVvXsEj9HcvfFyR5_rrFZL_o4OtUUWIh4E6_7DsjpCeUVYFx5PDqVZH9Rjme7pJHSzJl7sYvtCwfN5DKfXLix6E9SwR9NrgfVKMrcACDmjF6G7f3P3GBbCqRrv0XTU96va7CPpunAPesXZIzD8lfzrad0Ym2QvTwROz1-Xp6LcI5Nm9zNBlQ3bO8lZXCd_TfhQU","7820.png","nature"],
-  ["AVvXsEh0lbJEzOLMRsyI6_QTt3lq7uE-fQA26ndKUiGmUv_ZA9syX_GHG6gyB0t6UOOKWqknKFWXvReFvv2RSmdUT96K9j8dsbA-WIkor1Qgoxkpza-klx0Msr9cBFxZ4Jmqw8SWSgMlyHB4TW45Lf6hrc49CHtWGKQY_z1tu-EQQMIrcXfWlfNhiOdW3ypo6sM","7828.png","beach"],
+  ["AVvXsEgohhXgeJpzc-5WEHHoQ2y6Fnlcba-97Jx6OtXVPWwhNdg1ZeSmuodhGZxjLnR_CCca0H2SvUHwttIJqwy_hLJdncjDaZUSs-Unxs51_gmAJV_YEkdzbGXPOp_sTokv42Amty_ZGWNtsddlGeQ7iXYwYigPhGMoCYq4CuOS1CRjr0FcLIeHgD1L8AEJKek","7835.jpg","sunset"],
+  ["AVvXsEjaGetbHseIY6dgxzzmaDQMzPoqyXK8ivRcDN1mEAP9wqePeKkR2N5Fu4OTwxwfnw2P5XMcMWboaVqOIylEBXQx46SfjUBxBEh0qY-ZvWh4reG9Hb1AdMx0yX1jBJkziQD27yh3lSDo5H77Bw8NiBeoS0weJAfwusnwU9E7STIkR2Fn_L3Cl_75hkB4R5o","7810.jpg","city"],
+  ["AVvXsEhtvD5IWIbWOK4U3OWYuRSGVWcte2diRnJg5WjSj-Z_XFX6mfCujJ5bfOb6QRxm6kSCcJjVC1MgqwKLmu5bw5JE3vwIkFXBU3B8qqU8c8XSuKm0xUZt9e_NHHvhEN5dibmr7FBQJAmSQt64hUYQgEawdSfxgxRn8Y4SkFTQd1MXVxqNOkzsaPVsY8WY-Do","7839.jpg","nature"],
+  ["AVvXsEieY_S-yoyjBqBIK-fg6XGWSNTQvqb227wg2LxSq6VrQMcVJE4U7UAHv85UYdrfrQJO-9RKaMzKHah3-PxczgczmC5OPfveavcXmLzUhsKcyfHwRQFWN3sGlWaKgOybnL0JElEU7HovJ6Qkc_ggUJ2o59HfSRsf57XOiKcEigpEgxXpIA0jRlxbiSivd8s","7814.jpg","beach"],
   ["AVvXsEg98r6fPjmt8TDqdh2WwAuo7nGYTB9IFHpgImWDWF02L3ux9eV_JXfsloVboBjY33D7bO9Z_E7nt9pm8_iJsEsOf4Uy04UCmDyIFUsYuZ_4eD9la9Qix0ptjAa36qIVxtEAaVe_VxnpisnH-RnRt7NT_KDq6tY8hH1Sjga4328Z1S059nEzeqZR6BPPx8Y","7838.jpg","port"],
   ["AVvXsEhXcOhGOOQ3Iym7-p0wLlkHUNsdvFfaXxZ0f_0j3piHnm7tNlAuJ_2o9uErpB-NyKR34a7zGMiWt-HzrkrwZK4REHgFk5e6N50nA0hgd6o5e8OdfPJCczW632JLgM9qTfts-xUBmDVa-z3k9ncgxYm3TWpfG3FS4YYull6bWuBQBGVfAkZTeeWxI6wryPg","7833.jpg","sunset"],
-  ["AVvXsEhO0iHJz0sLJ29RFoIiSJ3zOsnfVDS_lh57_F_dMCR2EM5bPBr-d2Q1b1Ml5ZjbAL5CskDGGN8kIyGZwkTHsfyXxD7L5IbF2WkEBvC8epwrx80sGnnn-kvfLgBKH-kliCBegi_qEp_AwCnKDB6mLVicit1obGw-fzeduH4jvbJvtGPTwjz5_5WhTUwH5z4","7932.png","city"],
-  ["AVvXsEiwbAGfET8pXqnYtePmn3Dcx9E6zCHuBAo3yPWzl-kBqJ58QfpwjWD7TmYe1Mx6cLqTy4x892DI3kPRikVA1WQaZN27S3aao_0vIdwIz-O1xPt2mAiIGxVkJJDqaxc0Narw5oCELUJAn6E9NnoG12bXmJW6HYloLQMSSNLCYISDOmBjgTWky1y8u5-xTi0","7825.png","nature"],
-  ["AVvXsEgmjkOzWPnmJWoEdSHh-14mgvDSXzOC3ToQBqS9AWYMlQ8rZ-uUB4jTO5Ny3LnwAqsZBZIqafBKDjOeGjPMBa_BTuqRuov3lT6G-rCxxioaDw9MiLOji4_PK45n-SU2TNU28E4Dx1j5ZWN91eOqQvrBOcBo-1y2ahzFht2QAIVxena0jAf8rMvQBuD73BI","7816.jpg","beach"],
-  ["AVvXsEiuCcJg1GmkwJ0sqWXYjIbB3L-RlyNJJlKuunzKgi_D60rFj0TwUpVrZ8JJGzALJuB4a5X8jb-gJu_dt_q889u7sFJXlarjiIVp_Q2pT6h91tEDeo9zKBhJvysmVGgg_yhtX9ofu3j7febUFYKqynCVt_lZ4U1j_6e9wGVs8eKQyn437HHTHx71ExItg5k","7933.jpg","port"],
-  ["AVvXsEjQVaUT6bhYkjM0q-9av2E6MkJLyc3T4F1TMrEBD3eeYc-8bilqH4oehAUtdduKkirgDK2iu4keWmqB-bYsnbJJuHxnZzUz2mTasJNfdZ1gvqsUPP-uOhAyhK79dZVXoJ5ASElBVfxwYtYCmOtf4IoSFDqiAPx6aRnv4SPhl5McP1KP2uWahNH92ooTjzQ","7821.png","sunset"],
-  ["AVvXsEjqGRnyog0MgZGet6VsXeexuUduueui1sIyJB6_NCrtrdRhNksUqdbF05nvfEhonL00q-ttPsFutqPH40GfuaW10ia8QEag7nXG57RtRO92wUdeal4_w1NTrm7nKFtydRnUFbX8spPA33L7DmJLmLjkxJKpJph14TDKeEpxz3AMFPiBmWbUO-clVC9f0UU","7985.jpg","city"],
-  ["AVvXsEgQuNB42XyYyi-TX5fe-4ckOljuQwzjrI84U7FHu616g70Qf6vow09bf8be_5fLwGEaVEaI4Uq_UMC22odzq1nMYtfs5tcxCf-4KCQ2XxikhkZFlD9q4XNRbx7SeOf9RF3oBRfgYCGpAAp0e139avRwtuFedN_eeUG-eqhVJphMP2Lr9VMoDcgsuw96ODQ","7919.jpg","nature"],
-  ["AVvXsEg2znRVbDMEBN15jfb51WzAqRqbYBk_7NRg0OYrI5NAcH9RcOefdafgWxZ1VcQbIjZA_C6JZdo_FlBbzmsdhUfK9JNtPpmZzKuQ669V9CaDNrgcnIQZZnRqKT5Wes6-41J9Wuvo1x0ledogqQwFzD8H0yjNZ9ZPMUaMrEr7N9Ihu3OczMVywp6ctPU_y6E","8001.jpg","beach"],
-  ["AVvXsEhBxQeQdjgPDuK8LyVMk23YCs7_7tC8Hodn47aHJZJx1hVCVMrBHLzCKGp00qOV5Cqrv6rMaCjNySNvSuogx5drXB3x_9WduFKe6wRBRr89783eF6DGAX5-HdBnHHfQjPz64y6uG-jCArwCBhPryw095xvUt2LKCw-0bEuvAhp-gvLv80s302FYyJB8DOE","8002.jpg","port"],
-  ["AVvXsEjqsGxSmEMOTCBeJNmRXa0uECzP4i56LWf1YHh91k99cw2LdgiTU-TLaN4nB8GFqXwcy-Ju3XsUWA2pq3QYANaKM1zowmqzWvMAnyWUzJzC059TA1yY9PhLKxpiGY7TxvLaSSwjU6re9oO2C6tAQk3BCe5IP_Q30gaWyw4hw5ORMTZQOve_vn1eKjoHdik","7921.jpg","sunset"],
-  ["AVvXsEgz6kWWGmw3eBtjPJ-LamSLhLrUbpo5sWu87sd-3XSBv4iO1ijVbi7qbb37Gzix7-ZPF5RVSUU4LosPlmTujEoOK0lVaADzSqIqJlAStTTLEmSU0-zITlAzOMGGrZu8oqNVMkKzzqGb3DkuzHTF74usY4GlTJcL7tFAWYoeIi0mszFokxnGo1qBADP8DGU","7998.jpg","city"],
-  ["AVvXsEg6ssVnUJLKJMt5y8s0dxM6LAnk9hjEDFuiMRDkUg-ed6_fz9tVQT9Y79jEtoSqg6FXax3TYLxY73h1TadjZSRDzUyZneh92iI2dzuy1TvKGcOD9h5iVJXA3buPjOWqeH2T-0wtzC8n8lQynr7KKIDqvXlXTN6N8cgpe0na7PvO294peQ0cWYLvRuj2KXw","8004.jpg","nature"],
-  ["AVvXsEiBVguZ4nK4cJJVAP4FTyR_JCJlqj5nlWrusFBfJVHxl3lSTt49YWB5aanacH_g40c7Ei8yqPOW5L9NVoklnay_afd1ryN0O3GdtaOvycePcV70t8C4fN_FHT6btDT-jxcUVC9-qS-fJByPRNVCPMFYnppuXCof7N6q3amjFN7MuvW1k3Ir717MWv-mhKo","7990.jpg","beach"],
-  ["AVvXsEhVqM5605alWVBUh-88nDi_au2P7P0ADtV2OK7R5XqVduquyZ0NRjR_kvcrPIHSr9iiXgwSAwUNLgLVjUWYOM_1tWFcw0D25d6h9xOdwkBQRAFlmlRvE_bAchOTVDlbjz4sKfdRwhoxZ-hVB4CtS3PjmBYsEiARG7hIiwMd1jCpnkUx-RmYARUPqBqRKKo","7991.jpg","port"],
-  ["AVvXsEj9GWBUJVbFJX1Y5cjO8rAmqtmZ5abk-uK6_5-CwPO45nVnqlU3qtLnzoPhuRQf1Cf60s-1pPt8Ftjt51r0uPkPKr2UoH8v9qugbb-Jeu8NvprXEr3AfSWsEXjtqDsE-IoOjnU2ehFODvPoor73PFmm9Nfr6HQ0HdET9cLDaesU0fqzZs2m_RxaXO2344k","7986.jpg","sunset"],
-  ["AVvXsEig89xUko7FU-mNfMGy8jIXURPz0Ncey5XQuLka1XJ3aXqH5l6_Y_b5miWtlo6PTsp04NuwLHJ-8LVhfc0ei9fIli_bza_fcmpT4m2zTtSpcb-d5lYXjzZvBMjZXKORc5WrA3l28H1gorUBN4atqYitBze_mUSrefPiLJdp8l4gJHwjax7M4lMniSNgkf0","7980.jpg","city"],
-  ["AVvXsEjFjDBI2s1X8ncvXBf-b8-fGlANpEeuzGdP-jIWKho5Yrc040FeK9MnZ92C7m-qa5GccGNPEkvrnCnxSMnYL7givBxTJ-RfOf2bULtTj0Jk3S36wcC7LogFCTNe9I-Gz036tRNtaidOFbqQVLHQP8rHip_j9ke7iONxgPobxuNAIfppjjzIBSiA6YBerIM","7993.jpg","nature"],
-  ["AVvXsEj0Bfg2pMGFhoar5p7V0ChuUr8p-gxJvpXgaRJq0efFuVu-a40SKCDhTbBfeemt5BnL16ZDDvNdXjOtVX7GGxErKI24Kp_WHNn_c_jERECYLJSaVEWnN2FHK39o_rUPoWRM64M_ZIpewG03Gl8KaRM1g-b3tOXOj_2QT4oy-VONRRWBfkyejlc7pbcWecM","7917.jpg","beach"],
-  ["AVvXsEhXGUEXstu4mNoMkwkOIJZ7RWeRQa6gHpJZi7X00lmn76F13ppVqOCeFRoNOKxVym1FW228JAl5e5E9eZ4PlmzEIDe_lEtX-ybIVbY8z5cDtCdf-_eMZViTgoPz5rnZgPltfU7C4ffzZzVmKUfsJlf47FTr0Sf12lji18c-Fg-vofmII7th3anSUijNTC0","7982.jpg","port"],
-  ["AVvXsEiNaxTr68aSVezNxY_RUrPCdAcD46oJA-9-3h9Nkd08z2gm_pBPtxauS-4nNt3IUgXWfakXb-W7wsqWEm7bm6Gbxoml7cYW1ATW8vzGUz2IL9563_0_fDYAG6jQUxbrpRm7y4_EAbNDp1iKp5uzn0NAGPiVLARjX7fOUYSXPOaVdJHFIUbDAxsj-mCcpgs","7979.jpg","sunset"],
-  ["AVvXsEhR2glEcQFX7cjrNkOQ2DsJxZn3duubAIajXa5lpJEDKgzJj0bZmDa_0k8R_d6lRSKbPdEERCFfvRavJm9iDZu8DDbj0Gmt5MvRHT-0Nh1LfBEaFZnRydaZKhmJmIfxSFIVntAFiEfoTXA78khyiwUhjEEKqKqXhUFArMnIOKZo4XPduVE9QUX-HlsBxfw","7978.jpg","city"],
-  ["AVvXsEjUG7Y-LggupCWth__bQJDgM7bNXC5fpWaoDEnovZ933rYbVSDwAEmiY6Dgn1ppACjShxD3RWQ_32P_fc3yl7Q9FNc_GIRhO0wGq14HsUWsKqE-99ByekJkqZ4eUmC-lvQqgG_SuG3hboMyPogusUi6Vk0j3BWuMVUrspZNsCm5O_TDoEjpg5m45qApq9k","7994.jpg","nature"],
-  ["AVvXsEimUOatWT8A4e8uw0AlZvaIra4QtgimgaRWdJ18SqGxvu3fxBONKBefPfadS2VloWkq9B4P2v6qAfT6XaxszEBWybw1CBMpatNqRtfgh_WtBLZ0Nfv9VFTsXmAMFMSiNgrWOCOy8ZWbaDwnDC-7OhxpU6OXUAm0BVQmDRRHk5D_cRQ7RbwtekM74a6cue8","7912.jpg","beach"],
-  ["AVvXsEimp1B6GVComHki9FwUrZrOU6nJuJ6_9dMGXYaeRMs8KfVD61te1tSN4eiUv6cQhgfOQbC8rdiULfqNy7V2PANqR2Y5bLpYUkeNQtwdlycv5c5Q2-wWXbyAw_ikr4ExWqCWdPssLkG8sWKvRMdzcATRFtIetDh1b0pIJmiGZwUMbkc8Ll3dRTlOBdyRCx4","7988.jpg","port"],
-  ["AVvXsEjTdgMOM203Kto-uAErWMza88OFweodFsecg9j0H9Qsi5SmacRbFjLD88isF2RNMawVHHGWgDRp6_1I6MeGiK4wKYFsQ6UtCoaLJRfF9CS4i0Q8quTDvny5KujYcy14VqYWg_2-i_UbuvzggLAFxN7r271TuwAqG4-qD8zUCSSA8atuY_tA0caeUMiF9_g","7906.jpg","sunset"],
-  ["AVvXsEgunnnBMSndfMQAgDPJlWpjn2gWZz8ryxUKMsWwq46F22lt4uAxmRAqEEXNSOxedz-N40tmvH55yj3SH4G0uoO66_279qLE0z1KW6xNCSTJAgng10VJtRBayoYuQa3O8wv3oQ-Tz7VRMCWsR2ONpLGlqke97bvVYFD9IGJsw7ev-F9EP3zGjZPUmcwCZyw","7977.png","city"],
-  ["AVvXsEhFpYmj6CQX-SDwJjEnapqyqgJyTNf0-vtFdtvAVuJgdu_vKdOvdJgDduvfgP3A4L2gXOHWTWGia6kQb3i95TVDpAzaGTFzXdh5KDfOETTSGTqdoqFLiuKzV94dg2GtN8ziOa3XpgSzJj5B-uemFMQbUSjT75DNqrW900ujl1-TGC4eskLPDGpLupVDdWM","7924.jpg","nature"],
-  ["AVvXsEgl-oerWrcXbQXFm-OUHR3MJQ-E0pJqr3Po_Tq_qDD9qgtKPI6xOWHHwSGHLbb2eemocM1g7ckZPeKuYJvWtVZ61T9tIFqlJhktrvQAvJK1mNlN8oxXf0KGZHGso_Nn95Alhf8REgJHkNiNohdKuxlVKZVqCWl4Cv9cUibU_g_jvfHfjiRlbzSq1HctUO4","7903.jpg","beach"],
-  ["AVvXsEgBsdOxRp7AzNx_Sli1kEUi59ytCfkP3THjSp3-gL0sZZ7hc0XceXNAw1j3c52c6yT-VYpJc_Ofn81SvL7Kv3QOe-ua46n_xsLrwOh04TT9LCop1nlgQFL-wH6nB4H0fu8RVBEpsYDtbEyInHUXuwJWteOYvxhUxcKppiKkrXFQTw0pNL_gSr2dBW_HBp8","7969.jpg","port"],
-  ["AVvXsEgwHrHXpZmxFJvdih1uIpvAMx5gSztqFtbb0cb_qdBZ1wzS8ypd3bTrXId1MA6iGD6myyY_CR4N8T6tzwXh41lA7F2MI4A-Z6Uq96ymWq0exB3rfHqJONfU65rcp-ukCLwkxB5jIcg11qbI4MVDhseRgkroEvMGTVPxPwQ7MLCM_N-_-7eZeYYlB3hxeOE","7909.jpg","sunset"],
-  ["AVvXsEiFeim5cWD52p5DGvhPznkTG-f3GfQHU26GM-B6XEZVb1a1pkUz8zDqwaB0GlqKNYUm1jR-SAmQrIudx902F6DNL_0d3DOcLugNVjqIXH2ndd7XLa4L2yffE5gdHrXFzGUMC-YU0hi0JwjR5X1UUOAsqRAuEBkDWWeUTnxhh6yesqTLegGaG-dFrEr13-E","7970.jpg","city"],
-  ["AVvXsEhEm5H7vvvQEGS2aUphtEClLVpoqsi-FV7HPeMlMvDYyjeh05U7iQp-7y1VQ6gfprtTsSEt23gWjjLQ4SqI13xJdaq_koCNT-EUzbDzWBWO3RaMsLIaHvi2X3qVHO1fl2nWbkDBjnYHfZLOSp9F4VIrATiRHzRUDtj8SwkAcJpprD-1xv16jpwwUHSTVjM","7995.png","nature"],
-  ["AVvXsEheaQjBMM4qvpNfaCY3TFYzn7WSMJj-KGcOblf9PcfQMhxbzB_UY4KT7ZrG8UXQ-tkBPZmu_X1TRgYtf-xu_jfJJ0nfuatDxfFH4wPs6r7jXYfXwV3MKUNBjGqGlxooEkmkm5G4QRxerN_6s4A9hokjKF6KUdAAVag71xtgal6sJwDs7ahX_GDaVLWRhhg","7999.png","beach"],
-  ["AVvXsEiRi-phqilR8v_-1NyedqERSd99X1Rfl5yU3txFInbi4x1TB-b0RN79YodvCQ9arb8W5CKYKdlFjY9cLVMrQwILXCMOO077spp_sPc_NdDYmfW9kEG9ierdCSTUbrohobaQRd1kphvvXL-AXA8vUA8PLxQl5w7rM9mAsxl4ZfdryZfoHHEGCDneaTh8GfU","7971.png","port"],
-  ["AVvXsEhnT8X4LGWvllYcwQfzcKoXhHRPWanm2RGtBpca0lVoYE73J9wHrqjIqQanoMQ3d7TvOpRs6aL0ZuZtpDcHB3bh75OdfoDGa5G8_6X0TEE_KWsN3jq5ED7wIs28qbWg0hFlY7lNDUpqNjqhwx7hmzVmkqKTmXdINQ7niUXvfZ1u0GCQC9QMKaqt2H9NGt8","7900.jpg","sunset"],
-  ["AVvXsEiX5ZBgy1DKiu6w46wpKNWnr7Mc_s5KuG6ocuIMPXrlU52r_CL9kJ-vRdpCP6Eo-6ymi0Nvtnyt1wIWGYuYq6AHKgjFeaZXrSMkqCRt2cX2EYFpjb1Oj_hPKopcUuHeISKa9sdBy797kIvrXbG_FVVEI6tmdgJkA17Q3WuaEq6lxXybFDkXJTwc3S4qxPg","7920.png","city"],
-  ["AVvXsEhkTtTss6cditTFkju86Wi0h5cXMuSwLMwIO0WhI3PCMGlrGyYDlKtlMNULReMsrmM4uQYU3r8poB01r1_w-T026Ln5f_FZ0QuUYvmW_-Tp_ImF2eb4AHmywbSGQT1J0HiZEltqLHAmyOukq_XbdUdiGtJu0S7tN84a04GSMrjryamk6N8ChuJvkYwxgTM","7914.jpg","nature"],
-  ["AVvXsEgPUJkTiw7lpMsx1IbTyPgGQkC0IRroc1KtAzmlfA5ONEoqFhwiota7Vh2ON7Kd2KbBYUjnQoEes-9EexdWqwJu7jW-scnjY6gs7FHdbELilq7bz2TtPKF47MdMCT2id2mTlibpGZQY0z4ZmpOoMISs3pKAR39sXFmSLdqfB-2vMW0GZaDv0vDwO_AlVoA","7899.jpg","beach"],
-  ["AVvXsEiMeRt-z2av3R0vZhy1_zaZSMIBDHGQpX91llcuxc0EvxRwTn0i31vtK_n5WpM-pbVInbWuX2QvERHMiPDmQRwU6j_LXotOpTU98B_yW1UFCLJW8xe3Vzjlu4uWuskL-T44zK5YFZKl9w_jm5XeOW6njVi2ucgNn0fAI-Jn2Nqlrt_AM3oZZbo1Yc_STq0","7975.jpg","port"],
-  ["AVvXsEjbaY0zqM_mBqHmIiVAcEnI76f0iJw0pcx9LMWnuEllW1Zsxwn2_KAMyEtuLrwf2M1aYV4-Fy2LC5SaybKNncPm-4ihJLdEq6B-LvNf3UsTsbvTUInAlk2aM31sxiSu3TAGbX2jl45TBwhE141oPY9MubtK4O00dcTpBeRw9zySqpgVTes3ESbSSpkylHs","7896.jpg","sunset"],
-  ["AVvXsEjzaee32a4FId0hOI_tD-b08h2PWGuuGTpwwZkn5eNQ7caX7pp_bTTTxDvsrrJoB4KwfGaO6lv0-LMOVYWvRFVHXNjsc9NiDPHvnnwGILbQ1EIXyVHI3r1pZW4h-ubG0JG3pXnjR8Ch4Phq1Kr2qzg83KIitjttoVpzdkj0MZMR0tJWxpgYfjxmgklwddo","7972.jpg","city"],
-  ["AVvXsEitbWcxciabmo9_JoCTUtWzEud6mZp8CIHuFOfKYURAIZBta0idH1bL9DZTQKQPRz-e202h3-4LccP9HZIutd7H0sppJfHUeD_obc3Zddf6UbwZ7e4ZfRfgT1usyGzowR8_VOqtDM7I7QiD3IVNsBGDk7Y2vqk5ZRBzKxkr5ypRuVT9euh2Q0c9mInBPb4","7907.jpg","nature"],
-  ["AVvXsEjswbGUVELEkOs2mk1hMvnqeFgUfPBhPslZfATCYVrZkp_ZaMsc5bTI17p-RQ1BOkM_os1fBTBmiWYuJkLv52RQkTZfaf0XDFKBM7iEvsO2YiDpopeDlh2BsjG6cAEuLeryuEkliXRNztdDdQDSQZ54nM_9Y1TI-K5iQPn88StzkZFpaLoCfGxaeDQ5AHo","7895.jpg","beach"],
-  ["AVvXsEivOJomzmZV2-VvLggPeKwThxep1XB46ZXilpFNh0_UWqqwjBcQPlhGMxZic1PSjxuo5hRK-ZAYUGDTnCgIbKj-SDBCIzqxSTMVtI51QvjHhPZbUG3xFkDTP9at2K5MnIr_hFpRz_HQBBXwSCnQaqT-3B4PZg6WrsK95LtVXalkMKJrr6A1rGnSITSW1Co","7967.jpg","port"],
-  ["AVvXsEjqNFEUZM1M2EYPDoQGEu0KZwsV4_TVzY8p0RGIIBatvE5WKYXv3cZoDXC2E-5bvrjU9Ue6gOeozSH5jtF2e4go7x4qagQP6I-aruJt8xExupu_HsbbRXaUnd5uZWZzm3yXkFcIkJzDBKc_dgxFohMjt4IlRhhYN0HGdFcXHeauuI60d3fARx1hK1xUz9E","7968.png","sunset"],
-  ["AVvXsEgf_Z6cd5dOiA2z8Uwm2CpGatpeMefz-gM_n0Ynwi1wQyeIkm3pRXJGJbcWkOQsKx1spXfwugqs8chMuQeYta9mZ6xrJJ4l_l0AudvaX_ySiZRbzHC8BJjSgOsgtmR0TriQeDIb95A1B6TYXW3HiLQ4jyBdHygcIxgTcIN0mbGM3B70dHRK3zaaHWx5TJw","7976.png","city"],
-  ["AVvXsEjd-8wgecxIg1ri_Y_MxNe4IB9KUUD7FV0CvryiNjWIqqRYe4yWAHzwf22nyhjslxdEn0hvWRRlqPBFVGjr1fKXjyLe70G4pBQdC2obwmJHSXsoC4Cc4pR-BeQJ39JLkrdQ9sayxnKa104KKqP4cRQ7VIgmYldMG64C-kX3F9LEnWMfkv06fjZsjsbJ70Q","7892.png","nature"],
-  ["AVvXsEiyLJtu0h_sR-eQFpJudlv2bxdeX13_2TX4ox8sGflft3kkWVdt42oKTDxC8s0-hZW1aCRsxWH2kiQlLrx7HK0UOa2zEfiDBhxHgv6_nGGTsIXc9sl18oUIMQgkxWMGQjG6yfvOYTrmi-XiOzU2k_J5M9LG9Cg2FHeX9KHKCCRkm39c2IzzBApDsABcNXo","7901.png","beach"],
-  ["AVvXsEgcIbbISrMynZCKjoWl6hIAy1tDarWuw7ohwOmNhjUchZ1I9infdHgfTSMvfs5V9-HzQSiIUdUElnKmXLv1V7TR5phUHZdNnycV7g2_hxj6vKBZwU_D0eIS93pmwSmFwoy6QoGNCaB3flFy2aDL2-fEEjNEb5xEzzF6ycjhXUSznFyOIxbWAMNMMQxu9IM","7886.jpg","port"],
-  ["AVvXsEgDZZvXiKezHSvKnFHczxn_RVxBJ5EIeuLBcQjmUJ28Cp753LkxdoMze_XFCytx53LGamwYAHSHBtQ-kIqJW5x418RSFEPBVAN9apO7TiSGt_NLdLPBvDcH7XSzPEuQjWkkRM562iHM2NQqE5f2QbALJ0WyWE_ejr8oTEPurWqqV4pgzVB0I79EZv2yzzE","7891.jpg","sunset"],
-  ["AVvXsEjhnNNx8DKJr6dtO0hIA2D6u52tAKpelevbqa4eKdMU-v5KiNTo2SBmUSGJDMRr6hWUafIufE-SzZYpS47FttyRb3oj3BhCHL3fH6o3Erla8bg58G9z6rWqh7ZUsQ494ozihrTJ0XDQY0A5ZJUa1hoRfw3y9yQ6LT157rcSN-Y2e_bVxMEM0WK8IdTErCs","7888.png","city"],
-  ["AVvXsEggzYhVC3V7-yexQPhdECaVYojfhe_1dEpYPZRPnG3JGjyAAbsgZQaNZSsnkvQTTFeICfnU2Rr9rJaWIxPTpzUiul3PRpoUf6OGbCYaRzkuWzRq46CvML9rGu5NxSjBZpQDSN-J8ouo6sJHmPXkKMNxS9p_M-InCq2pFjJUdfn9duFFA3Dp_jTE34rwOGA","7897.png","nature"],
+  ["AVvXsEgmjkOzWPnmJWoEdSHh-14mgvDSXzOC3ToQBqS9AWYMlQ8rZ-uUB4jTO5Ny3LnwAqsZBZIqafBKDjOeGjPMBa_BTuqRuov3lT6G-rCxxioaDw9MiLOji4_PK45n-SU2TNU28E4Dx1j5ZWN91eOqQvrBOcBo-1y2ahzFht2QAIVxena0jAf8rMvQBuD73BI","7816.jpg","city"],
+  ["AVvXsEiuCcJg1GmkwJ0sqWXYjIbB3L-RlyNJJlKuunzKgi_D60rFj0TwUpVrZ8JJGzALJuB4a5X8jb-gJu_dt_q889u7sFJXlarjiIVp_Q2pT6h91tEDeo9zKBhJvysmVGgg_yhtX9ofu3j7febUFYKqynCVt_lZ4U1j_6e9wGVs8eKQyn437HHTHx71ExItg5k","7933.jpg","nature"],
+  ["AVvXsEjqGRnyog0MgZGet6VsXeexuUduueui1sIyJB6_NCrtrdRhNksUqdbF05nvfEhonL00q-ttPsFutqPH40GfuaW10ia8QEag7nXG57RtRO92wUdeal4_w1NTrm7nKFtydRnUFbX8spPA33L7DmJLmLjkxJKpJph14TDKeEpxz3AMFPiBmWbUO-clVC9f0UU","7985.jpg","beach"],
+  ["AVvXsEgQuNB42XyYyi-TX5fe-4ckOljuQwzjrI84U7FHu616g70Qf6vow09bf8be_5fLwGEaVEaI4Uq_UMC22odzq1nMYtfs5tcxCf-4KCQ2XxikhkZFlD9q4XNRbx7SeOf9RF3oBRfgYCGpAAp0e139avRwtuFedN_eeUG-eqhVJphMP2Lr9VMoDcgsuw96ODQ","7919.jpg","port"],
+  ["AVvXsEg2znRVbDMEBN15jfb51WzAqRqbYBk_7NRg0OYrI5NAcH9RcOefdafgWxZ1VcQbIjZA_C6JZdo_FlBbzmsdhUfK9JNtPpmZzKuQ669V9CaDNrgcnIQZZnRqKT5Wes6-41J9Wuvo1x0ledogqQwFzD8H0yjNZ9ZPMUaMrEr7N9Ihu3OczMVywp6ctPU_y6E","8001.jpg","sunset"],
+  ["AVvXsEhBxQeQdjgPDuK8LyVMk23YCs7_7tC8Hodn47aHJZJx1hVCVMrBHLzCKGp00qOV5Cqrv6rMaCjNySNvSuogx5drXB3x_9WduFKe6wRBRr89783eF6DGAX5-HdBnHHfQjPz64y6uG-jCArwCBhPryw095xvUt2LKCw-0bEuvAhp-gvLv80s302FYyJB8DOE","8002.jpg","city"],
+  ["AVvXsEjqsGxSmEMOTCBeJNmRXa0uECzP4i56LWf1YHh91k99cw2LdgiTU-TLaN4nB8GFqXwcy-Ju3XsUWA2pq3QYANaKM1zowmqzWvMAnyWUzJzC059TA1yY9PhLKxpiGY7TxvLaSSwjU6re9oO2C6tAQk3BCe5IP_Q30gaWyw4hw5ORMTZQOve_vn1eKjoHdik","7921.jpg","nature"],
+  ["AVvXsEgz6kWWGmw3eBtjPJ-LamSLhLrUbpo5sWu87sd-3XSBv4iO1ijVbi7qbb37Gzix7-ZPF5RVSUU4LosPlmTujEoOK0lVaADzSqIqJlAStTTLEmSU0-zITlAzOMGGrZu8oqNVMkKzzqGb3DkuzHTF74usY4GlTJcL7tFAWYoeIi0mszFokxnGo1qBADP8DGU","7998.jpg","beach"],
+  ["AVvXsEg6ssVnUJLKJMt5y8s0dxM6LAnk9hjEDFuiMRDkUg-ed6_fz9tVQT9Y79jEtoSqg6FXax3TYLxY73h1TadjZSRDzUyZneh92iI2dzuy1TvKGcOD9h5iVJXA3buPjOWqeH2T-0wtzC8n8lQynr7KKIDqvXlXTN6N8cgpe0na7PvO294peQ0cWYLvRuj2KXw","8004.jpg","port"],
+  ["AVvXsEiBVguZ4nK4cJJVAP4FTyR_JCJlqj5nlWrusFBfJVHxl3lSTt49YWB5aanacH_g40c7Ei8yqPOW5L9NVoklnay_afd1ryN0O3GdtaOvycePcV70t8C4fN_FHT6btDT-jxcUVC9-qS-fJByPRNVCPMFYnppuXCof7N6q3amjFN7MuvW1k3Ir717MWv-mhKo","7990.jpg","sunset"],
+  ["AVvXsEhVqM5605alWVBUh-88nDi_au2P7P0ADtV2OK7R5XqVduquyZ0NRjR_kvcrPIHSr9iiXgwSAwUNLgLVjUWYOM_1tWFcw0D25d6h9xOdwkBQRAFlmlRvE_bAchOTVDlbjz4sKfdRwhoxZ-hVB4CtS3PjmBYsEiARG7hIiwMd1jCpnkUx-RmYARUPqBqRKKo","7991.jpg","city"],
+  ["AVvXsEj9GWBUJVbFJX1Y5cjO8rAmqtmZ5abk-uK6_5-CwPO45nVnqlU3qtLnzoPhuRQf1Cf60s-1pPt8Ftjt51r0uPkPKr2UoH8v9qugbb-Jeu8NvprXEr3AfSWsEXjtqDsE-IoOjnU2ehFODvPoor73PFmm9Nfr6HQ0HdET9cLDaesU0fqzZs2m_RxaXO2344k","7986.jpg","nature"],
+  ["AVvXsEig89xUko7FU-mNfMGy8jIXURPz0Ncey5XQuLka1XJ3aXqH5l6_Y_b5miWtlo6PTsp04NuwLHJ-8LVhfc0ei9fIli_bza_fcmpT4m2zTtSpcb-d5lYXjzZvBMjZXKORc5WrA3l28H1gorUBN4atqYitBze_mUSrefPiLJdp8l4gJHwjax7M4lMniSNgkf0","7980.jpg","beach"],
+  ["AVvXsEjFjDBI2s1X8ncvXBf-b8-fGlANpEeuzGdP-jIWKho5Yrc040FeK9MnZ92C7m-qa5GccGNPEkvrnCnxSMnYL7givBxTJ-RfOf2bULtTj0Jk3S36wcC7LogFCTNe9I-Gz036tRNtaidOFbqQVLHQP8rHip_j9ke7iONxgPobxuNAIfppjjzIBSiA6YBerIM","7993.jpg","port"],
+  ["AVvXsEj0Bfg2pMGFhoar5p7V0ChuUr8p-gxJvpXgaRJq0efFuVu-a40SKCDhTbBfeemt5BnL16ZDDvNdXjOtVX7GGxErKI24Kp_WHNn_c_jERECYLJSaVEWnN2FHK39o_rUPoWRM64M_ZIpewG03Gl8KaRM1g-b3tOXOj_2QT4oy-VONRRWBfkyejlc7pbcWecM","7917.jpg","sunset"],
+  ["AVvXsEhXGUEXstu4mNoMkwkOIJZ7RWeRQa6gHpJZi7X00lmn76F13ppVqOCeFRoNOKxVym1FW228JAl5e5E9eZ4PlmzEIDe_lEtX-ybIVbY8z5cDtCdf-_eMZViTgoPz5rnZgPltfU7C4ffzZzVmKUfsJlf47FTr0Sf12lji18c-Fg-vofmII7th3anSUijNTC0","7982.jpg","city"],
+  ["AVvXsEiNaxTr68aSVezNxY_RUrPCdAcD46oJA-9-3h9Nkd08z2gm_pBPtxauS-4nNt3IUgXWfakXb-W7wsqWEm7bm6Gbxoml7cYW1ATW8vzGUz2IL9563_0_fDYAG6jQUxbrpRm7y4_EAbNDp1iKp5uzn0NAGPiVLARjX7fOUYSXPOaVdJHFIUbDAxsj-mCcpgs","7979.jpg","nature"],
+  ["AVvXsEhR2glEcQFX7cjrNkOQ2DsJxZn3duubAIajXa5lpJEDKgzJj0bZmDa_0k8R_d6lRSKbPdEERCFfvRavJm9iDZu8DDbj0Gmt5MvRHT-0Nh1LfBEaFZnRydaZKhmJmIfxSFIVntAFiEfoTXA78khyiwUhjEEKqKqXhUFArMnIOKZo4XPduVE9QUX-HlsBxfw","7978.jpg","beach"],
+  ["AVvXsEjUG7Y-LggupCWth__bQJDgM7bNXC5fpWaoDEnovZ933rYbVSDwAEmiY6Dgn1ppACjShxD3RWQ_32P_fc3yl7Q9FNc_GIRhO0wGq14HsUWsKqE-99ByekJkqZ4eUmC-lvQqgG_SuG3hboMyPogusUi6Vk0j3BWuMVUrspZNsCm5O_TDoEjpg5m45qApq9k","7994.jpg","port"],
+  ["AVvXsEimUOatWT8A4e8uw0AlZvaIra4QtgimgaRWdJ18SqGxvu3fxBONKBefPfadS2VloWkq9B4P2v6qAfT6XaxszEBWybw1CBMpatNqRtfgh_WtBLZ0Nfv9VFTsXmAMFMSiNgrWOCOy8ZWbaDwnDC-7OhxpU6OXUAm0BVQmDRRHk5D_cRQ7RbwtekM74a6cue8","7912.jpg","sunset"],
+  ["AVvXsEimp1B6GVComHki9FwUrZrOU6nJuJ6_9dMGXYaeRMs8KfVD61te1tSN4eiUv6cQhgfOQbC8rdiULfqNy7V2PANqR2Y5bLpYUkeNQtwdlycv5c5Q2-wWXbyAw_ikr4ExWqCWdPssLkG8sWKvRMdzcATRFtIetDh1b0pIJmiGZwUMbkc8Ll3dRTlOBdyRCx4","7988.jpg","city"],
+  ["AVvXsEjTdgMOM203Kto-uAErWMza88OFweodFsecg9j0H9Qsi5SmacRbFjLD88isF2RNMawVHHGWgDRp6_1I6MeGiK4wKYFsQ6UtCoaLJRfF9CS4i0Q8quTDvny5KujYcy14VqYWg_2-i_UbuvzggLAFxN7r271TuwAqG4-qD8zUCSSA8atuY_tA0caeUMiF9_g","7906.jpg","nature"],
+  ["AVvXsEhFpYmj6CQX-SDwJjEnapqyqgJyTNf0-vtFdtvAVuJgdu_vKdOvdJgDduvfgP3A4L2gXOHWTWGia6kQb3i95TVDpAzaGTFzXdh5KDfOETTSGTqdoqFLiuKzV94dg2GtN8ziOa3XpgSzJj5B-uemFMQbUSjT75DNqrW900ujl1-TGC4eskLPDGpLupVDdWM","7924.jpg","beach"],
+  ["AVvXsEgl-oerWrcXbQXFm-OUHR3MJQ-E0pJqr3Po_Tq_qDD9qgtKPI6xOWHHwSGHLbb2eemocM1g7ckZPeKuYJvWtVZ61T9tIFqlJhktrvQAvJK1mNlN8oxXf0KGZHGso_Nn95Alhf8REgJHkNiNohdKuxlVKZVqCWl4Cv9cUibU_g_jvfHfjiRlbzSq1HctUO4","7903.jpg","port"],
+  ["AVvXsEgBsdOxRp7AzNx_Sli1kEUi59ytCfkP3THjSp3-gL0sZZ7hc0XceXNAw1j3c52c6yT-VYpJc_Ofn81SvL7Kv3QOe-ua46n_xsLrwOh04TT9LCop1nlgQFL-wH6nB4H0fu8RVBEpsYDtbEyInHUXuwJWteOYvxhUxcKppiKkrXFQTw0pNL_gSr2dBW_HBp8","7969.jpg","sunset"],
+  ["AVvXsEgwHrHXpZmxFJvdih1uIpvAMx5gSztqFtbb0cb_qdBZ1wzS8ypd3bTrXId1MA6iGD6myyY_CR4N8T6tzwXh41lA7F2MI4A-Z6Uq96ymWq0exB3rfHqJONfU65rcp-ukCLwkxB5jIcg11qbI4MVDhseRgkroEvMGTVPxPwQ7MLCM_N-_-7eZeYYlB3hxeOE","7909.jpg","city"],
+  ["AVvXsEiFeim5cWD52p5DGvhPznkTG-f3GfQHU26GM-B6XEZVb1a1pkUz8zDqwaB0GlqKNYUm1jR-SAmQrIudx902F6DNL_0d3DOcLugNVjqIXH2ndd7XLa4L2yffE5gdHrXFzGUMC-YU0hi0JwjR5X1UUOAsqRAuEBkDWWeUTnxhh6yesqTLegGaG-dFrEr13-E","7970.jpg","nature"],
+  ["AVvXsEhnT8X4LGWvllYcwQfzcKoXhHRPWanm2RGtBpca0lVoYE73J9wHrqjIqQanoMQ3d7TvOpRs6aL0ZuZtpDcHB3bh75OdfoDGa5G8_6X0TEE_KWsN3jq5ED7wIs28qbWg0hFlY7lNDUpqNjqhwx7hmzVmkqKTmXdINQ7niUXvfZ1u0GCQC9QMKaqt2H9NGt8","7900.jpg","beach"],
+  ["AVvXsEhkTtTss6cditTFkju86Wi0h5cXMuSwLMwIO0WhI3PCMGlrGyYDlKtlMNULReMsrmM4uQYU3r8poB01r1_w-T026Ln5f_FZ0QuUYvmW_-Tp_ImF2eb4AHmywbSGQT1J0HiZEltqLHAmyOukq_XbdUdiGtJu0S7tN84a04GSMrjryamk6N8ChuJvkYwxgTM","7914.jpg","port"],
+  ["AVvXsEgPUJkTiw7lpMsx1IbTyPgGQkC0IRroc1KtAzmlfA5ONEoqFhwiota7Vh2ON7Kd2KbBYUjnQoEes-9EexdWqwJu7jW-scnjY6gs7FHdbELilq7bz2TtPKF47MdMCT2id2mTlibpGZQY0z4ZmpOoMISs3pKAR39sXFmSLdqfB-2vMW0GZaDv0vDwO_AlVoA","7899.jpg","sunset"],
+  ["AVvXsEiMeRt-z2av3R0vZhy1_zaZSMIBDHGQpX91llcuxc0EvxRwTn0i31vtK_n5WpM-pbVInbWuX2QvERHMiPDmQRwU6j_LXotOpTU98B_yW1UFCLJW8xe3Vzjlu4uWuskL-T44zK5YFZKl9w_jm5XeOW6njVi2ucgNn0fAI-Jn2Nqlrt_AM3oZZbo1Yc_STq0","7975.jpg","city"],
+  ["AVvXsEjbaY0zqM_mBqHmIiVAcEnI76f0iJw0pcx9LMWnuEllW1Zsxwn2_KAMyEtuLrwf2M1aYV4-Fy2LC5SaybKNncPm-4ihJLdEq6B-LvNf3UsTsbvTUInAlk2aM31sxiSu3TAGbX2jl45TBwhE141oPY9MubtK4O00dcTpBeRw9zySqpgVTes3ESbSSpkylHs","7896.jpg","nature"],
+  ["AVvXsEjzaee32a4FId0hOI_tD-b08h2PWGuuGTpwwZkn5eNQ7caX7pp_bTTTxDvsrrJoB4KwfGaO6lv0-LMOVYWvRFVHXNjsc9NiDPHvnnwGILbQ1EIXyVHI3r1pZW4h-ubG0JG3pXnjR8Ch4Phq1Kr2qzg83KIitjttoVpzdkj0MZMR0tJWxpgYfjxmgklwddo","7972.jpg","beach"],
+  ["AVvXsEitbWcxciabmo9_JoCTUtWzEud6mZp8CIHuFOfKYURAIZBta0idH1bL9DZTQKQPRz-e202h3-4LccP9HZIutd7H0sppJfHUeD_obc3Zddf6UbwZ7e4ZfRfgT1usyGzowR8_VOqtDM7I7QiD3IVNsBGDk7Y2vqk5ZRBzKxkr5ypRuVT9euh2Q0c9mInBPb4","7907.jpg","port"],
+  ["AVvXsEjswbGUVELEkOs2mk1hMvnqeFgUfPBhPslZfATCYVrZkp_ZaMsc5bTI17p-RQ1BOkM_os1fBTBmiWYuJkLv52RQkTZfaf0XDFKBM7iEvsO2YiDpopeDlh2BsjG6cAEuLeryuEkliXRNztdDdQDSQZ54nM_9Y1TI-K5iQPn88StzkZFpaLoCfGxaeDQ5AHo","7895.jpg","sunset"],
+  ["AVvXsEivOJomzmZV2-VvLggPeKwThxep1XB46ZXilpFNh0_UWqqwjBcQPlhGMxZic1PSjxuo5hRK-ZAYUGDTnCgIbKj-SDBCIzqxSTMVtI51QvjHhPZbUG3xFkDTP9at2K5MnIr_hFpRz_HQBBXwSCnQaqT-3B4PZg6WrsK95LtVXalkMKJrr6A1rGnSITSW1Co","7967.jpg","city"],
+  ["AVvXsEgcIbbISrMynZCKjoWl6hIAy1tDarWuw7ohwOmNhjUchZ1I9infdHgfTSMvfs5V9-HzQSiIUdUElnKmXLv1V7TR5phUHZdNnycV7g2_hxj6vKBZwU_D0eIS93pmwSmFwoy6QoGNCaB3flFy2aDL2-fEEjNEb5xEzzF6ycjhXUSznFyOIxbWAMNMMQxu9IM","7886.jpg","nature"],
+  ["AVvXsEgDZZvXiKezHSvKnFHczxn_RVxBJ5EIeuLBcQjmUJ28Cp753LkxdoMze_XFCytx53LGamwYAHSHBtQ-kIqJW5x418RSFEPBVAN9apO7TiSGt_NLdLPBvDcH7XSzPEuQjWkkRM562iHM2NQqE5f2QbALJ0WyWE_ejr8oTEPurWqqV4pgzVB0I79EZv2yzzE","7891.jpg","beach"]
 ];
 function getThumb(p){ return BASE+p[0]+"/s400/"+p[1]; }
 function getFull(p){ return BASE+p[0]+"/s2252/"+p[1]; }
 
+var PAGE_SIZE = 15;
+var curFilter = 'all';
+var filtered = [];
+var loaded = 0;
+var lbIdx = 0;
+var curLang = 'ar';
 
-var activeFilter = 'all';
-var curPhotos = allPhotos.slice();
-var currentPhotoIndex = 0;
-
-function buildPhotos(cat) {
-  cat = cat || 'all';
-  var grid = document.getElementById('galleryGrid');
-  if (!grid) return;
-  var filtered = cat === 'all' ? allPhotos : allPhotos.filter(function(p){ return p[2] === cat; });
-  curPhotos = filtered;
-  var html = '';
-  filtered.forEach(function(p, i) {
-    html += '<div class="photo-item" onclick="openLightbox(' + i + ')" style="cursor:pointer;">' +
-      '<img src="' + getThumb(p) + '" alt="القصر الصغير" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"/>' +
-    '</div>';
-  });
-  grid.innerHTML = html;
-  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
-  var btn = document.querySelector('[data-filter="' + cat + '"]');
-  if (btn) btn.classList.add('active');
+function setFilter(cat, btn) {
+  curFilter = cat;
+  document.querySelectorAll('.fbtn').forEach(function(b){ b.classList.remove('on'); });
+  if (btn) btn.classList.add('on');
+  filtered = cat === 'all' ? allPhotos.slice() : allPhotos.filter(function(p){ return p[2]===cat; });
+  loaded = 0;
+  document.getElementById('gallery-grid').innerHTML = '';
+  renderMore();
 }
 
-function openLightbox(idx) {
-  if (!curPhotos[idx]) return;
-  currentPhotoIndex = idx;
-  var p = curPhotos[idx];
-  var lbImg = document.getElementById('lb-img');
-  if (lbImg) { lbImg.src = ''; lbImg.src = getFull(p); }
-  var lb = document.getElementById('lightbox');
-  if (lb) { lb.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+function renderMore() {
+  var grid = document.getElementById('gallery-grid');
+  var end = Math.min(loaded + PAGE_SIZE, filtered.length);
+  for (var i = loaded; i < end; i++) {
+    (function(idx) {
+      var div = document.createElement('div');
+      div.className = 'photo-item';
+      div.onclick = function(){ openLB(idx); };
+      var img = document.createElement('img');
+      img.src = getThumb(filtered[idx]);
+      img.alt = 'القصر الصغير — Ksar Sghir';
+      img.loading = 'lazy';
+      div.appendChild(img);
+      grid.appendChild(div);
+    })(i);
+  }
+  loaded = end;
+  updateBtn();
 }
 
-function closeLightbox() {
-  var lb = document.getElementById('lightbox');
-  if (lb) { lb.style.display = 'none'; document.body.style.overflow = ''; }
+function loadMore() { renderMore(); }
+
+function updateBtn() {
+  var btn = document.getElementById('load-more-btn');
+  var info = document.getElementById('count-info');
+  var remaining = filtered.length - loaded;
+  if (remaining <= 0) {
+    btn.disabled = true;
+    btn.textContent = curLang==='fr' ? 'Tout chargé ✓' : curLang==='en' ? 'All loaded ✓' : 'تم التحميل ✓';
+  } else {
+    btn.disabled = false;
+    btn.textContent = (curLang==='fr' ? 'Charger plus (' : curLang==='en' ? 'Load more (' : 'تحميل المزيد (') + remaining + ')';
+  }
+  info.textContent = loaded + ' / ' + filtered.length + (curLang==='fr' ? ' photos' : curLang==='en' ? ' photos' : ' صورة');
 }
 
-function nextPhoto() {
-  currentPhotoIndex = (currentPhotoIndex + 1) % curPhotos.length;
-  openLightbox(currentPhotoIndex);
+function openLB(idx) {
+  lbIdx = idx;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  showLB();
 }
-
-function prevPhoto() {
-  currentPhotoIndex = (currentPhotoIndex - 1 + curPhotos.length) % curPhotos.length;
-  openLightbox(currentPhotoIndex);
+function showLB() {
+  var img = document.getElementById('lb-img');
+  img.src = '';
+  img.src = getFull(filtered[lbIdx]);
+  document.getElementById('lb-count').textContent = (lbIdx+1) + ' / ' + filtered.length;
 }
-
+function closeLB() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function nextLB() { lbIdx = (lbIdx+1) % filtered.length; showLB(); }
+function prevLB() { lbIdx = (lbIdx-1+filtered.length) % filtered.length; showLB(); }
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'ArrowRight') nextPhoto();
-  if (e.key === 'ArrowLeft') prevPhoto();
-  if (e.key === 'Escape') closeLightbox();
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key==='ArrowRight' || e.key==='ArrowDown') nextLB();
+  if (e.key==='ArrowLeft' || e.key==='ArrowUp') prevLB();
+  if (e.key==='Escape') closeLB();
 });
 
-var LANG_DATA = {
-  ar: { dir:'rtl', 'logo-ar':'القصر الصغير', lback:'← الرئيسية',
-        htitle:'معرض <em>الصور</em>', hdesc:'بعدسة بلال الهيشو — القصر الصغير، المغرب',
-        lbadge:'Bilal El Hichou Photography',
-        fall:'🌟 الكل', fbeach:'🌊 الشاطئ', fsunset:'🌅 الغروب',
-        fnature:'🌿 الطبيعة', fcity:'🏙️ المدينة', fport:'⚓ الميناء',
-        'load-more-text':'تحميل المزيد' },
-  fr: { dir:'ltr', 'logo-ar':'Ksar Sghir', lback:'← Accueil',
-        htitle:'Galerie <em>Photos</em>', hdesc:'Par Bilal El Hichou — Ksar Sghir, Maroc',
-        lbadge:'Bilal El Hichou Photography',
-        fall:'🌟 Tout', fbeach:'🌊 Plage', fsunset:'🌅 Coucher',
-        fnature:'🌿 Nature', fcity:'🏙️ Ville', fport:'⚓ Port',
-        'load-more-text':'Charger plus' },
-  en: { dir:'ltr', 'logo-ar':'Ksar Sghir', lback:'← Home',
-        htitle:'Photo <em>Gallery</em>', hdesc:'By Bilal El Hichou — Ksar Sghir, Morocco',
-        lbadge:'Bilal El Hichou Photography',
-        fall:'🌟 All', fbeach:'🌊 Beach', fsunset:'🌅 Sunset',
-        fnature:'🌿 Nature', fcity:'🏙️ City', fport:'⚓ Port',
-        'load-more-text':'Load more' }
+var LT = {
+  ar: { dir:'rtl', 'logo-ar':'القصر الصغير', htitle:'معرض <em>الصور</em>', hdesc:'بعدسة بلال الهيشو — القصر الصغير، المغرب', lbadge:'Bilal El Hichou Photography',
+    n1:'🏠 الرئيسية', n2:'🗺️ السياحة', n3:'📸 المعرض', n4:'✍️ المدونة', n5:'🛒 المتجر', n6:'📢 إعلن معنا', n7:'🌤️ الطقس', n8:'🕌 الصلاة',
+    fall:'🌟 الكل', fbeach:'🌊 الشاطئ', fsunset:'🌅 الغروب', fnature:'🌿 الطبيعة', fport:'⚓ الميناء', fcity:'🏙️ المدينة',
+    fc1:'🗺️ السياحة', fc2:'🔗 المواقع', fc3:'📄 معلومات',
+    fl1:'شاطئ القصر الصغير', fl2:'قرية بليونش', fl3:'ميناء الصيد', fl4:'طنجة المتوسط',
+    fl5:'الرئيسية', fl6:'المدونة', fl7:'المتجر', fl8:'الطقس والبحر',
+    fl9:'من أنا', fl10:'إعلن معنا', fl11:'سياسة الخصوصية', fl12:'تواصل معنا' },
+  fr: { dir:'ltr', 'logo-ar':'Ksar Sghir', htitle:'Galerie <em>Photos</em>', hdesc:'Par Bilal El Hichou — Ksar Sghir, Maroc', lbadge:'Bilal El Hichou Photography',
+    n1:'🏠 Accueil', n2:'🗺️ Tourisme', n3:'📸 Galerie', n4:'✍️ Blog', n5:'🛒 Boutique', n6:'📢 Publicité', n7:'🌤️ Météo', n8:'🕌 Prière',
+    fall:'🌟 Tout', fbeach:'🌊 Plage', fsunset:'🌅 Coucher', fnature:'🌿 Nature', fport:'⚓ Port', fcity:'🏙️ Ville',
+    fc1:'🗺️ Tourisme', fc2:'🔗 Sites', fc3:'📄 Infos',
+    fl1:'Plage Ksar Sghir', fl2:'Belyounech', fl3:'Port de pêche', fl4:'Tanger Med',
+    fl5:'Accueil', fl6:'Blog', fl7:'Boutique', fl8:'Météo & Mer',
+    fl9:'À propos', fl10:'Publicité', fl11:'Confidentialité', fl12:'Contact' },
+  en: { dir:'ltr', 'logo-ar':'Ksar Sghir', htitle:'Photo <em>Gallery</em>', hdesc:'By Bilal El Hichou — Ksar Sghir, Morocco', lbadge:'Bilal El Hichou Photography',
+    n1:'🏠 Home', n2:'🗺️ Tourism', n3:'📸 Gallery', n4:'✍️ Blog', n5:'🛒 Store', n6:'📢 Advertise', n7:'🌤️ Weather', n8:'🕌 Prayer',
+    fall:'🌟 All', fbeach:'🌊 Beach', fsunset:'🌅 Sunset', fnature:'🌿 Nature', fport:'⚓ Port', fcity:'🏙️ City',
+    fc1:'🗺️ Tourism', fc2:'🔗 Sites', fc3:'📄 Info',
+    fl1:'Ksar Sghir Beach', fl2:'Belyounech', fl3:'Fishing Port', fl4:'Tanger Med',
+    fl5:'Home', fl6:'Blog', fl7:'Store', fl8:'Weather & Sea',
+    fl9:'About', fl10:'Advertise', fl11:'Privacy Policy', fl12:'Contact' }
 };
 
 function setLang(lang) {
-  var t = LANG_DATA[lang];
-  if (!t) return;
+  curLang = lang;
+  var t = LT[lang];
   document.documentElement.setAttribute('dir', t.dir);
   document.body.setAttribute('dir', t.dir);
   Object.keys(t).forEach(function(id) {
-    if (id === 'dir') return;
+    if (id==='dir') return;
     var el = document.getElementById(id);
     if (el) el.innerHTML = t[id];
   });
   document.querySelectorAll('.lb').forEach(function(b) {
     b.classList.remove('on');
-    if (b.getAttribute('onclick') === "setLang('"+lang+"')") b.classList.add('on');
+    if (b.getAttribute('onclick')==="setLang('"+lang+"')") b.classList.add('on');
   });
+  updateBtn();
   try { localStorage.setItem('gal_lang', lang); } catch(e) {}
 }
 
-// ===== THEME =====
 function toggleTheme() {
   var isLight = document.body.classList.toggle('light');
   document.getElementById('theme-btn').textContent = isLight ? '🌙' : '☀️';
@@ -655,19 +364,11 @@ function toggleTheme() {
 
 (function() {
   var lang = 'ar', theme = 'dark';
-  try { lang = localStorage.getItem('gal_lang') || 'ar'; theme = localStorage.getItem('gal_theme') || 'dark'; } catch(e) {}
-  if (theme === 'light') { document.body.classList.add('light'); document.getElementById('theme-btn').textContent = '🌙'; }
+  try { lang = localStorage.getItem('gal_lang')||'ar'; theme = localStorage.getItem('gal_theme')||'dark'; } catch(e) {}
+  if (theme==='light') { document.body.classList.add('light'); document.getElementById('theme-btn').textContent='🌙'; }
   setLang(lang);
-  buildPhotos('all');
+  setFilter('all', document.getElementById('fall'));
 })();
 </script>
-
-
-<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:999;align-items:center;justify-content:center;flex-direction:column;">
-  <button onclick="closeLightbox()" style="position:absolute;top:15px;right:15px;background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:22px;width:38px;height:38px;border-radius:50%;cursor:pointer;">✕</button>
-  <button onclick="prevPhoto()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:24px;width:40px;height:40px;border-radius:50%;cursor:pointer;">›</button>
-  <button onclick="nextPhoto()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:24px;width:40px;height:40px;border-radius:50%;cursor:pointer;">‹</button>
-  <img id="lb-img" src="" alt="Ksar Sghir" style="max-width:92vw;max-height:88vh;border-radius:10px;object-fit:contain;"/>
-</div>
 </body>
 </html>
