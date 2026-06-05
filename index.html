@@ -345,114 +345,16 @@ footer span { color: #00b4d8; }
 
 <!-- FILTERS -->
 <div class="filters">
-  <button class="filter-btn active" onclick="filterGallery('all')" id="fall">🌟 الكل</button>
-  <button class="filter-btn" onclick="filterGallery('beach')" id="fbeach">🌊 الشاطئ</button>
-  <button class="filter-btn" onclick="filterGallery('sunset')" id="fsunset">🌅 الغروب</button>
-  <button class="filter-btn" onclick="filterGallery('nature')" id="fnature">🌿 الطبيعة</button>
-  <button class="filter-btn" onclick="filterGallery('night')" id="fnight">🌙 الليل</button>
-  <button class="filter-btn" onclick="filterGallery('port')" id="fport">⚓ الميناء</button>
+  <button class="filter-btn active" onclick="filterGallery(\'all\')" data-filter="all" id="fall">🌟 الكل</button>
+  <button class="filter-btn" onclick="filterGallery(\'beach\')" data-filter="beach" id="fbeach">🌊 الشاطئ</button>
+  <button class="filter-btn" onclick="filterGallery(\'sunset\')" data-filter="sunset" id="fsunset">🌅 الغروب</button>
+  <button class="filter-btn" onclick="filterGallery(\'nature\')" data-filter="nature" id="fnature">🌿 الطبيعة</button>
+  <button class="filter-btn" onclick="filterGallery(\'night\')" data-filter="night" id="fnight">🌙 الليل</button>
+  <button class="filter-btn" onclick="filterGallery(\'port\')" data-filter="port" id="fport">⚓ الميناء</button>
 </div>
 
 <!-- GALLERY -->
-<div class="gallery-grid" id="galleryGrid">
-
-  <div class="photo-item" data-cat="sunset" data-title="غروب الشمس — القصر الصغير" onclick="openLightbox(0)">
-    <div class="ph c1">🌅</div>
-    <div class="photo-overlay">
-      <div class="photo-title">غروب الشمس</div>
-      <span class="photo-cat">الغروب</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="beach" data-title="شاطئ القصر الصغير" onclick="openLightbox(1)">
-    <div class="ph c2">🌊</div>
-    <div class="photo-overlay">
-      <div class="photo-title">شاطئ القصر الصغير</div>
-      <span class="photo-cat">الشاطئ</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="nature" data-title="الربيع في بليونش" onclick="openLightbox(2)">
-    <div class="ph c3">🌿</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الربيع في بليونش</div>
-      <span class="photo-cat">الطبيعة</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="night" data-title="الهلال والنجمة" onclick="openLightbox(3)">
-    <div class="ph c4">🌙</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الهلال والنجمة</div>
-      <span class="photo-cat">الليل</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="port" data-title="ميناء الصيد التقليدي" onclick="openLightbox(4)">
-    <div class="ph c5">⚓</div>
-    <div class="photo-overlay">
-      <div class="photo-title">ميناء الصيد</div>
-      <span class="photo-cat">الميناء</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="sunset" data-title="الغروب من الأعلى" onclick="openLightbox(5)">
-    <div class="ph c6">🏔️</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الغروب من الأعلى</div>
-      <span class="photo-cat">الغروب</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="beach" data-title="الشاطئ في الفجر" onclick="openLightbox(6)">
-    <div class="ph c7">🌄</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الشاطئ في الفجر</div>
-      <span class="photo-cat">الشاطئ</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="nature" data-title="الأزهار الصفراء" onclick="openLightbox(7)">
-    <div class="ph c8">🌻</div>
-    <div class="photo-overlay">
-      <div class="photo-title">الأزهار الصفراء</div>
-      <span class="photo-cat">الطبيعة</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="night" data-title="المدينة ليلاً" onclick="openLightbox(8)">
-    <div class="ph c9">🌃</div>
-    <div class="photo-overlay">
-      <div class="photo-title">المدينة ليلاً</div>
-      <span class="photo-cat">الليل</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="sunset" data-title="ألوان المغرب" onclick="openLightbox(9)">
-    <div class="ph c10">🎨</div>
-    <div class="photo-overlay">
-      <div class="photo-title">ألوان المغرب</div>
-      <span class="photo-cat">الغروب</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="port" data-title="قوارب الصيد" onclick="openLightbox(10)">
-    <div class="ph c11">⛵</div>
-    <div class="photo-overlay">
-      <div class="photo-title">قوارب الصيد</div>
-      <span class="photo-cat">الميناء</span>
-    </div>
-  </div>
-
-  <div class="photo-item" data-cat="beach" data-title="أمواج المتوسط" onclick="openLightbox(11)">
-    <div class="ph c12">🏖️</div>
-    <div class="photo-overlay">
-      <div class="photo-title">أمواج المتوسط</div>
-      <span class="photo-cat">الشاطئ</span>
-    </div>
-  </div>
-
-</div>
+<div class="gallery-grid" id="galleryGrid"></div>
 
 <!-- LOAD MORE -->
 <div class="load-more-wrap">
@@ -505,10 +407,9 @@ footer span { color: #00b4d8; }
 </footer>
 
 <script>
-var currentIndex = 0;
 var BASE = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/";
 var allPhotos = [
-  ["AVvXsEjxN43xDPVB6q6YXuyWZ12EuTa9EAEUPBnaPKE2zSd5cddk8wX0MClkY9f6T4AwHSbgvaSAcrSfq6VVuAMups3HqsGmvgY47Pz5lnKV_Le9Adj9qzWOmYU9dBzPqV1b1hbUhGd1nENGhyphenhyphenzXuZCFWAvlrg-EC2TgXS62yVv2e4ny141qKGmLuBONGnPc3K4","7913.jpg","nature"],
+  ["AVvXsEjxN43xDPVB6q6YXuyWZ12EuTa9EAEUPBnaPKE2zSd5cddk8wX0MClkY9f6T4AwHSbgvaSAcrSfq6VVuAMups3HqsGmvgY47Pz5lnKV_Le9Adj9qzWOmYU9dBzPqV1b1hbUhGd1nENG--zXuZCFWAvlrg-EC2TgXS62yVv2e4ny141qKGmLuBONGnPc3K4","7913.jpg","nature"],
   ["AVvXsEhCM0r4yacJJuYZRFni3e0bve2aDtcXfymD4uG-fODIkPIfTXePaQyVEofRHRPshNJi2bTQdxq5V6aUaF1htetyDthVxt6-_mmeLP7oPVUhkfxrrOl3556GsYAxBJCEuYto9oePnlswU5GcLHl-UZkq7lKrKs_GajA0TDNyCdQRg5HWfrHgjqJjnjVy8eE","7956.png","beach"],
   ["AVvXsEgWT0bD1AvC7-640LvprewobT2nGtT_IaxBdubUswt6LuQXpSIqaH229pZCLNTU4HZl_m388vHdmq_ph45XxzqoVyU1bhYfJ20scagE1eJiU8xtYbYTTTf8e12yir-3oLY1ha05nPyOVOYq1ZD3O-sYPLQ47_1XCHPE6LlaADxvyfap4_IL7FKjdiBAcBU","7964.jpg","port"],
   ["AVvXsEjla9apDn9aK2ghcDM2Mfil1gKoO7hQHCpZTY4C5uiUytEOu5KEG8BEOd8Mm3NRdpdSsuHU9108ULuzu0yV6EPNQTGa1kRod6hlKl0lHGZBb8iDRZetVhMXNPlK-E4znabvV6qwDpG8SfRjXT8V5ogP5EDaPGiPFnx4pKltG8_LviHkUPZQG4_mBNXq9XI","7883.png","sunset"],
@@ -533,7 +434,7 @@ var allPhotos = [
   ["AVvXsEhCggpxNnZr-Phu6k7r832n_XehABTJ4AJDJoQIlu32_S-V43WLHdCMkVbf0QmoMDVnC1wANW_gmRHb4zWhbs6MFFzqpe9nZrK_NxHYokGIHwciEq_nW7pkCFmobmlTYBSv9AvD_aYigkH2XkV2IlyKzCgC8oLYQKUHsAa-UDBMuffccux_9ys_Qt83wD4","7866.jpg","port"],
   ["AVvXsEhqFk1LivRZm7xXrn9QSuqgGGr26IRUztp0fz_cqrwNY6BqPg1jOqEDzan20_1xA49mN33z5I5563niRaWdP1WMO3NZZQSyKlDHAInS09J-8-aQ6E-umgrsESymiFSgp2a-UjzJl-ejoIVrFI2Xp_ryQm562WTYpPZT_J4gsOAVPWCSiHe4mDAKazTL5Dg","7939.jpg","sunset"],
   ["AVvXsEjtp5uz7Orji5JITiVWXHpM9yIhI-eRKSlLkHmsC_KeE-mbiqtEQBny1AfbDFCwfLGtwjhR_OzTPm6PgF7aDJ0RfV9lL6G_Rw5PKOhQ-ya8UIUWeCBMO0Sh5s2bAZoW6SvQNrW46lnzP3GePfjWfGcZXKdfEJZ5DA5UNhlVqbxIM4BEyzhXfgXj7IphWiQ","7949.jpg","city"],
-  ["AVvXsEh9oGNGbmtAwcoY-lv8dcIxxMpdOE8a8G__O1TscH9s6YlpBjf-QqCCMlqqlGsn6355kcctAiSrMUUaUMLuShyphenhyphenNX9xBg59PcisVS8abNhXCpUDnUtYTQz_P4gO-NFL47msIJTvZFJ9GoUNyTodRY7JxkziBF3tZilHxnAdvOn2ZBtwxBgaC4ZpfOlE9Trg","7865.jpg","nature"],
+  ["AVvXsEh9oGNGbmtAwcoY-lv8dcIxxMpdOE8a8G__O1TscH9s6YlpBjf-QqCCMlqqlGsn6355kcctAiSrMUUaUMLuS--NX9xBg59PcisVS8abNhXCpUDnUtYTQz_P4gO-NFL47msIJTvZFJ9GoUNyTodRY7JxkziBF3tZilHxnAdvOn2ZBtwxBgaC4ZpfOlE9Trg","7865.jpg","nature"],
   ["AVvXsEgcScAuYtFKbwFaOG1IwPzmC9BtvYSTzPR4FtK06yYXk-PjvaNKeg1F1aLn70lJMWD7Zsz-gMknDIdGSmE8cl9KBwy5v_IaZXHjvaCzHYy7FxcnYoblt9lL8X6DtjyuU3w1UMktC9MtFo3oYa62kaTtQ1U0cft1GyLRVD-LVsG82lc5iEBk4J9kjxHE1w8","7950.png","beach"],
   ["AVvXsEgi2iKeb2DZmTfsMw0eGA4zhCT49aYk1vYA8lF-D-n3pp26NovKBt-gE_4_CaNn9QGuVg2kmjxr8OBZqPIBN8fGJ5savPk3Ogc-0dcSSTAEgI0dUEpIJ1ryPTkh8o9_y2QR5EEBkaL6TruNZ3y_okUzbmuhV4V-Xed86_4yp9c7U47EowIGOukl2zKcwHI","7859.png","port"],
   ["AVvXsEiQ_bWscMarFl-vHc6p6UockFgOfJ56rMRyEOtIQmzNmdlAtltLOvJw1ZZOYZHiFCDE82AjEVbtdVVQwfX1tf7p7VS282YZyhjLMaasul2DAKkU4cs2ga_hOP7sRoEa63u0aIKh2AVg-rgLhPRzErbOg4VRBLB1qFxE6AVREDFlY-qB5LALzF4i2IboTrI","7938.png","sunset"],
@@ -580,7 +481,7 @@ var allPhotos = [
   ["AVvXsEiLdRiizTgM9wX5w52Nr5dhKRcQeX21tvErKXLtwoYDhJV3Is8OCsjvMum1187sTFUUwwFEVaeEpgq5EsGKNvlKepMvkwEFyR4ecN_N4N_KW-TZdJarNKpD3vMwzJjS_DUlbpZrXpyJH9wKiHIaZN59oLdUp5acToMbem2_tQKHqJoJY2QLq0nXd1aF5cs","7809.png","city"],
   ["AVvXsEiEXmsGCnYHUioesmKWlLuejdEVOlxC9jgOSsP1y7a4LCLvqevhdL3DBa6ZzVXq8-cuDDj52KA1oW_qn5aRAriyRq0EO488YfaUr8OkApNai6tSgKRA4FBvN1YYShwX_RmROoEs__2Tuun9FU5RFFUHH7xn8lMt9ycCDQBjTTseTR73UnW63xLxoADFpbw","7796.jpg","nature"],
   ["AVvXsEjMo7Eqb9t_LjuZBNkYC5xXslu_nbxJ4eBVlRlnyGQRdbuZBIOij36q-7U969lCQwhDaFPO0wLBtEipguPvDTG8BmpY9DZkTnbfDJ7-mqM45p0awaiT-M70N5HQbCRQLr9ArOGwBQJhNddKk9ml9IYULQ_xiOz2jHwa9j2C3ywFFX6xW7m1p6jiSL8yWdI","7787.jpg","beach"],
-  ["AVvXsEh27zewjvIds8xD3afhOXySKS-lMuVdVr4ed07t8MegY6kTkZq2YWzCbIZnp1pUirNMbqhyphenhyphenAoefgfIuW_GQXfRSp5grhtOzRoUC-if-hMN7Xj9f3a3h7Q4cI49UROenbN8o91qzrrFlj5SMpqIn6K1EP7_nxBQQB8mv0misZI8iVAYz0IhGu1OVdv6fPuQ","7802.jpg","port"],
+  ["AVvXsEh27zewjvIds8xD3afhOXySKS-lMuVdVr4ed07t8MegY6kTkZq2YWzCbIZnp1pUirNMbq--AoefgfIuW_GQXfRSp5grhtOzRoUC-if-hMN7Xj9f3a3h7Q4cI49UROenbN8o91qzrrFlj5SMpqIn6K1EP7_nxBQQB8mv0misZI8iVAYz0IhGu1OVdv6fPuQ","7802.jpg","port"],
   ["AVvXsEi1ihdL4tXJcYqPmL6iV6AwqjVKJ9L91E4UXSi_k-xd9VOSu7ueYsPez2D4nxv8BI_l2bSI0liTuI0poshqXO_x7lrTMRprTU9g7lzqso8VVJkESVAqM4NpaccsnrXxMhTq79inEjqW263Be2V50Y1oHWnYklc6X6jDHmpBv1ktIIDI_CeMsXQioH2OX1E","7795.png","sunset"],
   ["AVvXsEilNc57edDTu0VUBrPRieD3WHnC8_k9sw934u4g7W0wCTKtXKlDYuW_YIgaScicv2iXF_dbQzHy4yW4DtYHfjsCOZ5EskIAKoYqt-tOHwHG0nozCduGuLy4mOK2CWkYwKyQPXBAIx7JxukBPUk2OEtX4Is68uPeS2WrAi1ghE99aF53RxuDA4SdvC9NwV4","7789.jpg","city"],
   ["AVvXsEj1dqV_OjRg9e7BNmhbTd_4pAbNqmTQTFubx41kSc5QTAvaGdVS0_T52iO37ajPgTaWGFiS8Q6glWRoWd9H_UqYi0D4fJoaHsBlQRzpYl35NaM06a9pNKF1qNNMU5yJnvgOAi0iVOY_aA4kQRcrpHqd_eZHxpavUlgdw3IaUv80Ly8i5PY5KVT6jKQosjA","7797.png","nature"],
@@ -653,185 +554,60 @@ var allPhotos = [
 function getThumb(p){ return BASE+p[0]+"/s400/"+p[1]; }
 function getFull(p){ return BASE+p[0]+"/s2252/"+p[1]; }
 
+
 var activeFilter = 'all';
+var curPhotos = allPhotos.slice();
+var currentPhotoIndex = 0;
 
-function buildPhotos() {
-  photos = [];
-  var items = document.querySelectorAll('.photo-item');
-  items.forEach(function(item, i) {
-    photos.push({
-      index: i,
-      cat: item.getAttribute('data-cat'),
-      title: item.getAttribute('data-title'),
-      emoji: item.querySelector('.ph') ? item.querySelector('.ph').textContent.trim() : '📷',
-      color: item.querySelector('.ph') ? item.querySelector('.ph').className.replace('ph ', '') : 'c1'
-    });
+function buildPhotos(cat) {
+  cat = cat || 'all';
+  var grid = document.getElementById('galleryGrid');
+  if (!grid) return;
+  var filtered = cat === 'all' ? allPhotos : allPhotos.filter(function(p){ return p[2] === cat; });
+  curPhotos = filtered;
+  var html = '';
+  filtered.forEach(function(p, i) {
+    html += '<div class="photo-item" onclick="openLightbox(' + i + ')" style="cursor:pointer;">' +
+      '<img src="' + getThumb(p) + '" alt="القصر الصغير" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"/>' +
+    '</div>';
   });
+  grid.innerHTML = html;
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  var btn = document.querySelector('[data-filter="' + cat + '"]');
+  if (btn) btn.classList.add('active');
 }
 
-function filterGallery(cat) {
-  activeFilter = cat;
-  var items = document.querySelectorAll('.photo-item');
-  var visible = 0;
-  items.forEach(function(item) {
-    if (cat === 'all' || item.getAttribute('data-cat') === cat) {
-      item.classList.remove('hidden');
-      visible++;
-    } else {
-      item.classList.add('hidden');
-    }
-  });
-  document.querySelectorAll('.filter-btn').forEach(function(btn) {
-    btn.classList.remove('active');
-  });
-  event.target.classList.add('active');
-  document.getElementById('photoCount').textContent = visible + ' صورة';
-}
-
-function openLightbox(index) {
-  currentIndex = index;
-  var p = photos[index];
-  var ph = document.getElementById('lightboxPh');
-  ph.className = 'lightbox-ph ' + p.color;
-  ph.textContent = p.emoji;
-  document.getElementById('lightboxTitle').textContent = p.title;
-  document.getElementById('lightboxCat').textContent = p.cat;
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
+function openLightbox(idx) {
+  if (!curPhotos[idx]) return;
+  currentPhotoIndex = idx;
+  var p = curPhotos[idx];
+  var lbImg = document.getElementById('lb-img');
+  if (lbImg) { lbImg.src = ''; lbImg.src = getFull(p); }
+  var lb = document.getElementById('lightbox');
+  if (lb) { lb.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
 }
 
 function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow = '';
+  var lb = document.getElementById('lightbox');
+  if (lb) { lb.style.display = 'none'; document.body.style.overflow = ''; }
 }
 
 function nextPhoto() {
-  currentIndex = (currentIndex + 1) % photos.length;
-  openLightbox(currentIndex);
+  currentPhotoIndex = (currentPhotoIndex + 1) % curPhotos.length;
+  openLightbox(currentPhotoIndex);
 }
 
 function prevPhoto() {
-  currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-  openLightbox(currentIndex);
+  currentPhotoIndex = (currentPhotoIndex - 1 + curPhotos.length) % curPhotos.length;
+  openLightbox(currentPhotoIndex);
 }
-
-document.getElementById('lightbox').addEventListener('click', function(e) {
-  if (e.target === this) closeLightbox();
-});
 
 document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowRight') nextPhoto();
+  if (e.key === 'ArrowLeft') prevPhoto();
   if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') nextPhoto();
-  if (e.key === 'ArrowRight') prevPhoto();
 });
 
-buildPhotos();
-
-// ═══ TRANSLATIONS ═══
-var curLang = 'ar';
-var T = {
-  ar: {
-    dir: 'rtl',
-    lname: 'القصر الصغير',
-    lback: '← الرئيسية',
-    htitle: 'معرض <em>الصور</em>',
-    hdesc: 'بعدسة بلال الهيشو — القصر الصغير، المغرب',
-    lphoto: 'صورة',
-    fall: '🌟 الكل', fbeach: '🌊 الشاطئ', fsunset: '🌅 الغروب',
-    fnature: '🌿 الطبيعة', fnight: '🌙 الليل', fport: '⚓ الميناء',
-    lmore: 'تحميل المزيد من الصور',
-    photos: {
-      'غروب الشمس': 'غروب الشمس', 'الشاطئ': 'الشاطئ',
-      'الطبيعة': 'الطبيعة', 'الهلال والنجمة': 'الهلال والنجمة',
-      'ميناء الصيد': 'ميناء الصيد', 'الغروب من الأعلى': 'الغروب من الأعلى',
-      'الشاطئ في الفجر': 'الشاطئ في الفجر', 'الأزهار الصفراء': 'الأزهار الصفراء',
-      'المدينة ليلاً': 'المدينة ليلاً', 'ألوان المغرب': 'ألوان المغرب',
-      'قوارب الصيد': 'قوارب الصيد', 'أمواج المتوسط': 'أمواج المتوسط'
-    }
-  },
-  fr: {
-    dir: 'ltr',
-    lname: 'Ksar Sghir',
-    lback: '← Accueil',
-    htitle: 'Galerie <em>Photos</em>',
-    hdesc: 'Par Bilal El Hichou — Ksar Sghir, Maroc',
-    lphoto: 'photos',
-    fall: '🌟 Tout', fbeach: '🌊 Plage', fsunset: '🌅 Coucher',
-    fnature: '🌿 Nature', fnight: '🌙 Nuit', fport: '⚓ Port',
-    lmore: 'Charger plus de photos',
-    photos: {
-      'غروب الشمس': 'Coucher de soleil', 'الشاطئ': 'La plage',
-      'الطبيعة': 'Nature', 'الهلال والنجمة': "Le Croissant et l'Étoile",
-      'ميناء الصيد': 'Port de pêche', 'الغروب من الأعلى': 'Vue panoramique',
-      'الشاطئ في الفجر': "La plage à l'aube", 'الأزهار الصفراء': 'Fleurs jaunes',
-      'المدينة ليلاً': 'La ville la nuit', 'ألوان المغرب': 'Couleurs du Maroc',
-      'قوارب الصيد': 'Bateaux de pêche', 'أمواج المتوسط': 'Vagues méditerranéennes'
-    }
-  },
-  en: {
-    dir: 'ltr',
-    lname: 'Ksar Sghir',
-    lback: '← Home',
-    htitle: 'Photo <em>Gallery</em>',
-    hdesc: 'By Bilal El Hichou — Ksar Sghir, Morocco',
-    lphoto: 'photos',
-    fall: '🌟 All', fbeach: '🌊 Beach', fsunset: '🌅 Sunset',
-    fnature: '🌿 Nature', fnight: '🌙 Night', fport: '⚓ Port',
-    lmore: 'Load more photos',
-    photos: {
-      'غروب الشمس': 'Sunset', 'الشاطئ': 'Beach',
-      'الطبيعة': 'Nature', 'الهلال والنجمة': 'Crescent and Star',
-      'ميناء الصيد': 'Fishing Port', 'الغروب من الأعلى': 'Panoramic View',
-      'الشاطئ في الفجر': 'Beach at Dawn', 'الأزهار الصفراء': 'Yellow Flowers',
-      'المدينة ليلاً': 'City at Night', 'ألوان المغرب': 'Colors of Morocco',
-      'قوارب الصيد': 'Fishing Boats', 'أمواج المتوسط': 'Mediterranean Waves'
-    }
-  }
-};
-
-function setL(lang) {
-  curLang = lang;
-  var t = T[lang];
-  document.documentElement.setAttribute('dir', t.dir);
-  document.body.setAttribute('dir', t.dir);
-  // Update text elements
-  var ids = ['lname','lback','lphoto','fall','fbeach','fsunset','fnature','fnight','fport','lmore'];
-  ids.forEach(function(id) {
-    var el = document.getElementById(id);
-    if (el && t[id]) el.innerHTML = t[id];
-  });
-  // Update hero
-  var ht = document.getElementById('htitle');
-  if (ht) ht.innerHTML = t.htitle;
-  var hd = document.getElementById('hdesc');
-  if (hd) hd.innerHTML = t.hdesc;
-  // Update photo labels
-  document.querySelectorAll('.photo-title').forEach(function(el) {
-    var arText = el.getAttribute('data-ar') || el.textContent;
-    if (t.photos[arText]) el.textContent = t.photos[arText];
-    if (!el.getAttribute('data-ar')) el.setAttribute('data-ar', el.textContent);
-  });
-  // Update lang buttons
-  document.querySelectorAll('.lb2').forEach(function(b) {
-    b.classList.remove('on');
-    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
-  });
-  try { localStorage.setItem('glang', lang); } catch(e) {}
-}
-
-// Init lang on load
-document.addEventListener('DOMContentLoaded', function() {
-  // Store original AR text for photos
-  document.querySelectorAll('.photo-title').forEach(function(el) {
-    el.setAttribute('data-ar', el.textContent);
-  });
-  var saved = 'ar';
-  try { saved = localStorage.getItem('glang') || 'ar'; } catch(e) {}
-  setL(saved);
-});
-
-
-// ===== LANG =====
 var LANG_DATA = {
   ar: { dir:'rtl', 'logo-ar':'القصر الصغير', lback:'← الرئيسية',
         htitle:'معرض <em>الصور</em>', hdesc:'بعدسة بلال الهيشو — القصر الصغير، المغرب',
@@ -877,15 +653,21 @@ function toggleTheme() {
   try { localStorage.setItem('gal_theme', isLight ? 'light' : 'dark'); } catch(e) {}
 }
 
-// ===== INIT LANG + THEME =====
 (function() {
   var lang = 'ar', theme = 'dark';
   try { lang = localStorage.getItem('gal_lang') || 'ar'; theme = localStorage.getItem('gal_theme') || 'dark'; } catch(e) {}
   if (theme === 'light') { document.body.classList.add('light'); document.getElementById('theme-btn').textContent = '🌙'; }
   setLang(lang);
+  buildPhotos('all');
 })();
-
 </script>
 
+
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:999;align-items:center;justify-content:center;flex-direction:column;">
+  <button onclick="closeLightbox()" style="position:absolute;top:15px;right:15px;background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:22px;width:38px;height:38px;border-radius:50%;cursor:pointer;">✕</button>
+  <button onclick="prevPhoto()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:24px;width:40px;height:40px;border-radius:50%;cursor:pointer;">›</button>
+  <button onclick="nextPhoto()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:24px;width:40px;height:40px;border-radius:50%;cursor:pointer;">‹</button>
+  <img id="lb-img" src="" alt="Ksar Sghir" style="max-width:92vw;max-height:88vh;border-radius:10px;object-fit:contain;"/>
+</div>
 </body>
 </html>
